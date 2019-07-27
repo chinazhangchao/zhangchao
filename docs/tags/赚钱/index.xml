@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>张超的博客</title>
-    <link>http://zhangchao.xyz/</link>
-    <description>Recent content on 张超的博客</description>
+    <title>赚钱 on 张超的博客</title>
+    <link>http://zhangchao.xyz/tags/%E8%B5%9A%E9%92%B1/</link>
+    <description>Recent content in 赚钱 on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 27 Jul 2019 18:29:41 +0800</lastBuildDate>
     
-	<atom:link href="http://zhangchao.xyz/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://zhangchao.xyz/tags/%E8%B5%9A%E9%92%B1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -24,15 +24,6 @@
 作者蒂莫西·费里斯也是一个奇人，能说六门外语：中文、韩文、日文、德语、西班牙语、意大利语。人学期间开始创业。曾留学并漫游中国。现通过远程工作，经营一家营养品跨国公司。曾获中国散打全美冠军，保持一项探戈舞吉尼斯世界记录。旅居世界各地，四海为家。《纽约时报》《国家地理旅行者》《商业周刊》《马克西姆》、NBC、CNN等媒体都对他作过特别报道。
 如果你也想自由的工作、生活，不妨看看本书。
 想看电子版的朋友，想交流合作的朋友，可以加QQ讨论群，加时请备注每周工作4小时：</description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43;构造函数、析构函数执行顺序详解</title>
-      <link>http://zhangchao.xyz/cpp/constructor_destrutor_order/</link>
-      <pubDate>Sat, 27 Jul 2019 11:48:17 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/cpp/constructor_destrutor_order/</guid>
-      <description> 构造函数执行顺序  调用虚基类构造函数（如有多个则按虚基类声明顺序从左到右） 调用基类构造函数（如有多个则按基类声明顺序从左到右） 设定虚函数表指针值（virtual table pointer） 执行初始化列表、调用成员变量构造函数（按成员变量声明顺序） 执行自身构造函数  析构函数执行顺序（与构造函数相反）  执行自身析构函数 调用成员变量析构函数（与成员声明顺序相反） 调整虚函数表指针值 调用基类析构函数（从右到左） 调用虚基类析构函数（从右到左）  </description>
     </item>
     
   </channel>

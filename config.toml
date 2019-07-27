@@ -9,5 +9,4 @@ publishDir = "docs"
 
 [params]
   author = "张超"
-  subtitle = "个人学习记录"
   keywords = "C++,Ruby,Rails,Web,算法,leetcode,编程,公众号,小程序,小游戏,英语,背单词,赚钱,财务自由,财富自由"
