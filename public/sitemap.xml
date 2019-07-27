@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://zhangchao.xyz/categories/c&#43;&#43;/</loc>
+    <lastmod>2019-07-27T11:48:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/c&#43;&#43;/</loc>
+    <lastmod>2019-07-27T11:48:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/cpp/constructor_destrutor_order/</loc>
+    <lastmod>2019-07-27T11:48:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/categories/</loc>
+    <lastmod>2019-07-27T11:48:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/cpp/</loc>
+    <lastmod>2019-07-27T11:48:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/</loc>
+    <lastmod>2019-07-27T11:48:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/</loc>
+    <lastmod>2019-07-27T11:48:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2019-07-27T11:48:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2019-07-27T11:48:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
