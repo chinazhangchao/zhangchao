@@ -4,6 +4,7 @@ title = "张超的博客"
 theme = "maupassant"
 preserveTaxonomyNames = true
 publishDir = "docs"
+googleAnalytics = "GTM-TQXK54R"
 [author]
   name = "张超"
 
