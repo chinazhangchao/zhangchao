@@ -6,10 +6,55 @@
     <description>Recent content in Categories on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 27 Jul 2019 18:29:41 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2019 11:59:34 +0800</lastBuildDate>
     
 	<atom:link href="http://zhangchao.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ruby</title>
+      <link>http://zhangchao.xyz/categories/ruby/</link>
+      <pubDate>Sat, 24 Aug 2019 11:59:34 +0800</pubDate>
+      
+      <guid>http://zhangchao.xyz/categories/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>http://zhangchao.xyz/categories/c&#43;&#43;/</link>
+      <pubDate>Sat, 24 Aug 2019 11:54:08 +0800</pubDate>
+      
+      <guid>http://zhangchao.xyz/categories/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LeetCode</title>
+      <link>http://zhangchao.xyz/categories/leetcode/</link>
+      <pubDate>Sat, 24 Aug 2019 11:54:08 +0800</pubDate>
+      
+      <guid>http://zhangchao.xyz/categories/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rails</title>
+      <link>http://zhangchao.xyz/categories/rails/</link>
+      <pubDate>Sat, 24 Aug 2019 11:46:54 +0800</pubDate>
+      
+      <guid>http://zhangchao.xyz/categories/rails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>http://zhangchao.xyz/categories/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sat, 24 Aug 2019 11:38:15 +0800</pubDate>
+      
+      <guid>http://zhangchao.xyz/categories/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>财富</title>
@@ -17,15 +62,6 @@
       <pubDate>Sat, 27 Jul 2019 18:29:41 +0800</pubDate>
       
       <guid>http://zhangchao.xyz/categories/%E8%B4%A2%E5%AF%8C/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43;</title>
-      <link>http://zhangchao.xyz/categories/c&#43;&#43;/</link>
-      <pubDate>Sat, 27 Jul 2019 11:48:17 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/categories/c&#43;&#43;/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on 张超的博客</title>
+    <link>http://zhangchao.xyz/categories/ruby/</link>
+    <description>Recent content in Ruby on 张超的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 24 Aug 2019 11:59:34 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhangchao.xyz/categories/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ruby字符串编码</title>
+      <link>http://zhangchao.xyz/ruby/string-encoding/</link>
+      <pubDate>Sat, 24 Aug 2019 11:59:34 +0800</pubDate>
+      
+      <guid>http://zhangchao.xyz/ruby/string-encoding/</guid>
+      <description>Ruby的各种字符串编码。</description>
+    </item>
+    
+    <item>
+      <title>Ruby 2.3中的魔法注释# frozen_string_literal: true</title>
+      <link>http://zhangchao.xyz/ruby/magic-comment/</link>
+      <pubDate>Sat, 24 Aug 2019 11:44:41 +0800</pubDate>
+      
+      <guid>http://zhangchao.xyz/ruby/magic-comment/</guid>
+      <description>注释# frozen_string_literal: true是干什么用的？</description>
+    </item>
+    
+    <item>
+      <title>Ruby 安全调用运算符 (&amp;.)</title>
+      <link>http://zhangchao.xyz/ruby/safe-navigation-operator/</link>
+      <pubDate>Sat, 24 Aug 2019 11:41:31 +0800</pubDate>
+      
+      <guid>http://zhangchao.xyz/ruby/safe-navigation-operator/</guid>
+      <description>Ruby运算符&amp;amp;.的用法。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,6 +1,7 @@
 ---
 title: "C++构造函数、析构函数执行顺序详解"
 date: 2019-07-27T11:48:17+08:00
+type: posts
 categories: [C++]
 keywords: [C++,构造函数,析构函数]
 tags: [C++,构造函数,析构函数]

@@ -1,6 +1,7 @@
 ---
 title: "每周工作4小时"
 date: 2019-07-27T18:29:41+08:00
+type: posts
 categories: [财富]
 keywords: [每周工作4小时,财富自由]
 tags: [每周工作4小时,财富自由,赚钱]

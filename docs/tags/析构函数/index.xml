@@ -13,10 +13,10 @@
     
     <item>
       <title>C&#43;&#43;构造函数、析构函数执行顺序详解</title>
-      <link>http://zhangchao.xyz/cpp/constructor_destrutor_order/</link>
+      <link>http://zhangchao.xyz/cpp/constructor-destrutor-order/</link>
       <pubDate>Sat, 27 Jul 2019 11:48:17 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/cpp/constructor_destrutor_order/</guid>
+      <guid>http://zhangchao.xyz/cpp/constructor-destrutor-order/</guid>
       <description>&lt;h2 id=&#34;构造函数执行顺序&#34;&gt;构造函数执行顺序&lt;/h2&gt;
 
 &lt;ol&gt;
