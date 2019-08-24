@@ -3,25 +3,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://zhangchao.xyz/categories/</loc>
+    <lastmod>2019-08-24T18:44:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/</loc>
+    <lastmod>2019-08-24T18:44:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tool/</loc>
+    <lastmod>2019-08-24T18:44:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2019-08-24T18:44:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2019-08-24T18:44:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/</loc>
+    <lastmod>2019-08-24T18:44:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tool/pdf-to-text/</loc>
+    <lastmod>2019-08-24T18:44:59+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://zhangchao.xyz/about/</loc>
     <lastmod>2019-08-24T12:21:11+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/</loc>
-    <lastmod>2019-08-24T12:21:11+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://zhangchao.xyz/archives/</loc>
     <lastmod>2019-08-24T12:21:11+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zhangchao.xyz/categories/</loc>
-    <lastmod>2019-08-24T11:59:34+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -45,12 +74,6 @@
   <url>
     <loc>http://zhangchao.xyz/ruby/string-encoding/</loc>
     <lastmod>2019-08-24T11:59:34+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zhangchao.xyz/tags/</loc>
-    <lastmod>2019-08-24T11:59:34+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

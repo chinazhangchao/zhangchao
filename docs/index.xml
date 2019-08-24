@@ -6,10 +6,19 @@
     <description>Recent content on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 24 Aug 2019 12:21:11 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2019 18:44:59 +0800</lastBuildDate>
     
 	<atom:link href="http://zhangchao.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>扫描版PDF文档转文本方法</title>
+      <link>http://zhangchao.xyz/tool/pdf-to-text/</link>
+      <pubDate>Sat, 24 Aug 2019 18:44:59 +0800</pubDate>
+      
+      <guid>http://zhangchao.xyz/tool/pdf-to-text/</guid>
+      <description>&lt;p&gt;很多pdf文档是扫描版的，也就是图片，无法提取文字，使用很不方便。通过结合以下两个利器可以很方便的把pdf转为文本。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>关于我</title>
