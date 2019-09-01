@@ -5,6 +5,7 @@ theme = "maupassant"
 preserveTaxonomyNames = true
 publishDir = "docs"
 googleAnalytics = "UA-144916691-1"
+disqusShortname = "zhangchao-xyz"
 
 [author]
   name = "张超"

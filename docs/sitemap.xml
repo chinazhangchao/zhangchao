@@ -21,13 +21,13 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2019-08-24T18:44:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2019-08-24T18:44:59+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -60,13 +60,13 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/categories/ruby/</loc>
+    <loc>http://zhangchao.xyz/tags/ruby/</loc>
     <lastmod>2019-08-24T11:59:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/tags/ruby/</loc>
+    <loc>http://zhangchao.xyz/categories/ruby/</loc>
     <lastmod>2019-08-24T11:59:34+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -77,25 +77,25 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/categories/c&#43;&#43;/</loc>
-    <lastmod>2019-08-24T11:54:08+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://zhangchao.xyz/tags/c&#43;&#43;/</loc>
     <lastmod>2019-08-24T11:54:08+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/categories/leetcode/</loc>
+    <loc>http://zhangchao.xyz/categories/c&#43;&#43;/</loc>
     <lastmod>2019-08-24T11:54:08+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://zhangchao.xyz/tags/leetcode/</loc>
+    <lastmod>2019-08-24T11:54:08+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/categories/leetcode/</loc>
     <lastmod>2019-08-24T11:54:08+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -122,13 +122,13 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/categories/rails/</loc>
+    <loc>http://zhangchao.xyz/tags/rails/</loc>
     <lastmod>2019-08-24T11:46:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/tags/rails/</loc>
+    <loc>http://zhangchao.xyz/categories/rails/</loc>
     <lastmod>2019-08-24T11:46:54+08:00</lastmod>
     <priority>0</priority>
   </url>
