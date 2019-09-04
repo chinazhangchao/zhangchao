@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.57.2" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,6 +36,16 @@
         google_ad_client: "ca-pub-5169380334846370",
         enable_page_level_ads: true
       });
+    </script>
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?994507e8de0120f288a9ff4886988e22";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
     </script>
 
     
@@ -104,17 +114,18 @@ Ruby 1.9 的实现方法是，所有的源码都有一个 Encoding 对象，当�
 注意：这里声明只是告诉Ruby解析器源码文件格式，并不是设置文件格式。 比方说你声明# encoding: gbk，然而文件格式却是utf-8，运行可是会出错的， 因为Ruby解析器会用你告诉它的gbk编码解析文件，显然这个肯定是要乱码的， 出错是必然的。
 
 如果要在内部修改字符串编码用encode!函数,如:
-```'日期'.encode!(Encoding::GBK)```
-###2.外部字符串编码
-字符串经常还可以通过另一种方法来创建：从 IO 对象读取。这时候我们就不能简单的将源码的 Encoding 对象赋值给字符串了，因为外码数据与源码无关。因此，IO 对象至少要附着一种 Encoding 对象。而 Ruby 为此提供了两种编码：外部编码和内部编码。
-
-我们通过设置打开文件的模式来设定外部编码和内部编码，并通过 IO 对象的 ```external_encoding``` 和 ```internal_encoding``` 方法来访问外部编码和内部编码。
 </code></pre>
 
-<p>f = File.new(&lsquo;test.txt&rsquo;, internal_encoding: Encoding::UTF_8, external_encoding: Encoding::GBK)
+<p>&lsquo;日期&rsquo;.encode!(Encoding::GBK)```
+###2.外部字符串编码
+字符串经常还可以通过另一种方法来创建：从 IO 对象读取。这时候我们就不能简单的将源码的 Encoding 对象赋值给字符串了，因为外码数据与源码无关。因此，IO 对象至少要附着一种 Encoding 对象。而 Ruby 为此提供了两种编码：外部编码和内部编码。</p>
+
+<p>我们通过设置打开文件的模式来设定外部编码和内部编码，并通过 IO 对象的 <code>external_encoding</code> 和 <code>internal_encoding</code> 方法来访问外部编码和内部编码。</p>
+
+<pre><code>f = File.new('test.txt', internal_encoding: Encoding::UTF_8, external_encoding: Encoding::GBK)
 f.internal_encoding               # =&gt; Encoding::UTF_8
 f.external_encoding               # =&gt; Encoding::GBK
-```</p>
+</code></pre>
 
 <p>外部编码是数据在 IO 对象内所采用的编码，外部编码影响数据的读取；如果内部编码没有设定的话，返回数据也会采用外部编码的编码进行编码。</p>
 

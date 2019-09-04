@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.57.2" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,6 +36,16 @@
         google_ad_client: "ca-pub-5169380334846370",
         enable_page_level_ads: true
       });
+    </script>
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?994507e8de0120f288a9ff4886988e22";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
     </script>
 
     
@@ -122,7 +132,8 @@ s &lt;&lt; &quot;12&quot;           =&gt; can't modify frozen String (RuntimeErr
 <li><p>另外，在Ruby 2.3中使用<code>--enable=frozen-string-literal</code>标志运行ruby，也会默认冻结所有文件中的字符串字面量。在单个文件中可以通过<code># frozen_string_literal: false</code>覆盖全局设置（Ruby 3中也可以用此方式覆盖全局设置）。</p>
 
 <pre><code class="language-shell">ruby --enable=frozen-string-literal t.rb
-</code></pre>
+</code></pre></li>
+</ul>
 
 <h1 id="如何修改">如何修改</h1>
 
@@ -137,8 +148,7 @@ s &lt;&lt; &quot;12&quot;           =&gt; can't modify frozen String (RuntimeErr
 =&gt; false
 &quot;&quot;.dup.frozen?
 =&gt; false
-</code></pre></li>
-</ul>
+</code></pre>
 
 <p>还可以使用一元-运算符冻结可变（未冻结）字符串。</p>
 

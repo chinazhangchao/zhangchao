@@ -52,6 +52,16 @@
       });
     </script>
 
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?994507e8de0120f288a9ff4886988e22";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
     <!-- custom css -->
     {{ range .Site.Params.customCSS }}
         <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
