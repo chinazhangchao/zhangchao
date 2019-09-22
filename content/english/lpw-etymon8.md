@@ -623,7 +623,7 @@ summary: "英语常用词根（8）"
                             postponable
                         </td>
                         <td>
-                            //
+                            /[pəs'pəʊnəbl]/
                         </td>
                         <td>
                             [postpon(e);-able a.]
@@ -2075,7 +2075,7 @@ summary: "英语常用词根（8）"
                             disproval
                         </td>
                         <td>
-                            //
+                            /[dɪsp'ruːvəl]/
                         </td>
                         <td>
                             [disprov(e);-al n.]

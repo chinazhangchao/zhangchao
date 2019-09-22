@@ -715,7 +715,7 @@ summary: "英语常用词根（15）"
                             isochronal
                         </td>
                         <td>
-                            //
+                            /[aɪ'sɒkrənl]/
                         </td>
                         <td>
                             [iso-;chron;-a a.]

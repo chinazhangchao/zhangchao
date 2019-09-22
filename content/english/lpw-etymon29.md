@@ -147,7 +147,7 @@ summary: "英语常用词根（29）"
                             nullity
                         </td>
                         <td>
-                            //
+                            /['nʌlɪtɪ]/
                         </td>
                         <td>
                             [nihil;-ity n.]

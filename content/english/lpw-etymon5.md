@@ -99,7 +99,7 @@ summary: "英语常用词根（5）"
                             recognitive
                         </td>
                         <td>
-                            //
+                            /[ˌrekəɡ'nɪʃn]/
                         </td>
                         <td>
                             [re-;co-;gnit;-ive a.]
@@ -183,7 +183,7 @@ summary: "英语常用词根（5）"
                             agnostically
                         </td>
                         <td>
-                            //
+                            /[æɡ'nɒstɪk]/
                         </td>
                         <td>
                             [（agnostic;-al a.）-ly ad.]
@@ -225,7 +225,7 @@ summary: "英语常用词根（5）"
                             precognitive
                         </td>
                         <td>
-                            //
+                            /[ˌpriːkɒɡ'nɪʃn]/
                         </td>
                         <td>
                             [pre-;cognitive a.]
@@ -825,7 +825,7 @@ summary: "英语常用词根（5）"
                             cryptogrammic
                         </td>
                         <td>
-                            //
+                            /[krɪp'təɡræmɪk]/
                         </td>
                         <td>
                             [cryptogram(m);-ic a.]
@@ -1047,7 +1047,7 @@ summary: "英语常用词根（5）"
                             ambitionless
                         </td>
                         <td>
-                            //
+                            /[æm'bɪʃnles]/
                         </td>
                         <td>
                             [ambition;-less a.]
@@ -1313,7 +1313,7 @@ summary: "英语常用词根（5）"
                             seditionist
                         </td>
                         <td>
-                            //
+                            /[sɪ'dɪʃn]/
                         </td>
                         <td>
                             [sedition;-ist n.]
@@ -2457,7 +2457,7 @@ summary: "英语常用词根（5）"
                             delator
                         </td>
                         <td>
-                            //
+                            /['dɪlətə]/
                         </td>
                         <td>
                             [delat(e);-or n.]

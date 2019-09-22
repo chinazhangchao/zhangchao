@@ -783,7 +783,7 @@ summary: "英语常用词根（7）"
                             ordainer
                         </td>
                         <td>
-                            //
+                            /[ɔː'deɪn]/
                         </td>
                         <td>
                             [ordain;-er n.]
@@ -1153,7 +1153,7 @@ summary: "英语常用词根（7）"
                             impartable
                         </td>
                         <td>
-                            //
+                            /[ɪm'pɑːtəbl]/
                         </td>
                         <td>
                             [impart;-able a.]
@@ -1655,7 +1655,7 @@ summary: "英语常用词根（7）"
                             compatriotic
                         </td>
                         <td>
-                            //
+                            /[kəmpætr'ɪɒtɪk]/
                         </td>
                         <td>
                             [compatriot;-ic a.]
@@ -1801,7 +1801,7 @@ summary: "英语常用词根（7）"
                             compellable
                         </td>
                         <td>
-                            //
+                            /[kəm'pel]/
                         </td>
                         <td>
                             [compel(l);-able a.]
@@ -1955,7 +1955,7 @@ summary: "英语常用词根（7）"
                             expellant
                         </td>
                         <td>
-                            //
+                            /[ɪks'pelənt]/
                         </td>
                         <td>
                             [expel(l);-ant/-ent a.]

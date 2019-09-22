@@ -141,7 +141,7 @@ summary: "英语常用词根（10）"
                             obtainer
                         </td>
                         <td>
-                            //
+                            /[əb'teɪn]/
                         </td>
                         <td>
                             [obtain;-er n.]
@@ -155,7 +155,7 @@ summary: "英语常用词根（10）"
                             obtainment
                         </td>
                         <td>
-                            //
+                            /[əb'teɪnmənt]/
                         </td>
                         <td>
                             [obtain;-ment n.]
@@ -295,7 +295,7 @@ summary: "英语常用词根（10）"
                             tenantry
                         </td>
                         <td>
-                            //
+                            /['tenəntrɪ]/
                         </td>
                         <td>
                             [tenant;-ry n.]
@@ -4045,7 +4045,7 @@ summary: "英语常用词根（10）"
                             volubly
                         </td>
                         <td>
-                            //
+                            /['vɒljʊbli]/
                         </td>
                         <td>
                             [volub(le);-ly ad.]

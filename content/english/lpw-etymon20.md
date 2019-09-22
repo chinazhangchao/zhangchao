@@ -327,7 +327,7 @@ summary: "英语常用词根（20）"
                             festive
                         </td>
                         <td>
-                            //
+                            /['festɪv]/
                         </td>
                         <td>
                             [fest;-ive a.]
@@ -528,20 +528,6 @@ summary: "英语常用词根（20）"
                         </td>
                         <td>
                             n.裂缝； 沟； 裂伤
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            fig, fict
-                        </td>
-                        <td>
-                            //
-                        </td>
-                        <td>
-                            [L fingere, fictum]
-                        </td>
-                        <td>
-                            #NAME?
                         </td>
                     </tr>
                 </tbody>

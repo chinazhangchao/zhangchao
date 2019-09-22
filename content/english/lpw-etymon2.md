@@ -99,7 +99,7 @@ summary: "英语常用词根（2）"
                             capturer
                         </td>
                         <td>
-                            //
+                            /'kæptʃərər/
                         </td>
                         <td>
                             [captur(e);-er n.]
@@ -108,7 +108,7 @@ summary: "英语常用词根（2）"
                             n.捕获者
                         </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>
                             capturable
                         </td>
@@ -121,7 +121,7 @@ summary: "英语常用词根（2）"
                         <td>
                             a.可捕获的
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td>
                             captive
@@ -1629,7 +1629,7 @@ summary: "英语常用词根（2）"
                             discernment
                         </td>
                         <td>
-                            //
+                            /dɪ'sɜːnmənt/
                         </td>
                         <td>
                             [discern;-ment n.]
@@ -2215,7 +2215,7 @@ summary: "英语常用词根（2）"
                             claimer
                         </td>
                         <td>
-                            //
+                            /k'leɪmə/
                         </td>
                         <td>
                             [claim;-er n.]
@@ -3452,7 +3452,7 @@ summary: "英语常用词根（2）"
                             n.① small bedroom小卧室② any small room小室
                         </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>
                             cubicular
                         </td>
@@ -3465,7 +3465,7 @@ summary: "英语常用词根（2）"
                         <td>
                             a.寝室的
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td>
                             recumbent

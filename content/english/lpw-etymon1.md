@@ -2303,7 +2303,7 @@ summary: "英语常用词根（1）"
                             biophysicist
                         </td>
                         <td>
-                            //
+                            /ˌbaɪəʊ'fɪzɪsɪst/
                         </td>
                         <td>
                             [biophysic(s);-ist n.]

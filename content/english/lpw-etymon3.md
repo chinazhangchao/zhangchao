@@ -38,7 +38,7 @@ summary: "英语常用词根（3）"
                             n. system of formal worship or religious belief礼拜；迷信：the cult of personality个人崇拜
                         </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>
                             cultism
                         </td>
@@ -65,7 +65,7 @@ summary: "英语常用词根（3）"
                         <td>
                             n.热衷于搞迷信崇拜的人
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td>
                             cultivate
@@ -239,7 +239,7 @@ summary: "英语常用词根（3）"
                             aquacultural
                         </td>
                         <td>
-                            //
+                            /'ækwəkʌltʃə(r)/
                         </td>
                         <td>
                             [aquacultur(e);-al a.]
@@ -1027,7 +1027,7 @@ summary: "英语常用词根（3）"
                             encyclopaedism
                         </td>
                         <td>
-                            //
+                            /ensaɪkləʊ'piːdɪzəm/
                         </td>
                         <td>
                             [encyclopaed(ia);-ism n.]

@@ -653,7 +653,7 @@ summary: "英语常用词根（30）"
                             nihility
                         </td>
                         <td>
-                            //
+                            /[naɪ'hɪlɪtɪ]/
                         </td>
                         <td>
                             [sport;oram;-a n.]

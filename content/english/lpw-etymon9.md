@@ -825,7 +825,7 @@ summary: "英语常用词根（9）"
                             persecutee
                         </td>
                         <td>
-                            //
+                            /['pɜːsɪkjuːt]/
                         </td>
                         <td>
                             [persecut(e);-ee n.]
@@ -1265,7 +1265,7 @@ summary: "英语常用词根（9）"
                             assessable
                         </td>
                         <td>
-                            //
+                            /[ə'sesəbl]/
                         </td>
                         <td>
                             [assess;-able a.]
@@ -1327,7 +1327,7 @@ summary: "英语常用词根（9）"
                             signless
                         </td>
                         <td>
-                            //
+                            /['saɪnles]/
                         </td>
                         <td>
                             [sign n.;-less a.]
@@ -2661,7 +2661,7 @@ summary: "英语常用词根（9）"
                             perspirable
                         </td>
                         <td>
-                            //
+                            /[pɜːs'pɪrəbl]/
                         </td>
                         <td>
                             [perspir(e);-able a.]
@@ -3037,7 +3037,7 @@ summary: "英语常用词根（9）"
                             contactual
                         </td>
                         <td>
-                            //
+                            /['kɒntækt]/
                         </td>
                         <td>
                             [contact n.;-u-;-al a.]

@@ -539,7 +539,7 @@ summary: "英语常用词根（4）"
                             fideist
                         </td>
                         <td>
-                            //
+                            /[faɪ'diːɪst]/
                         </td>
                         <td>
                             [fide;-ist n.]
@@ -895,7 +895,7 @@ summary: "英语常用词根（4）"
                             confinable
                         </td>
                         <td>
-                            //
+                            /[kən'faɪn]/
                         </td>
                         <td>
                             [confin(e);-albe a.]
@@ -2137,7 +2137,7 @@ summary: "英语常用词根（4）"
                             refractable
                         </td>
                         <td>
-                            //
+                            /[rɪf'ræktəbl]/
                         </td>
                         <td>
                             [refract;-able a.]
@@ -2883,7 +2883,7 @@ summary: "英语常用词根（4）"
                             ingestive
                         </td>
                         <td>
-                            //
+                            /[ɪnd'ʒestɪv]/
                         </td>
                         <td>
                             [ingest;-ive n.]

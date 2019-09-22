@@ -425,7 +425,7 @@ summary: "英语常用词根（34）"
                             irradiate
                         </td>
                         <td>
-                            //
+                            /[ɪ'reɪdieɪt]/
                         </td>
                         <td>
                             [ir-(in-);radi;-ate v.]

@@ -493,7 +493,7 @@ summary: "英语常用词根（13）"
                             coaxial
                         </td>
                         <td>
-                            //
+                            /[kəʊ'æksɪəl]/
                         </td>
                         <td>
                             [co-;ax(i);-al a.]

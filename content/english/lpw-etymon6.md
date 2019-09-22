@@ -929,7 +929,7 @@ summary: "英语常用词根（6）"
                             illusional
                         </td>
                         <td>
-                            //
+                            /[ɪ'luːʒnəl]/
                         </td>
                         <td>
                             [illusion;-al a.]
@@ -1117,7 +1117,7 @@ summary: "英语常用词根（6）"
                             manualism
                         </td>
                         <td>
-                            //
+                            /['mænjuəlɪzəm]/
                         </td>
                         <td>
                             [manual n.;-ism n.]
@@ -1369,7 +1369,7 @@ summary: "英语常用词根（6）"
                             maintainable
                         </td>
                         <td>
-                            //
+                            /[meɪn'teɪnəbl]/
                         </td>
                         <td>
                             [maintain;-able a.]
@@ -2841,7 +2841,7 @@ summary: "英语常用词根（6）"
                             demobilization
                         </td>
                         <td>
-                            //
+                            /[dɪˌməʊbəlaɪ'zeɪʃn]/
                         </td>
                         <td>
                             [demobiliz(e);-ation n.]

@@ -800,20 +800,6 @@ summary: "英语常用词根（39）"
                             a.放热的
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            thes, thet
-                        </td>
-                        <td>
-                            //
-                        </td>
-                        <td>
-                            [GK tithenai]
-                        </td>
-                        <td>
-                            #NAME?
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>

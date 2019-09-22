@@ -445,7 +445,7 @@ summary: "英语常用词根（23）"
                             hospitality
                         </td>
                         <td>
-                            //
+                            /[ˌhɒspɪ'tæləti]/
                         </td>
                         <td>
                             [hospit;-ality n.]

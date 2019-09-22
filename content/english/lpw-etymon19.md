@@ -853,7 +853,7 @@ summary: "英语常用词根（19）"
                             antifebrine
                         </td>
                         <td>
-                            //
+                            /[æntɪ'fiːbrɪn]/
                         </td>
                         <td>
                             [anti-;febr;-ine n.]

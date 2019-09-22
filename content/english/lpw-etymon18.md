@@ -743,7 +743,7 @@ summary: "英语常用词根（18）"
                             dynasty
                         </td>
                         <td>
-                            //
+                            /['dɪnəsti]/
                         </td>
                         <td>
                             [dynast;-y n. ]
