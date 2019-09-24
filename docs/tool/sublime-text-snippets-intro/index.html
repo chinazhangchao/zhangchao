@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.57.2" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sublime Text使用代码片段Snippets高效写作 | 张超的博客</title>
+    <meta property="og:title" content="Sublime Text使用代码片段Snippets高效写作 - 张超的博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content="2019-09-24T21:47:24&#43;08:00">
+        
+        
+    <meta property="article:modified_time" content="2019-09-24T21:47:24&#43;08:00">
+        
+    <meta name="Keywords" content="[sublime text]">
+    <meta name="description" content="Sublime Text使用代码片段Snippets高效写作">
+        
+    <meta name="author" content="张超">
+    <meta property="og:url" content="http://zhangchao.xyz/tool/sublime-text-snippets-intro/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    
+        <link rel="stylesheet" href="/css/prism.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5169380334846370",
+        enable_page_level_ads: true
+      });
+    </script>
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?994507e8de0120f288a9ff4886988e22";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+    
+    
+</head>
+
+<body>
+<header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://zhangchao.xyz/">
+                        张超的博客
+                    </a>
+                
+                <p class="description">记录一些思考</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="" href="http://zhangchao.xyz/">首页</a>
+                    
+                    <a  href="http://zhangchao.xyz/archives/" title="归档">归档</a>
+                    
+                    <a  href="http://zhangchao.xyz/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="body">
+    <div class="container">
+        <div class="col-group">
+
+            <div class="col-8" id="main">
+                <div class="res-cons">
+                    <article class="post">
+                        <header>
+                            <h1 class="post-title">Sublime Text使用代码片段Snippets高效写作</h1>
+                        </header>
+                        <date class="post-meta meta-date">
+                            2019年9月24日
+                        </date>
+                        
+                        <div class="post-meta">
+                            <span>|</span>
+                            
+                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7">工具</a></span>
+                            
+                        </div>
+                        
+                        
+                        
+                        <div class="post-content">
+                            <p>Snippets是可以复用的代码片段模板，可以帮助你快速输入大量重复内容，极大提高写作效率。</p>
+
+<p>在Sublime Text中新建Snippet，选择菜单：Tools-&gt;Developer-&gt;New Snippet&hellip;，Sublime Text会生成一个Snippet模板。</p>
+
+<p><img src="/tool/sublime-text-snippets-intro/1.png" style="width:600px;"/></p>
+
+<pre><code>&lt;snippet&gt;
+	&lt;content&gt;&lt;![CDATA[
+Hello, ${1:this} is a ${2:snippet}.
+]]&gt;&lt;/content&gt;
+	&lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;
+	&lt;!-- &lt;tabTrigger&gt;hello&lt;/tabTrigger&gt; --&gt;
+	&lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;
+	&lt;!-- &lt;scope&gt;source.python&lt;/scope&gt; --&gt;
+&lt;/snippet&gt;
+
+</code></pre>
+
+<p>将模板内容修改如下：</p>
+
+<pre><code>&lt;snippet&gt;
+	&lt;content&gt;&lt;![CDATA[
+Hello, this is a snippet.
+]]&gt;&lt;/content&gt;
+	&lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;
+	&lt;tabTrigger&gt;hello&lt;/tabTrigger&gt;
+	&lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;
+	&lt;scope&gt;source.python&lt;/scope&gt;
+&lt;/snippet&gt;
+
+</code></pre>
+
+<p>简单介绍一下各节点含义（看不懂没关系，后面的实际操作会让你豁然开朗）：
+* <code>content</code>节点内容表示实际的代码片段。
+* <code>tabTrigger</code>节点内容表示用来输入代码片段的快捷字符串。
+* <code>scope</code>节点内容表示代码片段会在哪种上下文环境下激活, 比如上面代码定义了source.python, 意思是这段代码片段会在python语言环境下激活。<strong>可以从菜单：Tools-&gt;Developer-&gt;Show Scope Name查看当前文件扩展名对应的Scope。</strong></p>
+
+<p>把修改后的模板保存为文件<code>hello.sublime-snippet</code>。</p>
+
+<p><img src="/tool/sublime-text-snippets-intro/2.png" style="width:600px;"/></p>
+
+<p>新建文件<code>t.py</code>，在文件中输入<code>hello</code>，按下<code>Tab</code>键，则输出如下：
+<img src="/tool/sublime-text-snippets-intro/3.png" style="width:600px;"/></p>
+
+<p>好了，这就是Snippet最基本的用法，是不是很简单很强大！更多高级功能请参考官方文档<a href="http://docs.sublimetext.info/en/latest/extensibility/snippets.html">http://docs.sublimetext.info/en/latest/extensibility/snippets.html</a></p>
+
+<p>附常见语言对应Scope值：</p>
+
+<pre><code>ActionScript: source.actionscript.2
+AppleScript: source.applescript
+ASP: source.asp
+Batch FIle: source.dosbatch
+C#: source.cs
+C++: source.c++
+Clojure: source.clojure
+CoffeeScript: source.coffee
+CSS: source.css
+D: source.d
+Diff: source.diff
+Erlang: source.erlang
+Go: source.go
+GraphViz: source.dot
+Groovy: source.groovy
+Haskell: source.haskell
+HTML: text.html(.basic)
+JSP: text.html.jsp
+Java: source.java
+Java Properties: source.java-props
+Java Doc: text.html.javadoc
+JSON: source.json
+Javascript: source.js
+BibTex: source.bibtex
+Latex Log: text.log.latex
+Latex Memoir: text.tex.latex.memoir
+Latex: text.tex.latex
+LESS: source.css.less
+TeX: text.tex
+Lisp: source.lisp
+Lua: source.lua
+MakeFile: source.makefile
+Markdown: text.html.markdown
+Multi Markdown: text.html.markdown.multimarkdown
+Matlab: source.matlab
+Objective-C: source.objc
+Objective-C++: source.objc++
+OCaml campl4: source.camlp4.ocaml
+OCaml: source.ocaml
+OCamllex: source.ocamllex
+Perl: source.perl
+PHP: source.php
+Regular Expression(python): source.regexp.python
+Python: source.python
+R Console: source.r-console
+R: source.r
+Ruby on Rails: source.ruby.rails
+Ruby HAML: text.haml
+SQL(Ruby): source.sql.ruby
+Regular Expression: source.regexp
+RestructuredText: text.restructuredtext
+Ruby: source.ruby
+SASS: source.sass
+Scala: source.scala
+Shell Script: source.shell
+SQL: source.sql
+Stylus: source.stylus
+TCL: source.tcl
+HTML(TCL): text.html.tcl
+Plain text: text.plain
+Textile: text.html.textile
+XML: text.xml
+XSL: text.xml.xsl
+YAML: source.yaml
+</code></pre>
+                        </div>
+
+                        
+
+
+                        
+
+<div class="post-archive">
+    <h2>相关文章</h2>
+    <ul class="listing">
+        
+        <li><a href="/tool/sublime-text-3-increase-recent-file-number-mac/">Sublime Text 3增加最近打开的文件数量（Mac）</a></li>
+        
+        <li><a href="/tool/sublime-text-3-increase-recent-file-number-windows/">Sublime Text 3增加最近打开的文件数量（Windows）</a></li>
+        
+    </ul>
+</div>
+
+
+                        <div class="post-meta meta-tags">
+                            
+                            <ul class="clearfix">
+                                
+                                <li><a href="http://zhangchao.xyz/tags/sublime-text">sublime text</a></li>
+                                
+                            </ul>
+                            
+                        </div>
+                    </article>
+                    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "zhangchao-xyz" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+                </div>
+            </div>
+            <div id="secondary">
+    <section class="widget">
+        <form id="search" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://zhangchao.xyz/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://zhangchao.xyz/tool/sublime-text-snippets-intro/" title="Sublime Text使用代码片段Snippets高效写作">Sublime Text使用代码片段Snippets高效写作</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/english/lpw-etymon-index/" title="英语常用词根目录">英语常用词根目录</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/" title="Sublime Text 3增加最近打开的文件数量（Mac）">Sublime Text 3增加最近打开的文件数量（Mac）</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/" title="Sublime Text 3增加最近打开的文件数量（Windows）">Sublime Text 3增加最近打开的文件数量（Windows）</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/tool/pdf-to-text/" title="扫描版PDF文档转文本方法">扫描版PDF文档转文本方法</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/ruby/string-encoding/" title="Ruby字符串编码">Ruby字符串编码</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/leetcode/num2/" title="LeetCode-2. Add Two Numbers（两数相加）C&#43;&#43;实现">LeetCode-2. Add Two Numbers（两数相加）C&#43;&#43;实现</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/leetcode/num1/" title="LeetCode-1. Two Sum（两数之和）C&#43;&#43;实现">LeetCode-1. Two Sum（两数之和）C&#43;&#43;实现</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/leetcode/summary/" title="LeetCode题解汇总">LeetCode题解汇总</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/rails/mime-parse/" title="Rails中的MIME类型解析规则">Rails中的MIME类型解析规则</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://zhangchao.xyz/categories/c&#43;&#43;/">c&#43;&#43;(6)</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/categories/leetcode/">leetcode(3)</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/categories/rails/">rails(1)</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/categories/ruby/">ruby(3)</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/">工具(4)</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/categories/%E7%AE%97%E6%B3%95/">算法(3)</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/">英语(44)</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/categories/%E8%B4%A2%E5%AF%8C/">财富(1)</a>
+    </li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://zhangchao.xyz/tags/c&#43;&#43;/">c&#43;&#43;</a>
+    
+    <a href="http://zhangchao.xyz/tags/leetcode/">leetcode</a>
+    
+    <a href="http://zhangchao.xyz/tags/rails/">rails</a>
+    
+    <a href="http://zhangchao.xyz/tags/ruby/">ruby</a>
+    
+    <a href="http://zhangchao.xyz/tags/sublime-text/">sublime-text</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E5%A0%86%E6%8E%92%E5%BA%8F/">堆排序</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">归并排序</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">快速排序</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">构造函数</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/">析构函数</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C4%E5%B0%8F%E6%97%B6/">每周工作4小时</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E8%8B%B1%E8%AF%AD/">英语</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E8%AF%8D%E6%A0%B9/">词根</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1/">财富自由</a>
+    
+    <a href="http://zhangchao.xyz/tags/%E8%B5%9A%E9%92%B1/">赚钱</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://zhangchao.xyz/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        &copy; 2019 <a href="http://zhangchao.xyz/">张超的博客 By 张超</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    <script type="text/javascript">
+    
+    (function(){
+        $("pre code").parent().addClass("line-numbers")
+    }())
+
+    window.MathJax = {
+        tex2jax: {
+            inlineMath: [ ['$','$'] ],
+            processEscapes: true
+        }
+    };
+    </script>
+    <script type="text/javascript" src="/js/prism.js" async="true"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-144916691-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+<script type="text/javascript" src="/layui/layui.all.js" async=""></script>
+
+
+</body>
+</html>
