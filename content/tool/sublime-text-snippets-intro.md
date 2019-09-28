@@ -40,12 +40,13 @@ Hello, this is a snippet.
 
 ```
 
-简单介绍一下各节点含义（看不懂没关系，后面的实际操作会让你豁然开朗）：
+简单介绍一下各节点含义（看不懂没关系，后面的实际操作会让你豁然开朗，可以回头再看`^_^`）：
+
 * `content`节点内容表示实际的代码片段。
 * `tabTrigger`节点内容表示用来输入代码片段的快捷字符串。
-* `scope`节点内容表示代码片段会在哪种上下文环境下激活, 比如上面代码定义了source.python, 意思是这段代码片段会在python语言环境下激活。**可以从菜单：Tools->Developer->Show Scope Name查看当前文件扩展名对应的Scope。**
+* `scope`节点内容表示代码片段会在哪种上下文环境下激活, 比如上面代码定义了source.python, 意思是这段代码片段会在python语言环境下激活。**注意：Scope不是文件扩展名，可以从菜单：Tools->Developer->Show Scope Name查看当前文件扩展名对应的Scope。**
 
-把修改后的模板保存为文件`hello.sublime-snippet`。
+把修改后的模板保存为文件`hello.sublime-snippet`（保存目录保持默认打开的目录即可）。
 
 <img src="/tool/sublime-text-snippets-intro/2.png" style="width:600px;"/>
 
@@ -53,6 +54,13 @@ Hello, this is a snippet.
 <img src="/tool/sublime-text-snippets-intro/3.png" style="width:600px;"/>
 
 好了，这就是Snippet最基本的用法，是不是很简单很强大！更多高级功能请参考官方文档[http://docs.sublimetext.info/en/latest/extensibility/snippets.html](http://docs.sublimetext.info/en/latest/extensibility/snippets.html)
+
+**一个常见问题：针对Markdown文件的Snippet没有出现在自动补全列表中**
+
+解决办法是选择菜单Preferences->Settings，在右侧的窗口中增加如下设置：
+```
+"auto_complete_selector": "meta.tag - punctuation.definition.tag.begin, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc, text",
+```
 
 附常见语言对应Scope值：
 ```

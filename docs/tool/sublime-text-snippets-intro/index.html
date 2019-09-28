@@ -28,7 +28,6 @@
         <link rel="stylesheet" href="/css/prism.css">
     
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/layui/css/layui.css">
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -136,12 +135,15 @@ Hello, this is a snippet.
 
 </code></pre>
 
-<p>简单介绍一下各节点含义（看不懂没关系，后面的实际操作会让你豁然开朗）：
-* <code>content</code>节点内容表示实际的代码片段。
-* <code>tabTrigger</code>节点内容表示用来输入代码片段的快捷字符串。
-* <code>scope</code>节点内容表示代码片段会在哪种上下文环境下激活, 比如上面代码定义了source.python, 意思是这段代码片段会在python语言环境下激活。<strong>可以从菜单：Tools-&gt;Developer-&gt;Show Scope Name查看当前文件扩展名对应的Scope。</strong></p>
+<p>简单介绍一下各节点含义（看不懂没关系，后面的实际操作会让你豁然开朗，可以回头再看<code>^_^</code>）：</p>
 
-<p>把修改后的模板保存为文件<code>hello.sublime-snippet</code>。</p>
+<ul>
+<li><code>content</code>节点内容表示实际的代码片段。</li>
+<li><code>tabTrigger</code>节点内容表示用来输入代码片段的快捷字符串。</li>
+<li><code>scope</code>节点内容表示代码片段会在哪种上下文环境下激活, 比如上面代码定义了source.python, 意思是这段代码片段会在python语言环境下激活。<strong>注意：Scope不是文件扩展名，可以从菜单：Tools-&gt;Developer-&gt;Show Scope Name查看当前文件扩展名对应的Scope。</strong></li>
+</ul>
+
+<p>把修改后的模板保存为文件<code>hello.sublime-snippet</code>（保存目录保持默认打开的目录即可）。</p>
 
 <p><img src="/tool/sublime-text-snippets-intro/2.png" style="width:600px;"/></p>
 
@@ -149,6 +151,13 @@ Hello, this is a snippet.
 <img src="/tool/sublime-text-snippets-intro/3.png" style="width:600px;"/></p>
 
 <p>好了，这就是Snippet最基本的用法，是不是很简单很强大！更多高级功能请参考官方文档<a href="http://docs.sublimetext.info/en/latest/extensibility/snippets.html">http://docs.sublimetext.info/en/latest/extensibility/snippets.html</a></p>
+
+<p><strong>一个常见问题：针对Markdown文件的Snippet没有出现在自动补全列表中</strong></p>
+
+<p>解决办法是选择菜单Preferences-&gt;Settings，在右侧的窗口中增加如下设置：</p>
+
+<pre><code>&quot;auto_complete_selector&quot;: &quot;meta.tag - punctuation.definition.tag.begin, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc, text&quot;,
+</code></pre>
 
 <p>附常见语言对应Scope值：</p>
 
@@ -291,10 +300,6 @@ YAML: source.yaml
     </li>
     
     <li>
-        <a href="http://zhangchao.xyz/english/lpw-etymon-index/" title="英语常用词根目录">英语常用词根目录</a>
-    </li>
-    
-    <li>
         <a href="http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/" title="Sublime Text 3增加最近打开的文件数量（Mac）">Sublime Text 3增加最近打开的文件数量（Mac）</a>
     </li>
     
@@ -324,6 +329,10 @@ YAML: source.yaml
     
     <li>
         <a href="http://zhangchao.xyz/rails/mime-parse/" title="Rails中的MIME类型解析规则">Rails中的MIME类型解析规则</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/ruby/magic-comment/" title="Ruby 2.3中的魔法注释# frozen_string_literal: true">Ruby 2.3中的魔法注释# frozen_string_literal: true</a>
     </li>
     
 </ul>
@@ -360,10 +369,6 @@ YAML: source.yaml
     </li>
     
     <li>
-        <a href="http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/">英语(44)</a>
-    </li>
-    
-    <li>
         <a href="http://zhangchao.xyz/categories/%E8%B4%A2%E5%AF%8C/">财富(1)</a>
     </li>
     
@@ -397,10 +402,6 @@ YAML: source.yaml
     <a href="http://zhangchao.xyz/tags/%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/">析构函数</a>
     
     <a href="http://zhangchao.xyz/tags/%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C4%E5%B0%8F%E6%97%B6/">每周工作4小时</a>
-    
-    <a href="http://zhangchao.xyz/tags/%E8%8B%B1%E8%AF%AD/">英语</a>
-    
-    <a href="http://zhangchao.xyz/tags/%E8%AF%8D%E6%A0%B9/">词根</a>
     
     <a href="http://zhangchao.xyz/tags/%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1/">财富自由</a>
     
@@ -464,7 +465,6 @@ if (!doNotTrack) {
 
 
 
-<script type="text/javascript" src="/layui/layui.all.js" async=""></script>
 
 
 </body>
