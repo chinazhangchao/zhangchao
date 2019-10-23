@@ -4,7 +4,42 @@
   
   <url>
     <loc>http://zhangchao.xyz/categories/</loc>
-    <lastmod>2019-09-24T21:47:24+08:00</lastmod>
+    <lastmod>2019-10-23T20:43:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/english/</loc>
+    <lastmod>2019-10-23T20:43:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/</loc>
+    <lastmod>2019-10-23T20:43:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E5%8D%95%E8%AF%8D/</loc>
+    <lastmod>2019-10-23T20:43:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/english/word-things-1/</loc>
+    <lastmod>2019-10-23T20:43:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/</loc>
+    <lastmod>2019-10-23T20:43:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E8%8B%B1%E8%AF%AD/</loc>
+    <lastmod>2019-10-23T20:43:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/</loc>
+    <lastmod>2019-10-23T20:43:21+08:00</lastmod>
   </url>
   
   <url>
@@ -18,22 +53,12 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/tags/</loc>
-    <lastmod>2019-09-24T21:47:24+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://zhangchao.xyz/tool/</loc>
     <lastmod>2019-09-24T21:47:24+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2019-09-24T21:47:24+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zhangchao.xyz/</loc>
     <lastmod>2019-09-24T21:47:24+08:00</lastmod>
   </url>
   
@@ -128,7 +153,7 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/categories/rails/</loc>
+    <loc>http://zhangchao.xyz/tags/rails/</loc>
     <lastmod>2019-08-24T11:46:54+08:00</lastmod>
   </url>
   
@@ -138,7 +163,7 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/tags/rails/</loc>
+    <loc>http://zhangchao.xyz/categories/rails/</loc>
     <lastmod>2019-08-24T11:46:54+08:00</lastmod>
   </url>
   
