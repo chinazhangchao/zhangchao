@@ -7,6 +7,9 @@ publishDir = "docs"
 googleAnalytics = "UA-144916691-1"
 disqusShortname = "zhangchao-xyz"
 
+[markup.goldmark.renderer]
+  unsafe= true
+
 [author]
   name = "张超"
 

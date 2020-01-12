@@ -4,16 +4,71 @@
   
   <url>
     <loc>http://zhangchao.xyz/categories/</loc>
-    <lastmod>2019-11-19T07:26:21+08:00</lastmod>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/english/</loc>
-    <lastmod>2019-11-19T07:26:21+08:00</lastmod>
+    <loc>http://zhangchao.xyz/math/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://zhangchao.xyz/tags/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E5%A5%BD%E4%B9%A6/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E6%95%99%E6%9D%90/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/categories/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/math/best-math-books/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2020-01-12T15:50:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/english/</loc>
     <lastmod>2019-11-19T07:26:21+08:00</lastmod>
   </url>
   
@@ -24,11 +79,6 @@
   
   <url>
     <loc>http://zhangchao.xyz/english/word-things-2/</loc>
-    <lastmod>2019-11-19T07:26:21+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zhangchao.xyz/</loc>
     <lastmod>2019-11-19T07:26:21+08:00</lastmod>
   </url>
   
@@ -158,12 +208,12 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/tags/rails/</loc>
+    <loc>http://zhangchao.xyz/rails/</loc>
     <lastmod>2019-08-24T11:46:54+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/rails/</loc>
+    <loc>http://zhangchao.xyz/tags/rails/</loc>
     <lastmod>2019-08-24T11:46:54+08:00</lastmod>
   </url>
   

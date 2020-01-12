@@ -18,7 +18,6 @@
       
       <guid>http://zhangchao.xyz/cpp/constructor-destrutor-order/</guid>
       <description>&lt;h2 id=&#34;构造函数执行顺序&#34;&gt;构造函数执行顺序&lt;/h2&gt;
-
 &lt;ol&gt;
 &lt;li&gt;调用虚基类构造函数（如有多个则按虚基类声明顺序从左到右）&lt;/li&gt;
 &lt;li&gt;调用基类构造函数（如有多个则按基类声明顺序从左到右）&lt;/li&gt;
