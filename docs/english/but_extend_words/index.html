@@ -7,20 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ruby 2.3中的魔法注释# frozen_string_literal: true | 张超的博客</title>
-    <meta property="og:title" content="Ruby 2.3中的魔法注释# frozen_string_literal: true - 张超的博客">
+    <title>巧记单词——用but记住10个单词 | 张超的博客</title>
+    <meta property="og:title" content="巧记单词——用but记住10个单词 - 张超的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content="2019-08-24T11:44:41&#43;08:00">
+    <meta property="article:published_time" content="2020-02-09T16:01:10&#43;08:00">
         
         
-    <meta property="article:modified_time" content="2019-08-24T11:44:41&#43;08:00">
+    <meta property="article:modified_time" content="2020-02-09T16:01:10&#43;08:00">
         
-    <meta name="Keywords" content="[Ruby frozen_string_literal]">
-    <meta name="description" content="Ruby 2.3中的魔法注释# frozen_string_literal: true">
+    <meta name="Keywords" content="[英语 单词 背单词]">
+    <meta name="description" content="巧记单词——用but记住10个单词">
         
     <meta name="author" content="张超">
-    <meta property="og:url" content="http://zhangchao.xyz/ruby/magic-comment/">
+    <meta property="og:url" content="http://zhangchao.xyz/english/but_extend_words/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
@@ -87,56 +87,90 @@
                 <div class="res-cons">
                     <article class="post">
                         <header>
-                            <h1 class="post-title">Ruby 2.3中的魔法注释# frozen_string_literal: true</h1>
+                            <h1 class="post-title">巧记单词——用but记住10个单词</h1>
                         </header>
                         <date class="post-meta meta-date">
-                            2019年8月24日
+                            2020年2月9日
                         </date>
                         
                         <div class="post-meta">
                             <span>|</span>
                             
-                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/ruby">Ruby</a></span>
+                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD">英语</a></span>
                             
                         </div>
                         
                         
                         
                         <div class="post-content">
-                            <h1 id="背景">背景</h1>
-<p>为了提高程序性能，<strong>在Ruby 3中，字符串字面量在所有文件中默认被冻结。</strong></p>
-<p>为了过渡，Ruby2.3增加了一个魔法注释：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-</code></pre></div><h1 id="作用">作用</h1>
-<p>它告诉Ruby，文件中的所有字符串字面量都被隐式冻结，不可修改，就像每一个字符串都调用了<code>freeze</code>方法一样。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">string</span><span style="color:#e6db74">&#34;</span>
-puts s<span style="color:#f92672">.</span>frozen?      <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">12</span><span style="color:#e6db74">&#34;</span>           <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> can<span style="color:#960050;background-color:#1e0010">&#39;</span>t modify frozen String (<span style="color:#66d9ef">RuntimeError</span>)
-</code></pre></div><h1 id="使用方式">使用方式</h1>
+                            <p>本篇罗列一下单词but<a href="https://www.jianshu.com/p/38f5a4b6943c">衍生</a>出的单词。</p>
 <ul>
-<li>
-<p>把该注释加在文件的第一行。</p>
-</li>
-<li>
-<p>另外，在Ruby 2.3中使用<code>--enable=frozen-string-literal</code>标志运行ruby，也会默认冻结所有文件中的字符串字面量。在单个文件中可以通过<code># frozen_string_literal: false</code>覆盖全局设置（Ruby 3中也可以用此方式覆盖全局设置）。</p>
-</li>
+<li>but [bət] conj. 但是；而是；除了；只因为 | prep. 除…以外； | adv. 只；不过；只是；另一方面 | n. 借口；推辞；但是；反对 | pron. [关系代词，意义相当于 who…not, which…not]； | vt. 对…说“但是”；</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ruby --enable<span style="color:#f92672">=</span>frozen-string-literal t.rb
-</code></pre></div><h1 id="如何修改">如何修改</h1>
-<p>如果想要修改字符串字面量怎么办？</p>
-<p><strong>无论全局或每个文件如何设置，可以使用一元+运算符（注意优先级）来产生非冻结字符串或调用<code>dup</code>方法来对其进行复制</strong>：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-(<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">false</span>
-<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>dup<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">false</span>
-</code></pre></div><p>还可以使用一元-运算符冻结可变（未冻结）字符串。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">(<span style="color:#f92672">-</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-</code></pre></div>
+<p>首先修改首字母衍生的词：</p>
+<ul>
+<li>cut [kʌt] vt.&amp; vi. 将（某物）切开（或分割）； | vt. 削减；剪切；切成；删剪 | vi. 电影；（为决定谁先出牌等）切牌；可被切割；可用于切割 | n. 切口；削减；剪裁；切片</li>
+<li>hut [hʌt] n. 小屋；棚屋；临时营房；牢房 | v. 使住临时营房；驻扎；</li>
+<li>nut [nʌt] n. 螺母，螺帽；坚果，坚果果仁；难对付的人；[乐]弓根 | v. 采坚果；拾坚果；</li>
+<li>out [aʊt] adv. 出局；在外，在外部；完全，彻底；出版 | prep. （表示来源）从；（从…里）出来；（表示不在原状态）脱离；离去 | vt. 使熄灭；揭露；驱逐； | adj. 外面的；出局的；下台的；外围的 | n. 不流行；出局；</li>
+<li>put [pʊt] vt. 放；表达；给予（重视、信任、价值等）；使处于（某种状态） | vt.&amp; vi. 使感觉到；使受到…的影响； | vi. 说；猛推；将…送往；使与…连接 | n. [方]笨蛋，怪人；对策； | adj. 固定的；不动的；</li>
+<li>gut [gʌt] n. 勇气；内脏；直觉；肠；肚子 | adj. 本能的，直觉的； | vt. 毁坏（建筑物等）的内部；取出…的内脏；</li>
+</ul>
+<p>连成一句话：</p>
+<p><strong>小屋（hut）里放（put）了很多坚果（nut），我没用勇气（gut）切开（cut）吃。</strong></p>
+<p>修改第二个字母衍生的词：</p>
+<ul>
+<li>bat [bæt] n. 蝙蝠；（棒球等的）球棒，（网球等的）球拍；| vt.&amp; vi. 用球板击球，用球棒击球；</li>
+<li>bet [bet] n. 打赌，赌博，赌注； | vi. 当然，的确；打赌(on,against,with)； | vt. 赌博；与…打赌；下赌注；确信</li>
+<li>bit [bɪt] n. 一点，一块；少量；一会儿，一转眼；[计] 比特（二进位制信息单位） | adj. 很小的，微不足道的； | adv. [口语]相当，有点儿，或多或少； | v. 咬，叮( bite的过去式)；</li>
+</ul>
+<p>连成一句话：</p>
+<p><strong>我敢打赌（bet）蝙蝠（bat）不吃球拍（bat），一点（bit）也不吃。</strong></p>
+<p>修改第三个字母衍生的词：</p>
+<ul>
+<li>bud [bʌd] n. 芽，萌芽；花蕾；未成熟的人，少男少女；〈美〉刚进社交界的姑娘 | vi. 发芽，长出蓓蕾；开始发育；芽接；</li>
+<li>bus [bʌs] n. 公共汽车；巴士；大客车； | v. 用公共汽车运送；乘公共汽车；用校车送；收拾 （餐桌）</li>
+<li>buy [baɪ] vt.&amp; vi. 购买，购得； | n. 交易，买卖；便宜货； | vt. 够支付；买通；收买；贿赂</li>
+<li>bug [bʌg] n. 虫子；陷，瑕疵；细菌，病菌；窃听器 | vt. 在…装窃听器；打扰，烦恼；折磨，使痛苦；（使眼球）暴突或变大 | vi. 变大；凸出；</li>
+</ul>
+<p>连成一句话：</p>
+<p><strong>购买的（buy）花蕾（bud）里有一只虫子（bug）。</strong></p>
+<p>把but字母倒序，构成新词tub：</p>
+<ul>
+<li>tub [tʌb] n. 盆；桶；浴缸；</li>
+</ul>
+<p>连成一句话：</p>
+<p><strong>没有浴缸（tub）只是不洗澡的借口（but）。</strong></p>
+<p>在but后面加几个字母：</p>
+<ul>
+<li>butt [bʌt] n. 烟头，屁股；笑柄；大桶 | vt.&amp; vi. 用头撞或顶；碰撞；</li>
+<li>butter [ˈbʌtə(r)] n. 黄油；黄油状的食品；奉承话；焊膏 | vt. 抹黄油于…上；用黄油煎食物；讨好；</li>
+<li>button [ˈbʌtn] n. 按钮；纽扣，扣子；扣状物； | vt. 用纽扣扣紧；钉钮扣于；在…上装钮扣； | vi. 扣住；装有钮扣；扣上钮扣；</li>
+</ul>
+<p>连成一句话：</p>
+<p><strong>屁股（butt）上沾上黄油（butter）了，按这个按钮（button）可以清洗掉。</strong></p>
+<p>本篇的单词！有兴趣的可以自己做成思维导图，随时翻阅！</p>
+<ol>
+<li>but</li>
+<li>cut</li>
+<li>hut</li>
+<li>nut</li>
+<li>out</li>
+<li>put</li>
+<li>gut</li>
+<li>bat</li>
+<li>bet</li>
+<li>bit</li>
+<li>bud</li>
+<li>bus</li>
+<li>buy</li>
+<li>bug</li>
+<li>tub</li>
+<li>butt</li>
+<li>butter</li>
+<li>button</li>
+</ol>
+
                         </div>
 
                         
@@ -148,7 +182,15 @@ s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;<
     <h2>相关文章</h2>
     <ul class="listing">
         
-        <li><a href="/ruby/safe-navigation-operator/">Ruby 安全调用运算符 (&amp;.)</a></li>
+        <li><a href="/english/say_extend_words/">巧记单词——用say记住10个单词</a></li>
+        
+        <li><a href="/english/have_extend_words/">巧记单词——用have记住10个单词</a></li>
+        
+        <li><a href="/english/and_extend_words/">巧记单词——用and记住10个单词</a></li>
+        
+        <li><a href="/english/easy_extend_words/">巧记单词——用easy记住10个单词</a></li>
+        
+        <li><a href="/english/word-things-2/">单词那些事（2）——一览众山小</a></li>
         
     </ul>
 </div>
@@ -158,7 +200,9 @@ s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;<
                             
                             <ul class="clearfix">
                                 
-                                <li><a href="http://zhangchao.xyz/tags/ruby">Ruby</a></li>
+                                <li><a href="http://zhangchao.xyz/tags/%E8%8B%B1%E8%AF%AD">英语</a></li>
+                                
+                                <li><a href="http://zhangchao.xyz/tags/%E5%8D%95%E8%AF%8D">单词</a></li>
                                 
                             </ul>
                             

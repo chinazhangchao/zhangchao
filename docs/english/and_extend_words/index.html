@@ -7,20 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ruby 2.3中的魔法注释# frozen_string_literal: true | 张超的博客</title>
-    <meta property="og:title" content="Ruby 2.3中的魔法注释# frozen_string_literal: true - 张超的博客">
+    <title>巧记单词——用and记住10个单词 | 张超的博客</title>
+    <meta property="og:title" content="巧记单词——用and记住10个单词 - 张超的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content="2019-08-24T11:44:41&#43;08:00">
+    <meta property="article:published_time" content="2020-02-09T15:59:21&#43;08:00">
         
         
-    <meta property="article:modified_time" content="2019-08-24T11:44:41&#43;08:00">
+    <meta property="article:modified_time" content="2020-02-09T15:59:21&#43;08:00">
         
-    <meta name="Keywords" content="[Ruby frozen_string_literal]">
-    <meta name="description" content="Ruby 2.3中的魔法注释# frozen_string_literal: true">
+    <meta name="Keywords" content="[英语 单词 背单词]">
+    <meta name="description" content="巧记单词——用and记住10个单词">
         
     <meta name="author" content="张超">
-    <meta property="og:url" content="http://zhangchao.xyz/ruby/magic-comment/">
+    <meta property="og:url" content="http://zhangchao.xyz/english/and_extend_words/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
@@ -87,56 +87,77 @@
                 <div class="res-cons">
                     <article class="post">
                         <header>
-                            <h1 class="post-title">Ruby 2.3中的魔法注释# frozen_string_literal: true</h1>
+                            <h1 class="post-title">巧记单词——用and记住10个单词</h1>
                         </header>
                         <date class="post-meta meta-date">
-                            2019年8月24日
+                            2020年2月9日
                         </date>
                         
                         <div class="post-meta">
                             <span>|</span>
                             
-                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/ruby">Ruby</a></span>
+                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD">英语</a></span>
                             
                         </div>
                         
                         
                         
                         <div class="post-content">
-                            <h1 id="背景">背景</h1>
-<p>为了提高程序性能，<strong>在Ruby 3中，字符串字面量在所有文件中默认被冻结。</strong></p>
-<p>为了过渡，Ruby2.3增加了一个魔法注释：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-</code></pre></div><h1 id="作用">作用</h1>
-<p>它告诉Ruby，文件中的所有字符串字面量都被隐式冻结，不可修改，就像每一个字符串都调用了<code>freeze</code>方法一样。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">string</span><span style="color:#e6db74">&#34;</span>
-puts s<span style="color:#f92672">.</span>frozen?      <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">12</span><span style="color:#e6db74">&#34;</span>           <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> can<span style="color:#960050;background-color:#1e0010">&#39;</span>t modify frozen String (<span style="color:#66d9ef">RuntimeError</span>)
-</code></pre></div><h1 id="使用方式">使用方式</h1>
+                            <p>本篇罗列一下单词and<a href="https://www.jianshu.com/p/38f5a4b6943c">衍生</a>出的单词。</p>
 <ul>
-<li>
-<p>把该注释加在文件的第一行。</p>
-</li>
-<li>
-<p>另外，在Ruby 2.3中使用<code>--enable=frozen-string-literal</code>标志运行ruby，也会默认冻结所有文件中的字符串字面量。在单个文件中可以通过<code># frozen_string_literal: false</code>覆盖全局设置（Ruby 3中也可以用此方式覆盖全局设置）。</p>
-</li>
+<li>and [ənd] conj. 和，与；而且；于是，然后；因此</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ruby --enable<span style="color:#f92672">=</span>frozen-string-literal t.rb
-</code></pre></div><h1 id="如何修改">如何修改</h1>
-<p>如果想要修改字符串字面量怎么办？</p>
-<p><strong>无论全局或每个文件如何设置，可以使用一元+运算符（注意优先级）来产生非冻结字符串或调用<code>dup</code>方法来对其进行复制</strong>：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-(<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">false</span>
-<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>dup<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">false</span>
-</code></pre></div><p>还可以使用一元-运算符冻结可变（未冻结）字符串。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">(<span style="color:#f92672">-</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-</code></pre></div>
+<p>首先通过变换第二个字母或第三个字母可以得到四个简单的新词：</p>
+<ul>
+<li>add [æd] vt. 增加；补充；附带说明；把…包括在内 | vi. 增加；做加法；累积而成；扩大 | n. 加法，加法运算；（一篇报道的）补充部分；</li>
+<li>aid [eɪd] n. 帮助；助手；外援；辅助设备 | vt. 帮助；资助；救助；促进 | vi. 帮助；</li>
+<li>any [ˈeni] adj. 任何的；一点，一些；普通的；任何，随便哪一个 | pron. 任何；无论哪个；若干； | adv. 稍微，少许；什么，一些，一点；</li>
+<li>ant [ænt] n. 蚂蚁；</li>
+</ul>
+<p>把这四个单词组成一句话：</p>
+<p><strong>增加（add）外援（aid），不要放过任何（any）一只蚂蚁（ant）。</strong></p>
+<p>给and增加一个首字母可以得到四个新词：</p>
+<ul>
+<li>land [lænd] n. 陆地；国家；地产；土地 | vt.&amp; vi. （使）登岸；降临；使陷于（困境）；使不得不应付 | vt. 自船上卸下；获得；捕到；钓到（鱼） | vi. 跳落，跌落，被抛落（地面）；</li>
+<li>sand [sænd] n. 沙；沙滩；沙色； | vt. 撒沙于；用砂纸磨光；</li>
+<li>band [bænd] n. 带；乐队；衣带；价值 | vt. 给…镶边；用带绑扎；（将价格、收入等）划分档次；把…联合起来 | vt.&amp; vi. 结合起来，伙同； | vi. 聚集，联合（起来）（通常与together 连用）；</li>
+<li>hand [hænd] n. 手；协助，帮助；（工具等的）把，柄；掌管 | vt. 传递，交给；搀扶；支持；</li>
+<li>wand [wɑːnd] n. 棒；棍；杖；魔杖；嫩枝；箭靶</li>
+</ul>
+<p>把这四个单词组成一句话：</p>
+<p><strong>陆地（land）上有沙滩（sand），沙滩上有一个乐队（band）在演奏，指挥的人手（hand）里拿着一根魔杖（wand）。</strong></p>
+<p>在and前增加两个字母：</p>
+<ul>
+<li>stand [stænd] n. 台，看台；立场；停止；抵抗 | vi. 站立，起立；竖直放置；保持看法；停滞 | vt. 使站立；忍受；抵御；承担责任 | vt.&amp; vi. 站立，（使）直立，站着；</li>
+<li>brand [brænd] n. [商]商标，牌子；烙印；〈比喻〉污名，耻辱；燃烧着的木头 | vt. 污辱；铭刻于；加商标于；打烙印于</li>
+<li>grand [grænd] adj. 壮观的；宏大的，宏伟的；（最）重要的；豪华的； | n. 一千美元；大钢琴；</li>
+</ul>
+<p>连成一句话：</p>
+<p><strong>看台（stand）上竖立（stand）着一个宏大的（grand）商标（brand）牌。</strong></p>
+<p>在land前增加两个字母：</p>
+<ul>
+<li>island [ˈaɪlənd] n. 岛，岛屿； | vt. 使孤立；</li>
+<li>inland [ˌɪnˈlænd] adj. 内地的，内陆的；国内的； | adv. 向内地，在内地；向内陆，在内陆； | n. 内地，内陆；国内；</li>
+</ul>
+<p>本篇的单词！有兴趣的可以自己做成思维导图，随时翻阅！</p>
+<ol>
+<li>and</li>
+<li>add</li>
+<li>aid</li>
+<li>any</li>
+<li>ant</li>
+<li>land</li>
+<li>sand</li>
+<li>band</li>
+<li>hand</li>
+<li>wand</li>
+<li>stand</li>
+<li>brand</li>
+<li>grand</li>
+<li>island</li>
+<li>inland</li>
+</ol>
+
                         </div>
 
                         
@@ -148,7 +169,11 @@ s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;<
     <h2>相关文章</h2>
     <ul class="listing">
         
-        <li><a href="/ruby/safe-navigation-operator/">Ruby 安全调用运算符 (&amp;.)</a></li>
+        <li><a href="/english/easy_extend_words/">巧记单词——用easy记住10个单词</a></li>
+        
+        <li><a href="/english/word-things-2/">单词那些事（2）——一览众山小</a></li>
+        
+        <li><a href="/english/word-things-1/">单词那些事（1）——胸中有丘壑</a></li>
         
     </ul>
 </div>
@@ -158,7 +183,9 @@ s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;<
                             
                             <ul class="clearfix">
                                 
-                                <li><a href="http://zhangchao.xyz/tags/ruby">Ruby</a></li>
+                                <li><a href="http://zhangchao.xyz/tags/%E8%8B%B1%E8%AF%AD">英语</a></li>
+                                
+                                <li><a href="http://zhangchao.xyz/tags/%E5%8D%95%E8%AF%8D">单词</a></li>
                                 
                             </ul>
                             

@@ -7,27 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ruby 2.3中的魔法注释# frozen_string_literal: true | 张超的博客</title>
-    <meta property="og:title" content="Ruby 2.3中的魔法注释# frozen_string_literal: true - 张超的博客">
-    <meta property="og:type" content="article">
-        
-    <meta property="article:published_time" content="2019-08-24T11:44:41&#43;08:00">
-        
-        
-    <meta property="article:modified_time" content="2019-08-24T11:44:41&#43;08:00">
-        
-    <meta name="Keywords" content="[Ruby frozen_string_literal]">
-    <meta name="description" content="Ruby 2.3中的魔法注释# frozen_string_literal: true">
-        
-    <meta name="author" content="张超">
-    <meta property="og:url" content="http://zhangchao.xyz/ruby/magic-comment/">
+    <title>张超的博客 | 记录一些思考</title>
+    <meta property="og:title" content="张超的博客 | 记录一些思考">
+    <meta property="og:type" content="website">
+    <meta name="Keywords" content="C&#43;&#43;,Ruby,Rails,Web,算法,leetcode,编程,公众号,小程序,小游戏,英语,背单词,赚钱,财务自由,财富自由">
+    <meta name="description" content="">
+    <meta property="og:url" content="http://zhangchao.xyz/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
     
-        <link rel="stylesheet" href="/css/prism.css">
-    
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/rss+xml+xml" href="http://zhangchao.xyz/index.xml" title="张超的博客" />
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -52,21 +43,24 @@
     
 </head>
 
+
 <body>
 <header id="header" class="clearfix">
     <div class="container">
         <div class="col-group">
             <div class="site-name ">
                 
-                    <a id="logo" href="http://zhangchao.xyz/">
-                        张超的博客
-                    </a>
+                    <h1>
+                        <a id="logo" href="http://zhangchao.xyz/">
+                            张超的博客
+                        </a>
+                    </h1>
                 
                 <p class="description">记录一些思考</p>
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="http://zhangchao.xyz/">首页</a>
+                    <a class="current" href="http://zhangchao.xyz/">首页</a>
                     
                     <a  href="http://zhangchao.xyz/archives/" title="归档">归档</a>
                     
@@ -85,111 +79,145 @@
 
             <div class="col-8" id="main">
                 <div class="res-cons">
-                    <article class="post">
-                        <header>
-                            <h1 class="post-title">Ruby 2.3中的魔法注释# frozen_string_literal: true</h1>
-                        </header>
-                        <date class="post-meta meta-date">
-                            2019年8月24日
-                        </date>
-                        
-                        <div class="post-meta">
-                            <span>|</span>
-                            
-                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/ruby">Ruby</a></span>
-                            
-                        </div>
-                        
-                        
-                        
-                        <div class="post-content">
-                            <h1 id="背景">背景</h1>
-<p>为了提高程序性能，<strong>在Ruby 3中，字符串字面量在所有文件中默认被冻结。</strong></p>
-<p>为了过渡，Ruby2.3增加了一个魔法注释：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-</code></pre></div><h1 id="作用">作用</h1>
-<p>它告诉Ruby，文件中的所有字符串字面量都被隐式冻结，不可修改，就像每一个字符串都调用了<code>freeze</code>方法一样。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">string</span><span style="color:#e6db74">&#34;</span>
-puts s<span style="color:#f92672">.</span>frozen?      <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">12</span><span style="color:#e6db74">&#34;</span>           <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> can<span style="color:#960050;background-color:#1e0010">&#39;</span>t modify frozen String (<span style="color:#66d9ef">RuntimeError</span>)
-</code></pre></div><h1 id="使用方式">使用方式</h1>
-<ul>
-<li>
-<p>把该注释加在文件的第一行。</p>
-</li>
-<li>
-<p>另外，在Ruby 2.3中使用<code>--enable=frozen-string-literal</code>标志运行ruby，也会默认冻结所有文件中的字符串字面量。在单个文件中可以通过<code># frozen_string_literal: false</code>覆盖全局设置（Ruby 3中也可以用此方式覆盖全局设置）。</p>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ruby --enable<span style="color:#f92672">=</span>frozen-string-literal t.rb
-</code></pre></div><h1 id="如何修改">如何修改</h1>
-<p>如果想要修改字符串字面量怎么办？</p>
-<p><strong>无论全局或每个文件如何设置，可以使用一元+运算符（注意优先级）来产生非冻结字符串或调用<code>dup</code>方法来对其进行复制</strong>：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-(<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">false</span>
-<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>dup<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">false</span>
-</code></pre></div><p>还可以使用一元-运算符冻结可变（未冻结）字符串。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">(<span style="color:#f92672">-</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-</code></pre></div>
-                        </div>
-
-                        
-
-
-                        
-
-<div class="post-archive">
-    <h2>相关文章</h2>
-    <ul class="listing">
-        
-        <li><a href="/ruby/safe-navigation-operator/">Ruby 安全调用运算符 (&amp;.)</a></li>
-        
-    </ul>
-</div>
-
-
-                        <div class="post-meta meta-tags">
-                            
-                            <ul class="clearfix">
-                                
-                                <li><a href="http://zhangchao.xyz/tags/ruby">Ruby</a></li>
-                                
-                            </ul>
-                            
-                        </div>
-                    </article>
                     
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="http://zhangchao.xyz/cpp/quick-sort-cpp/" title="快速排序-C&#43;&#43;代码" >快速排序-C&#43;&#43;代码</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年8月24日
+                            </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/c&#43;&#43;">C&#43;&#43;</a></span>
+                                
+                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/%E7%AE%97%E6%B3%95">算法</a></span>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                快速排序C++实现。……
+                            </div>
+                            <p class="readmore"><a href="http://zhangchao.xyz/cpp/quick-sort-cpp/">阅读全文</a></p>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="http://zhangchao.xyz/cpp/heap-sort-cpp/" title="堆排序-C&#43;&#43;代码" >堆排序-C&#43;&#43;代码</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年8月24日
+                            </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/c&#43;&#43;">C&#43;&#43;</a></span>
+                                
+                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/%E7%AE%97%E6%B3%95">算法</a></span>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                堆排序C++实现。……
+                            </div>
+                            <p class="readmore"><a href="http://zhangchao.xyz/cpp/heap-sort-cpp/">阅读全文</a></p>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="http://zhangchao.xyz/wealth/4-hour-workweek/" title="每周工作4小时" >每周工作4小时</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年7月27日
+                            </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/%E8%B4%A2%E5%AF%8C">财富</a></span>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                <p><em><strong>世界上最富有、最成功的人和所有人一样，每天都拥有同样的24小时，每周都拥有同样的7天。他们之所以杰出，是因为他们更聪明地工作，而不是更辛苦地工作。</strong></em>
+——— 蒂莫西·费里斯</p>……
+                            </div>
+                            <p class="readmore"><a href="http://zhangchao.xyz/wealth/4-hour-workweek/">阅读全文</a></p>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="http://zhangchao.xyz/cpp/constructor-destrutor-order/" title="C&#43;&#43;构造函数、析构函数执行顺序详解" >C&#43;&#43;构造函数、析构函数执行顺序详解</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年7月27日
+                            </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="http://zhangchao.xyz/categories/c&#43;&#43;">C&#43;&#43;</a></span>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                <h2 id="构造函数执行顺序">构造函数执行顺序</h2>
+<ol>
+<li>调用虚基类构造函数（如有多个则按虚基类声明顺序从左到右）</li>
+<li>调用基类构造函数（如有多个则按基类声明顺序从左到右）</li>
+<li>设定虚函数表指针值（virtual table pointer）</li>
+<li>执行初始化列表、调用成员变量构造函数（按成员变量声明顺序）</li>
+<li>执行自身构造函数</li>
+</ol>……
+                            </div>
+                            <p class="readmore"><a href="http://zhangchao.xyz/cpp/constructor-destrutor-order/">阅读全文</a></p>
+                        </article>
+                    
+                    
+
+
+
+<ol class="page-navigator">
     
+    <li class="prev">
+        <a href="http://zhangchao.xyz/page/2/">上一页</a>
+    </li>
     
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "zhangchao-xyz" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     
+    <li >
+        <a href="http://zhangchao.xyz/">1</a>
+    </li>
     
+    <li >
+        <a href="http://zhangchao.xyz/page/2/">2</a>
+    </li>
+    
+    <li  class="current">
+        <a href="http://zhangchao.xyz/page/3/">3</a>
+    </li>
+    
+
+    
+</ol>
+
+
+
                 </div>
             </div>
+
             <div id="secondary">
     <section class="widget">
         <form id="search" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
@@ -367,22 +395,6 @@ s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;<
 </footer>
 
 
-    <script type="text/javascript">
-    
-    (function(){
-        $("pre code").parent().addClass("line-numbers")
-    }())
-
-    window.MathJax = {
-        tex2jax: {
-            inlineMath: [ ['$','$'] ],
-            processEscapes: true
-        }
-    };
-    </script>
-    <script type="text/javascript" src="/js/prism.js" async="true"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
 
@@ -396,6 +408,7 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+
 
 
 
