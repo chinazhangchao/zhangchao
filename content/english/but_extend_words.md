@@ -7,7 +7,7 @@ keywords: [英语,单词,背单词]
 tags: [英语,单词]
 summary: "通过but记住十几个单词！"
 ---
-本篇罗列一下单词but[衍生](https://www.jianshu.com/p/38f5a4b6943c)出的单词。
+本篇罗列一下单词but[衍生]({{< ref "word-things-2.md" >}})出的单词。
 
 * but [bət] conj. 但是；而是；除了；只因为 | prep. 除…以外； | adv. 只；不过；只是；另一方面 | n. 借口；推辞；但是；反对 | pron. [关系代词，意义相当于 who…not, which…not]； | vt. 对…说“但是”；
 

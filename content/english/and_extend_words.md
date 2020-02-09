@@ -8,7 +8,7 @@ tags: [英语,单词]
 summary: "通过and记住十几个单词！"
 ---
 
-本篇罗列一下单词and[衍生](https://www.jianshu.com/p/38f5a4b6943c)出的单词。
+本篇罗列一下单词and[衍生]({{< ref "word-things-2.md" >}})出的单词。
 
 * and [ənd] conj. 和，与；而且；于是，然后；因此
 

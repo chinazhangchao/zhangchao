@@ -7,7 +7,7 @@ keywords: [英语,单词,背单词]
 tags: [英语,单词]
 summary: "通过say记住十几个单词！"
 ---
-本篇罗列一下单词say[衍生](https://www.jianshu.com/p/38f5a4b6943c)出的单词。
+本篇罗列一下单词say[衍生]({{< ref "word-things-2.md" >}})出的单词。
 
 * say [seɪ] vi. 说， 讲；表明，宣称；假设；约莫 | vt. 表明；念；说明；比方说 | n. 发言权；说话；要说的话；发言权
 
