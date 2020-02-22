@@ -4,41 +4,61 @@
   
   <url>
     <loc>http://zhangchao.xyz/categories/</loc>
-    <lastmod>2020-02-16T13:05:00+08:00</lastmod>
+    <lastmod>2020-02-22T09:13:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://zhangchao.xyz/english/</loc>
-    <lastmod>2020-02-16T13:05:00+08:00</lastmod>
+    <lastmod>2020-02-22T09:13:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://zhangchao.xyz/tags/</loc>
-    <lastmod>2020-02-16T13:05:00+08:00</lastmod>
+    <lastmod>2020-02-22T09:13:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://zhangchao.xyz/tags/%E5%8D%95%E8%AF%8D/</loc>
-    <lastmod>2020-02-16T13:05:00+08:00</lastmod>
+    <lastmod>2020-02-22T09:13:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/english/more_extend_words/</loc>
-    <lastmod>2020-02-16T13:05:00+08:00</lastmod>
+    <loc>http://zhangchao.xyz/english/good_extend_words/</loc>
+    <lastmod>2020-02-22T09:13:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://zhangchao.xyz/</loc>
-    <lastmod>2020-02-16T13:05:00+08:00</lastmod>
+    <lastmod>2020-02-22T09:13:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://zhangchao.xyz/tags/%E8%8B%B1%E8%AF%AD/</loc>
-    <lastmod>2020-02-16T13:05:00+08:00</lastmod>
+    <lastmod>2020-02-22T09:13:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/</loc>
+    <lastmod>2020-02-22T09:13:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/english/far_extend_words/</loc>
+    <lastmod>2020-02-22T09:12:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/english/room_extend_words/</loc>
+    <lastmod>2020-02-22T09:11:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/english/back_extend_words/</loc>
+    <lastmod>2020-02-22T09:10:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangchao.xyz/english/more_extend_words/</loc>
     <lastmod>2020-02-16T13:05:00+08:00</lastmod>
   </url>
   
@@ -228,12 +248,12 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/categories/ruby/</loc>
+    <loc>http://zhangchao.xyz/tags/ruby/</loc>
     <lastmod>2019-08-24T11:59:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/tags/ruby/</loc>
+    <loc>http://zhangchao.xyz/categories/ruby/</loc>
     <lastmod>2019-08-24T11:59:34+08:00</lastmod>
   </url>
   
@@ -243,12 +263,12 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/tags/c&#43;&#43;/</loc>
+    <loc>http://zhangchao.xyz/categories/c&#43;&#43;/</loc>
     <lastmod>2019-08-24T11:54:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/categories/c&#43;&#43;/</loc>
+    <loc>http://zhangchao.xyz/tags/c&#43;&#43;/</loc>
     <lastmod>2019-08-24T11:54:08+08:00</lastmod>
   </url>
   
@@ -288,12 +308,12 @@
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/rails/</loc>
+    <loc>http://zhangchao.xyz/categories/rails/</loc>
     <lastmod>2019-08-24T11:46:54+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://zhangchao.xyz/categories/rails/</loc>
+    <loc>http://zhangchao.xyz/rails/</loc>
     <lastmod>2019-08-24T11:46:54+08:00</lastmod>
   </url>
   
