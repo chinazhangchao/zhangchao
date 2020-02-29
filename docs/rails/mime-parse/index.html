@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.63.2" />
+    <meta name="generator" content="Hugo 0.65.3" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -159,7 +159,7 @@ given type, the most specific reference has precedence.</p>
 
   format<span style="color:#f92672">.</span>json <span style="color:#66d9ef">do</span>
     render(<span style="color:#e6db74">json</span>: {
-              <span style="color:#e6db74">code</span>: <span style="color:#ae81ff">0</span><span style="color:#f92672"></span>,
+              <span style="color:#e6db74">code</span>: <span style="color:#ae81ff">0</span>,
               <span style="color:#e6db74">location</span>: new_user_session_path,
               <span style="color:#e6db74">msg</span>: <span style="color:#e6db74">&#39;用户密码被重置，请重新登录&#39;</span>
             })
@@ -195,7 +195,7 @@ given type, the most specific reference has precedence.</p>
 <h1 id="rails对mime的解析">Rails对MIME的解析</h1>
 <p>答案当然要从Rails源码中找（Read the fucking source code ^_^），涉及的函数如下（在文件<code>rails/actionpack/lib/action_dispatch/http/mime_negotiation.rb</code>中，代码细节先不用深究，后文还有分析）：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># order是在respond_to代码块中声明的返回格式数组，formats函数返回前端需要的格式数组，见后面的定义</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">negotiate_mime</span>(order)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">negotiate_mime</span>(order)
   formats<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>priority<span style="color:#f92672">|</span>
     <span style="color:#66d9ef">if</span> priority <span style="color:#f92672">==</span> <span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">ALL</span>
       <span style="color:#66d9ef">return</span> order<span style="color:#f92672">.</span>first
@@ -208,8 +208,8 @@ given type, the most specific reference has precedence.</p>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># formats函数解析前端需要的格式，返回解析后的格式数组</span>
 <span style="color:#75715e"># 其中第二个条件分支中的accepts函数会解析Accept字段，注意前提是有Accept头并且校验合法</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">formats</span>
-  fetch_header(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">action_dispatch.request.formats</span><span style="color:#e6db74">&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>k<span style="color:#f92672">|</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">formats</span>
+  fetch_header(<span style="color:#e6db74">&#34;action_dispatch.request.formats&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>k<span style="color:#f92672">|</span>
     params_readable <span style="color:#f92672">=</span> <span style="color:#66d9ef">begin</span>
                         parameters<span style="color:#f92672">[</span><span style="color:#e6db74">:format</span><span style="color:#f92672">]</span>
                       <span style="color:#66d9ef">rescue</span> <span style="color:#66d9ef">ActionController</span><span style="color:#f92672">::</span><span style="color:#66d9ef">BadRequest</span>
@@ -217,23 +217,23 @@ given type, the most specific reference has precedence.</p>
                       <span style="color:#66d9ef">end</span>
 
     v <span style="color:#f92672">=</span> <span style="color:#66d9ef">if</span> params_readable
-      Array(<span style="color:#66d9ef">Mime</span><span style="color:#f92672">[</span>parameters<span style="color:#f92672">[</span><span style="color:#e6db74">:format</span><span style="color:#f92672">]</span><span style="color:#f92672">]</span>)
+      Array(<span style="color:#66d9ef">Mime</span><span style="color:#f92672">[</span>parameters<span style="color:#f92672">[</span><span style="color:#e6db74">:format</span><span style="color:#f92672">]]</span>)
     <span style="color:#66d9ef">elsif</span> use_accept_header <span style="color:#f92672">&amp;&amp;</span> valid_accept_header
       accepts
     <span style="color:#66d9ef">elsif</span> extension_format <span style="color:#f92672">=</span> format_from_path_extension
       <span style="color:#f92672">[</span>extension_format<span style="color:#f92672">]</span>
     <span style="color:#66d9ef">elsif</span> xhr?
-      <span style="color:#f92672">[</span><span style="color:#66d9ef">Mime</span><span style="color:#f92672">[</span><span style="color:#e6db74">:js</span><span style="color:#f92672">]</span><span style="color:#f92672">]</span>
+      <span style="color:#f92672">[</span><span style="color:#66d9ef">Mime</span><span style="color:#f92672">[</span><span style="color:#e6db74">:js</span><span style="color:#f92672">]]</span>
     <span style="color:#66d9ef">else</span>
-      <span style="color:#f92672">[</span><span style="color:#66d9ef">Mime</span><span style="color:#f92672">[</span><span style="color:#e6db74">:html</span><span style="color:#f92672">]</span><span style="color:#f92672">]</span>
+      <span style="color:#f92672">[</span><span style="color:#66d9ef">Mime</span><span style="color:#f92672">[</span><span style="color:#e6db74">:html</span><span style="color:#f92672">]]</span>
     <span style="color:#66d9ef">end</span>
     set_header k, v
   <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># accepts函数调用Mime::Type.parse完成真正的解析工作</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">accepts</span>
-  fetch_header(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">action_dispatch.request.accepts</span><span style="color:#e6db74">&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>k<span style="color:#f92672">|</span>
-    header <span style="color:#f92672">=</span> get_header(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">HTTP_ACCEPT</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>to_s<span style="color:#f92672">.</span>strip
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">accepts</span>
+  fetch_header(<span style="color:#e6db74">&#34;action_dispatch.request.accepts&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>k<span style="color:#f92672">|</span>
+    header <span style="color:#f92672">=</span> get_header(<span style="color:#e6db74">&#34;HTTP_ACCEPT&#34;</span>)<span style="color:#f92672">.</span>to_s<span style="color:#f92672">.</span>strip
 
     v <span style="color:#f92672">=</span> <span style="color:#66d9ef">if</span> header<span style="color:#f92672">.</span>empty?
       <span style="color:#f92672">[</span>content_mime_type<span style="color:#f92672">]</span>
@@ -246,10 +246,10 @@ given type, the most specific reference has precedence.</p>
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">private</span>
 
   <span style="color:#75715e"># 这个正则表达式是用来判断是否是浏览器发出的请求，不是浏览器发出的请求才返回true</span>
-  <span style="color:#66d9ef">BROWSER_LIKE_ACCEPTS</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/</span><span style="color:#e6db74">,</span><span style="color:#e6db74">\</span><span style="color:#e6db74">s*</span><span style="color:#e6db74">\</span><span style="color:#e6db74">*</span><span style="color:#e6db74">\/</span><span style="color:#e6db74">\</span><span style="color:#e6db74">*|</span><span style="color:#e6db74">\</span><span style="color:#e6db74">*</span><span style="color:#e6db74">\/</span><span style="color:#e6db74">\</span><span style="color:#e6db74">*</span><span style="color:#e6db74">\</span><span style="color:#e6db74">s*,</span><span style="color:#e6db74">/</span>
+  <span style="color:#66d9ef">BROWSER_LIKE_ACCEPTS</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/,\s*\*\/\*|\*\/\*\s*,/</span>
 
   <span style="color:#75715e"># 校验函数，在formats中被调用，用来检查Accept是否正确</span>
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">valid_accept_header</span> <span style="color:#75715e"># :doc:</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">valid_accept_header</span> <span style="color:#75715e"># :doc:</span>
     (xhr? <span style="color:#f92672">&amp;&amp;</span> (accept<span style="color:#f92672">.</span>present? <span style="color:#f92672">||</span> content_mime_type)) <span style="color:#f92672">||</span>
       (accept<span style="color:#f92672">.</span>present? <span style="color:#f92672">&amp;&amp;</span> accept <span style="color:#f92672">!~</span> <span style="color:#66d9ef">BROWSER_LIKE_ACCEPTS</span>)
       <span style="color:#75715e"># 此处是问题的关键，如果accept头里包含*/*和其他类型（如：Accept: application/json, text/plain, */*）则此函数返回false，</span>
@@ -301,51 +301,51 @@ end
 </code></pre><p>此时返回json格式。</p>
 <p>Accept头是*/*时，解析Accept的结果为<code>Mime::ALL</code>类型，从<code>negotiate_mime</code>函数代码中可以明显看出，当请求类型为<code>Mime::ALL</code>时，选择<code>order</code>中的第一个格式返回，此时会返回<code>respond_to</code>代码块中的第一个格式。</p>
 <p>如果没有<code>respond_to</code>代码块呢？如果没有<code>respond_to</code>代码块，但是在view目录下有<code>test.html.erb</code>、<code>test.json.jbuilder</code>两个文件，Rails返回什么格式？这种情况下，Rails按顺序遍历所有注册的Mime格式，找对应的匹配文件，一旦找到文件就返回该格式。这种情况下的返回格式依赖Mime格式的注册顺序，下面是Mime格式注册的代码（<code>rails/actionpack/lib/action_dispatch/http/mime_types.rb</code>）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">text/html</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:html</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74"> application/xhtml+xml </span><span style="color:#e6db74">)</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74"> xhtml </span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">text/plain</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:text</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">txt</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">text/javascript</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:js</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74"> application/javascript application/x-javascript </span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">text/css</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:css</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">text/calendar</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:ics</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">text/csv</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:csv</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">text/vcard</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:vcf</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">text/vtt</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:vtt</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">vtt</span><span style="color:#e6db74">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;text/html&#34;</span>, <span style="color:#e6db74">:html</span>, <span style="color:#e6db74">%w( application/xhtml+xml )</span>, <span style="color:#e6db74">%w( xhtml )</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;text/plain&#34;</span>, <span style="color:#e6db74">:text</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(txt)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;text/javascript&#34;</span>, <span style="color:#e6db74">:js</span>, <span style="color:#e6db74">%w( application/javascript application/x-javascript )</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;text/css&#34;</span>, <span style="color:#e6db74">:css</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;text/calendar&#34;</span>, <span style="color:#e6db74">:ics</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;text/csv&#34;</span>, <span style="color:#e6db74">:csv</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;text/vcard&#34;</span>, <span style="color:#e6db74">:vcf</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;text/vtt&#34;</span>, <span style="color:#e6db74">:vtt</span>, <span style="color:#e6db74">%w(vtt)</span>
 
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">image/png</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:png</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">png</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">image/jpeg</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:jpeg</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">jpg jpeg jpe pjpeg</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">image/gif</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:gif</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">gif</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">image/bmp</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:bmp</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">bmp</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">image/tiff</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:tiff</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">tif tiff</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">image/svg+xml</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:svg</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;image/png&#34;</span>, <span style="color:#e6db74">:png</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(png)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;image/jpeg&#34;</span>, <span style="color:#e6db74">:jpeg</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(jpg jpeg jpe pjpeg)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;image/gif&#34;</span>, <span style="color:#e6db74">:gif</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(gif)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;image/bmp&#34;</span>, <span style="color:#e6db74">:bmp</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(bmp)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;image/tiff&#34;</span>, <span style="color:#e6db74">:tiff</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(tif tiff)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;image/svg+xml&#34;</span>, <span style="color:#e6db74">:svg</span>
 
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">video/mpeg</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:mpeg</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">mpg mpeg mpe</span><span style="color:#e6db74">)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;video/mpeg&#34;</span>, <span style="color:#e6db74">:mpeg</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(mpg mpeg mpe)</span>
 
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">audio/mpeg</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:mp3</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">mp1 mp2 mp3</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">audio/ogg</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:ogg</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">oga ogg spx opus</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">audio/aac</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:m4a</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74"> audio/mp4 </span><span style="color:#e6db74">)</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">m4a mpg4 aac</span><span style="color:#e6db74">)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;audio/mpeg&#34;</span>, <span style="color:#e6db74">:mp3</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(mp1 mp2 mp3)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;audio/ogg&#34;</span>, <span style="color:#e6db74">:ogg</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(oga ogg spx opus)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;audio/aac&#34;</span>, <span style="color:#e6db74">:m4a</span>, <span style="color:#e6db74">%w( audio/mp4 )</span>, <span style="color:#e6db74">%w(m4a mpg4 aac)</span>
 
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">video/webm</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:webm</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">webm</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">video/mp4</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:mp4</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">mp4 m4v</span><span style="color:#e6db74">)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;video/webm&#34;</span>, <span style="color:#e6db74">:webm</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(webm)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;video/mp4&#34;</span>, <span style="color:#e6db74">:mp4</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(mp4 m4v)</span>
 
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">font/otf</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:otf</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">otf</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">font/ttf</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:ttf</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">ttf</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">font/woff</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:woff</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">woff</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">font/woff2</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:woff2</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">woff2</span><span style="color:#e6db74">)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;font/otf&#34;</span>, <span style="color:#e6db74">:otf</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(otf)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;font/ttf&#34;</span>, <span style="color:#e6db74">:ttf</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(ttf)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;font/woff&#34;</span>, <span style="color:#e6db74">:woff</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(woff)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;font/woff2&#34;</span>, <span style="color:#e6db74">:woff2</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(woff2)</span>
 
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">application/xml</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:xml</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74"> text/xml application/x-xml </span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">application/rss+xml</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:rss</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">application/atom+xml</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:atom</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">application/x-yaml</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:yaml</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74"> text/yaml </span><span style="color:#e6db74">)</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">yml yaml</span><span style="color:#e6db74">)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;application/xml&#34;</span>, <span style="color:#e6db74">:xml</span>, <span style="color:#e6db74">%w( text/xml application/x-xml )</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;application/rss+xml&#34;</span>, <span style="color:#e6db74">:rss</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;application/atom+xml&#34;</span>, <span style="color:#e6db74">:atom</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;application/x-yaml&#34;</span>, <span style="color:#e6db74">:yaml</span>, <span style="color:#e6db74">%w( text/yaml )</span>, <span style="color:#e6db74">%w(yml yaml)</span>
 
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">multipart/form-data</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:multipart_form</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">application/x-www-form-urlencoded</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:url_encoded_form</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;multipart/form-data&#34;</span>, <span style="color:#e6db74">:multipart_form</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;application/x-www-form-urlencoded&#34;</span>, <span style="color:#e6db74">:url_encoded_form</span>
 
 <span style="color:#75715e"># https://www.ietf.org/rfc/rfc4627.txt</span>
 <span style="color:#75715e"># http://www.json.org/JSONRequest.html</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">application/json</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:json</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74"> text/x-json application/jsonrequest </span><span style="color:#e6db74">)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;application/json&#34;</span>, <span style="color:#e6db74">:json</span>, <span style="color:#e6db74">%w( text/x-json application/jsonrequest )</span>
 
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">application/pdf</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:pdf</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">pdf</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">application/zip</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:zip</span>, <span style="color:#f92672">[</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">zip</span><span style="color:#e6db74">)</span>
-<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">application/gzip</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">:gzip</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">application/x-gzip</span><span style="color:#e6db74">)</span>, <span style="color:#e6db74">%w(</span><span style="color:#e6db74">gz</span><span style="color:#e6db74">)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;application/pdf&#34;</span>, <span style="color:#e6db74">:pdf</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(pdf)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;application/zip&#34;</span>, <span style="color:#e6db74">:zip</span>, <span style="color:#f92672">[]</span>, <span style="color:#e6db74">%w(zip)</span>
+<span style="color:#66d9ef">Mime</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Type</span><span style="color:#f92672">.</span>register <span style="color:#e6db74">&#34;application/gzip&#34;</span>, <span style="color:#e6db74">:gzip</span>, <span style="color:#e6db74">%w(application/x-gzip)</span>, <span style="color:#e6db74">%w(gz)</span>
 </code></pre></div><p>很明显，<code>text/html</code>是第一个格式，因此在本例中返回<code>test.html.erb</code>文件内容。</p>
 <p><strong>结论：Accept头是*/*时，返回<code>respond_to</code>代码块中的第一个格式。没有<code>respond_to</code>代码块时，按Mime格式注册顺序寻找对应文件返回。</strong></p>
 <h3 id="3-accept头包含和其他内容">3. Accept头包含*/*和其他内容</h3>
@@ -437,6 +437,22 @@ end
 <ul class="widget-list">
     
     <li>
+        <a href="http://zhangchao.xyz/english/law_extend_words/" title="巧记单词——用law记住10个单词">巧记单词——用law记住10个单词</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/english/lose_extend_words/" title="巧记单词——用lose记住10个单词">巧记单词——用lose记住10个单词</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/english/line_extend_words/" title="巧记单词——用line记住10个单词">巧记单词——用line记住10个单词</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/english/sit_extend_words/" title="巧记单词——用sit记住10个单词">巧记单词——用sit记住10个单词</a>
+    </li>
+    
+    <li>
         <a href="http://zhangchao.xyz/english/head_extend_words/" title="巧记单词——用head记住10个单词">巧记单词——用head记住10个单词</a>
     </li>
     
@@ -458,22 +474,6 @@ end
     
     <li>
         <a href="http://zhangchao.xyz/english/room_extend_words/" title="巧记单词——用room记住10个单词">巧记单词——用room记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/back_extend_words/" title="巧记单词——用back记住10个单词">巧记单词——用back记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/more_extend_words/" title="巧记单词——用more记住10个单词">巧记单词——用more记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/like_extend_words/" title="巧记单词——用like记住10个单词">巧记单词——用like记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/now_extend_words/" title="巧记单词——用now记住10个单词">巧记单词——用now记住10个单词</a>
     </li>
     
 </ul>
@@ -514,7 +514,7 @@ end
     </li>
     
     <li>
-        <a href="http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/">英语(24)</a>
+        <a href="http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/">英语(28)</a>
     </li>
     
     <li>

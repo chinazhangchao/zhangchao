@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.63.2" />
+    <meta name="generator" content="Hugo 0.65.3" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -110,9 +110,9 @@
 </code></pre></div><h1 id="作用">作用</h1>
 <p>它告诉Ruby，文件中的所有字符串字面量都被隐式冻结，不可修改，就像每一个字符串都调用了<code>freeze</code>方法一样。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">string</span><span style="color:#e6db74">&#34;</span>
-puts s<span style="color:#f92672">.</span>frozen?      <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">12</span><span style="color:#e6db74">&#34;</span>           <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> can<span style="color:#960050;background-color:#1e0010">&#39;</span>t modify frozen String (<span style="color:#66d9ef">RuntimeError</span>)
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;string&#34;</span>
+puts s<span style="color:#f92672">.</span>frozen?      <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;12&#34;</span>           <span style="color:#f92672">=&gt;</span> can<span style="color:#960050;background-color:#1e0010">&#39;</span>t modify frozen String (<span style="color:#66d9ef">RuntimeError</span>)
 </code></pre></div><h1 id="使用方式">使用方式</h1>
 <ul>
 <li>
@@ -127,15 +127,15 @@ s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;<
 <p>如果想要修改字符串字面量怎么办？</p>
 <p><strong>无论全局或每个文件如何设置，可以使用一元+运算符（注意优先级）来产生非冻结字符串或调用<code>dup</code>方法来对其进行复制</strong>：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># frozen_string_literal: true</span>
-<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
-(<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">false</span>
-<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>dup<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">false</span>
+<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>frozen?
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+(<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#f92672">.</span>frozen?
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">false</span>
+<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>dup<span style="color:#f92672">.</span>frozen?
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">false</span>
 </code></pre></div><p>还可以使用一元-运算符冻结可变（未冻结）字符串。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">(<span style="color:#f92672">-</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>frozen?
-<span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">(<span style="color:#f92672">-</span><span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#f92672">.</span>frozen?
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
 </code></pre></div>
                         </div>
 
@@ -205,6 +205,22 @@ s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;<
 <ul class="widget-list">
     
     <li>
+        <a href="http://zhangchao.xyz/english/law_extend_words/" title="巧记单词——用law记住10个单词">巧记单词——用law记住10个单词</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/english/lose_extend_words/" title="巧记单词——用lose记住10个单词">巧记单词——用lose记住10个单词</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/english/line_extend_words/" title="巧记单词——用line记住10个单词">巧记单词——用line记住10个单词</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/english/sit_extend_words/" title="巧记单词——用sit记住10个单词">巧记单词——用sit记住10个单词</a>
+    </li>
+    
+    <li>
         <a href="http://zhangchao.xyz/english/head_extend_words/" title="巧记单词——用head记住10个单词">巧记单词——用head记住10个单词</a>
     </li>
     
@@ -226,22 +242,6 @@ s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;<
     
     <li>
         <a href="http://zhangchao.xyz/english/room_extend_words/" title="巧记单词——用room记住10个单词">巧记单词——用room记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/back_extend_words/" title="巧记单词——用back记住10个单词">巧记单词——用back记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/more_extend_words/" title="巧记单词——用more记住10个单词">巧记单词——用more记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/like_extend_words/" title="巧记单词——用like记住10个单词">巧记单词——用like记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/now_extend_words/" title="巧记单词——用now记住10个单词">巧记单词——用now记住10个单词</a>
     </li>
     
 </ul>
@@ -282,7 +282,7 @@ s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;<
     </li>
     
     <li>
-        <a href="http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/">英语(24)</a>
+        <a href="http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/">英语(28)</a>
     </li>
     
     <li>

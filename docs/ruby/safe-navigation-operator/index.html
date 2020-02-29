@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.63.2" />
+    <meta name="generator" content="Hugo 0.65.3" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -104,7 +104,7 @@
                         
                         <div class="post-content">
                             <p>今天在阅读discourse源码时，看到其中有很多地方使用<code>&amp;.</code>符号，如：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">result <span style="color:#f92672">&lt;&lt;</span> types<span style="color:#f92672">[</span><span style="color:#e6db74">:whisper</span><span style="color:#f92672">]</span> <span style="color:#66d9ef">if</span> viewed_by<span style="color:#f92672">&amp;</span><span style="color:#f92672">.</span>staff?
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">result <span style="color:#f92672">&lt;&lt;</span> types<span style="color:#f92672">[</span><span style="color:#e6db74">:whisper</span><span style="color:#f92672">]</span> <span style="color:#66d9ef">if</span> viewed_by<span style="color:#f92672">&amp;.</span>staff?
 </code></pre></div><p>不明白干啥的，搜索了一下，发现国外一篇文章总结的很好，在此记录一下。</p>
 <p>安全调用运算符（&amp;.）是Ruby 2.3.0中最吸引人的新增特性之一。类似的运算符在C#和Groovy语言中早已存在，用的语法略有不同，是符号（?.）。那么这个运算符的作用是什么呢？</p>
 <h1 id="使用场景">使用场景</h1>
@@ -119,7 +119,7 @@
 </code></pre></div><p>这段代码完成同样的功能——它要么返回address字段值要么返回nil（当调用链中有nil值时）。但第一个例子的写法也有可能返回false，比如当owner值为false的时候。</p>
 <h1 id="使用">使用&amp;.</h1>
 <p>我们可以使用安全调用运算符重写前面的例子：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">account<span style="color:#f92672">&amp;</span><span style="color:#f92672">.</span>owner<span style="color:#f92672">&amp;</span><span style="color:#f92672">.</span>address
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">account<span style="color:#f92672">&amp;.</span>owner<span style="color:#f92672">&amp;.</span>address
 </code></pre></div><p>虽然语法看起来有点奇怪，但我猜你会很快爱上它，因为它的确让代码更简洁。</p>
 <h1 id="更多例子">更多例子</h1>
 <p>接下来让我们详细比较一下这三种方式：</p>
@@ -134,7 +134,7 @@ account <span style="color:#f92672">&amp;&amp;</span> account<span style="color:
 account<span style="color:#f92672">.</span>try(<span style="color:#e6db74">:owner</span>)<span style="color:#f92672">.</span>try(<span style="color:#e6db74">:address</span>)
 <span style="color:#75715e"># =&gt; nil</span>
 
-account<span style="color:#f92672">&amp;</span><span style="color:#f92672">.</span>owner<span style="color:#f92672">&amp;</span><span style="color:#f92672">.</span>address
+account<span style="color:#f92672">&amp;.</span>owner<span style="color:#f92672">&amp;.</span>address
 <span style="color:#75715e"># =&gt; nil</span>
 </code></pre></div><p>这个例子没有什么特别的。但如果owner的值为false呢（虽然可能性不大，但在垃圾代码的狂躁世界里并非不可能）？</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">account <span style="color:#f92672">=</span> <span style="color:#66d9ef">Account</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">owner</span>: <span style="color:#66d9ef">false</span>)
@@ -148,7 +148,7 @@ account <span style="color:#f92672">&amp;&amp;</span> account<span style="color:
 account<span style="color:#f92672">.</span>try(<span style="color:#e6db74">:owner</span>)<span style="color:#f92672">.</span>try(<span style="color:#e6db74">:address</span>)
 <span style="color:#75715e"># =&gt; nil</span>
 
-account<span style="color:#f92672">&amp;</span><span style="color:#f92672">.</span>owner<span style="color:#f92672">&amp;</span><span style="color:#f92672">.</span>address
+account<span style="color:#f92672">&amp;.</span>owner<span style="color:#f92672">&amp;.</span>address
 <span style="color:#75715e"># =&gt; undefined method `address&#39; for false:FalseClass`</span>
 </code></pre></div><p><strong>第一个亮点出现了——&amp;.运算符只跳过nil但可以识别false！它与<code>s1 &amp;&amp; s1.s2 &amp;&amp; s1.s2.s3</code>这种写法并不完全一样。</strong>
 如果owner不为空但是并没有address属性（方法）呢？</p>
@@ -163,7 +163,7 @@ account <span style="color:#f92672">&amp;&amp;</span> account<span style="color:
 account<span style="color:#f92672">.</span>try(<span style="color:#e6db74">:owner</span>)<span style="color:#f92672">.</span>try(<span style="color:#e6db74">:address</span>)
 <span style="color:#75715e"># =&gt; nil</span>
 
-account<span style="color:#f92672">&amp;</span><span style="color:#f92672">.</span>owner<span style="color:#f92672">&amp;</span><span style="color:#f92672">.</span>address
+account<span style="color:#f92672">&amp;.</span>owner<span style="color:#f92672">&amp;.</span>address
 <span style="color:#75715e"># =&gt; NoMethodError: undefined method `address&#39; for #&lt;Object:0x00559996b5bde8&gt;`</span>
 </code></pre></div><p><strong>很遗憾，try方法没有检查接收者是否响应给定的方法。这就是为什么应该尽量使用try的严格版本——try!的原因：</strong></p>
 <pre><code>account.try!(:owner).try!(:address)
@@ -250,6 +250,22 @@ address = params[:account].fetch(:owner) .fetch(:address)
 <ul class="widget-list">
     
     <li>
+        <a href="http://zhangchao.xyz/english/law_extend_words/" title="巧记单词——用law记住10个单词">巧记单词——用law记住10个单词</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/english/lose_extend_words/" title="巧记单词——用lose记住10个单词">巧记单词——用lose记住10个单词</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/english/line_extend_words/" title="巧记单词——用line记住10个单词">巧记单词——用line记住10个单词</a>
+    </li>
+    
+    <li>
+        <a href="http://zhangchao.xyz/english/sit_extend_words/" title="巧记单词——用sit记住10个单词">巧记单词——用sit记住10个单词</a>
+    </li>
+    
+    <li>
         <a href="http://zhangchao.xyz/english/head_extend_words/" title="巧记单词——用head记住10个单词">巧记单词——用head记住10个单词</a>
     </li>
     
@@ -271,22 +287,6 @@ address = params[:account].fetch(:owner) .fetch(:address)
     
     <li>
         <a href="http://zhangchao.xyz/english/room_extend_words/" title="巧记单词——用room记住10个单词">巧记单词——用room记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/back_extend_words/" title="巧记单词——用back记住10个单词">巧记单词——用back记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/more_extend_words/" title="巧记单词——用more记住10个单词">巧记单词——用more记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/like_extend_words/" title="巧记单词——用like记住10个单词">巧记单词——用like记住10个单词</a>
-    </li>
-    
-    <li>
-        <a href="http://zhangchao.xyz/english/now_extend_words/" title="巧记单词——用now记住10个单词">巧记单词——用now记住10个单词</a>
     </li>
     
 </ul>
@@ -327,7 +327,7 @@ address = params[:account].fetch(:owner) .fetch(:address)
     </li>
     
     <li>
-        <a href="http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/">英语(24)</a>
+        <a href="http://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/">英语(28)</a>
     </li>
     
     <li>
