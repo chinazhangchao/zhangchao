@@ -26,7 +26,7 @@ summary: "通过year记住十几个单词！"
 
 连成一句话：
 
-**我听到（hear）熊（bear）的叫声在附近（near），很害怕（fear），爬到后方（rear）梨树（pear）上，被树枝撕破（tear）了穿着（wear）的带齿轮（gear）的贵（dear）衣服。**
+**我听到（hear）熊（bear）的叫声在附近（near），很害怕（fear），爬到后方（rear）梨树（pear）上，穿（wear）的带齿轮（gear）的贵（dear）衣服被树枝撕破（tear）了。**
 
 增加字母衍生的词：
 

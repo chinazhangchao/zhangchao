@@ -30,7 +30,7 @@ summary: "通过with记住十几个单词！"
 
 连成一句话：
 
-**冬天可以把在外面（without）的花撤回（withdraw）到屋里面（within）这样可以抵御（withstand）严寒，抑制（withhold）枯萎（wither）**
+**冬天可以把在外面（without）的花撤回（withdraw）到屋里面（within）这样可以抵御（withstand）严寒，抑制（withhold）枯萎（wither）。**
 
 本篇的单词！有兴趣的可以自己做成思维导图，随时翻阅！
 1. with

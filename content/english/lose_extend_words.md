@@ -37,7 +37,7 @@ lose最后一个字母变为s，就是名词形式loss：
 
 连成一句话：
 
-**人们紧密地（closely）的围绕（enclose）在密室（closet）里揭露（disclose）事情的真相。**
+**人们紧密地（closely）的围绕（enclose）在关闭（close）的密室（closet）里揭露（disclose）事情的真相。**
 
 本篇的单词！有兴趣的可以自己做成思维导图，随时翻阅！
 1. lose
