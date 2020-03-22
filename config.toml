@@ -12,6 +12,9 @@ summaryLength = 140
 publishDir = "docs"
 googleAnalytics = "UA-144916691-1"
 
+[markup.goldmark.renderer]
+  unsafe= true
+
 [author]
   name = "张超"
 

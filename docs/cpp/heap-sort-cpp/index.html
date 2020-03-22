@@ -93,93 +93,185 @@
         
         
         <div class="post-content">
-            <pre><code>#include &lt;iostream&gt;
-
-// 堆调整（非递归版）
-void max_heapify_no_recur(int a[], int len, int i)
+            <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">86
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#998;font-style:italic">// 堆调整（非递归版）
+</span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">max_heapify_no_recur</span>(<span style="color:#458;font-weight:bold">int</span> a[], <span style="color:#458;font-weight:bold">int</span> len, <span style="color:#458;font-weight:bold">int</span> i)
 {
-    int l = 0;
-    int r = 0;
-    int m = 0;
+    <span style="color:#458;font-weight:bold">int</span> l <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
+    <span style="color:#458;font-weight:bold">int</span> r <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
+    <span style="color:#458;font-weight:bold">int</span> m <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
 
-    while (true) {
-        l = i * 2 + 1;  //左节点
-        r = i * 2 + 2;  //右节点
-        m = i;
+    <span style="color:#000;font-weight:bold">while</span> (<span style="color:#0086b3">true</span>) {
+        l <span style="color:#000;font-weight:bold">=</span> i <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">2</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>;  <span style="color:#998;font-style:italic">//左节点
+</span><span style="color:#998;font-style:italic"></span>        r <span style="color:#000;font-weight:bold">=</span> i <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">2</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">2</span>;  <span style="color:#998;font-style:italic">//右节点
+</span><span style="color:#998;font-style:italic"></span>        m <span style="color:#000;font-weight:bold">=</span> i;
 
-        // 找出最大值节点
-        if (l &lt; len &amp;&amp; a[l] &gt; a[m]) {
-            m = l;
+        <span style="color:#998;font-style:italic">// 找出最大值节点
+</span><span style="color:#998;font-style:italic"></span>        <span style="color:#000;font-weight:bold">if</span> (l <span style="color:#000;font-weight:bold">&lt;</span> len <span style="color:#000;font-weight:bold">&amp;&amp;</span> a[l] <span style="color:#000;font-weight:bold">&gt;</span> a[m]) {
+            m <span style="color:#000;font-weight:bold">=</span> l;
         }
-        if (r &lt; len &amp;&amp; a[r] &gt; a[m]) {
-            m = r;
+        <span style="color:#000;font-weight:bold">if</span> (r <span style="color:#000;font-weight:bold">&lt;</span> len <span style="color:#000;font-weight:bold">&amp;&amp;</span> a[r] <span style="color:#000;font-weight:bold">&gt;</span> a[m]) {
+            m <span style="color:#000;font-weight:bold">=</span> r;
         }
-        if (m != i) {
-            // 把当前节点设为最大，继续调整子节点
-            std::swap(a[i], a[m]);
-            i = m;
+        <span style="color:#000;font-weight:bold">if</span> (m <span style="color:#000;font-weight:bold">!=</span> i) {
+            <span style="color:#998;font-style:italic">// 把当前节点设为最大，继续调整子节点
+</span><span style="color:#998;font-style:italic"></span>            std<span style="color:#000;font-weight:bold">::</span>swap(a[i], a[m]);
+            i <span style="color:#000;font-weight:bold">=</span> m;
         }
-        else {
-            break;
+        <span style="color:#000;font-weight:bold">else</span> {
+            <span style="color:#000;font-weight:bold">break</span>;
         }
     }
 }
 
-// 堆调整（递归版）
-void max_heapify(int a[], int len, int i)
+<span style="color:#998;font-style:italic">// 堆调整（递归版）
+</span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">max_heapify</span>(<span style="color:#458;font-weight:bold">int</span> a[], <span style="color:#458;font-weight:bold">int</span> len, <span style="color:#458;font-weight:bold">int</span> i)
 {
-    int l = i * 2 + 1;  //左节点
-    int r = i * 2 + 2;  //右节点
-    int m = i;
+    <span style="color:#458;font-weight:bold">int</span> l <span style="color:#000;font-weight:bold">=</span> i <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">2</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>;  <span style="color:#998;font-style:italic">//左节点
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#458;font-weight:bold">int</span> r <span style="color:#000;font-weight:bold">=</span> i <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">2</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">2</span>;  <span style="color:#998;font-style:italic">//右节点
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#458;font-weight:bold">int</span> m <span style="color:#000;font-weight:bold">=</span> i;
 
-    // 找出最大值节点
-    if (l &lt; len &amp;&amp; a[l] &gt; a[m]) {
-        m = l;
+    <span style="color:#998;font-style:italic">// 找出最大值节点
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">if</span> (l <span style="color:#000;font-weight:bold">&lt;</span> len <span style="color:#000;font-weight:bold">&amp;&amp;</span> a[l] <span style="color:#000;font-weight:bold">&gt;</span> a[m]) {
+        m <span style="color:#000;font-weight:bold">=</span> l;
     }
-    if (r &lt; len &amp;&amp; a[r] &gt; a[m]) {
-        m = r;
+    <span style="color:#000;font-weight:bold">if</span> (r <span style="color:#000;font-weight:bold">&lt;</span> len <span style="color:#000;font-weight:bold">&amp;&amp;</span> a[r] <span style="color:#000;font-weight:bold">&gt;</span> a[m]) {
+        m <span style="color:#000;font-weight:bold">=</span> r;
     }
-    if (m != i) {
-        // 把当前节点设为最大，递归调整子节点
-        std::swap(a[i], a[m]);
+    <span style="color:#000;font-weight:bold">if</span> (m <span style="color:#000;font-weight:bold">!=</span> i) {
+        <span style="color:#998;font-style:italic">// 把当前节点设为最大，递归调整子节点
+</span><span style="color:#998;font-style:italic"></span>        std<span style="color:#000;font-weight:bold">::</span>swap(a[i], a[m]);
         max_heapify(a, len, m);
     }
 }
 
-// 建堆
-void build_max_heap(int a[], int len)
+<span style="color:#998;font-style:italic">// 建堆
+</span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">build_max_heap</span>(<span style="color:#458;font-weight:bold">int</span> a[], <span style="color:#458;font-weight:bold">int</span> len)
 {
-    for (int i = len/2 - 1; i &gt;= 0; i--) {
-//        max_heapify(a, len, i);
-        max_heapify_no_recur(a, len, i);
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> len<span style="color:#000;font-weight:bold">/</span><span style="color:#099">2</span> <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>; i <span style="color:#000;font-weight:bold">&gt;=</span> <span style="color:#099">0</span>; i<span style="color:#000;font-weight:bold">--</span>) {
+<span style="color:#998;font-style:italic">//        max_heapify(a, len, i);
+</span><span style="color:#998;font-style:italic"></span>        max_heapify_no_recur(a, len, i);
     }
 }
 
-// 堆排序
-void heap_sort(int a[], int len)
+<span style="color:#998;font-style:italic">// 堆排序
+</span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">heap_sort</span>(<span style="color:#458;font-weight:bold">int</span> a[], <span style="color:#458;font-weight:bold">int</span> len)
 {
     build_max_heap(a, len);
-    for (int i = len - 1; i &gt; 0; i--) {
-        std::swap(a[i], a[0]);
-//        max_heapify(a, i, 0);
-        max_heapify_no_recur(a, i, 0);
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> len <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>; i <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">0</span>; i<span style="color:#000;font-weight:bold">--</span>) {
+        std<span style="color:#000;font-weight:bold">::</span>swap(a[i], a[<span style="color:#099">0</span>]);
+<span style="color:#998;font-style:italic">//        max_heapify(a, i, 0);
+</span><span style="color:#998;font-style:italic"></span>        max_heapify_no_recur(a, i, <span style="color:#099">0</span>);
     }
 }
 
-int main(int argc, const char * argv[])
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>(<span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">*</span> argv[])
 {
-    int a[] = {1, 1, 6, 6, 8, 3, 5, 100, 300, 200, 99, 99};
-    heap_sort(a, sizeof(a)/sizeof(a[0]));
+    <span style="color:#458;font-weight:bold">int</span> a[] <span style="color:#000;font-weight:bold">=</span> {<span style="color:#099">1</span>, <span style="color:#099">1</span>, <span style="color:#099">6</span>, <span style="color:#099">6</span>, <span style="color:#099">8</span>, <span style="color:#099">3</span>, <span style="color:#099">5</span>, <span style="color:#099">100</span>, <span style="color:#099">300</span>, <span style="color:#099">200</span>, <span style="color:#099">99</span>, <span style="color:#099">99</span>};
+    heap_sort(a, <span style="color:#000;font-weight:bold">sizeof</span>(a)<span style="color:#000;font-weight:bold">/</span><span style="color:#000;font-weight:bold">sizeof</span>(a[<span style="color:#099">0</span>]));
 
-    for (int i : a) {
-        std::cout &lt;&lt; i &lt;&lt; ' ';
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">i</span> : a) {
+        std<span style="color:#000;font-weight:bold">::</span>cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> i <span style="color:#000;font-weight:bold">&lt;&lt;</span> <span style="color:#d14">&#39; &#39;</span>;
     }
-    std::cout &lt;&lt; std::endl;
+    std<span style="color:#000;font-weight:bold">::</span>cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> std<span style="color:#000;font-weight:bold">::</span>endl;
     
-    return 0;
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
 
-</code></pre>
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
 
         
@@ -188,7 +280,7 @@ int main(int argc, const char * argv[])
         
 
 <div class="post-archive">
-    <h2>See Also</h2>
+    <h2>相关文章</h2>
     <ul class="listing">
         
         <li><a href="/cpp/constructor-destrutor-order/">C&#43;&#43;构造函数、析构函数执行顺序详解</a></li>

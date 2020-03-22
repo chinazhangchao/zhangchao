@@ -93,68 +93,135 @@
         
         
         <div class="post-content">
-            <pre><code>#include &lt;iostream&gt;
-
-void merge(int a[], int b[], int l, int m, int r)
+            <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">merge</span>(<span style="color:#458;font-weight:bold">int</span> a[], <span style="color:#458;font-weight:bold">int</span> b[], <span style="color:#458;font-weight:bold">int</span> l, <span style="color:#458;font-weight:bold">int</span> m, <span style="color:#458;font-weight:bold">int</span> r)
 {
-    int i = l;
-    int j = m + 1;
-    int k = l;
+    <span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> l;
+    <span style="color:#458;font-weight:bold">int</span> j <span style="color:#000;font-weight:bold">=</span> m <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>;
+    <span style="color:#458;font-weight:bold">int</span> k <span style="color:#000;font-weight:bold">=</span> l;
     
-    while (k &lt;= r) {
-        if (i &gt; m) {
-            b[k++] = a[j++];
+    <span style="color:#000;font-weight:bold">while</span> (k <span style="color:#000;font-weight:bold">&lt;=</span> r) {
+        <span style="color:#000;font-weight:bold">if</span> (i <span style="color:#000;font-weight:bold">&gt;</span> m) {
+            b[k<span style="color:#000;font-weight:bold">++</span>] <span style="color:#000;font-weight:bold">=</span> a[j<span style="color:#000;font-weight:bold">++</span>];
         }
-        else if (j &gt; r) {
-            b[k++] = a[i++];
+        <span style="color:#000;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">if</span> (j <span style="color:#000;font-weight:bold">&gt;</span> r) {
+            b[k<span style="color:#000;font-weight:bold">++</span>] <span style="color:#000;font-weight:bold">=</span> a[i<span style="color:#000;font-weight:bold">++</span>];
         }
-        else {
-            if (a[i] &gt; a[j]) {
-                b[k++] = a[j++];
+        <span style="color:#000;font-weight:bold">else</span> {
+            <span style="color:#000;font-weight:bold">if</span> (a[i] <span style="color:#000;font-weight:bold">&gt;</span> a[j]) {
+                b[k<span style="color:#000;font-weight:bold">++</span>] <span style="color:#000;font-weight:bold">=</span> a[j<span style="color:#000;font-weight:bold">++</span>];
             }
-            else {
-                b[k++] = a[i++];
+            <span style="color:#000;font-weight:bold">else</span> {
+                b[k<span style="color:#000;font-weight:bold">++</span>] <span style="color:#000;font-weight:bold">=</span> a[i<span style="color:#000;font-weight:bold">++</span>];
             }
         }
     }
 
-    for (int k = l; k &lt;= r; k++) {
-        a[k] = b[k];
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> k <span style="color:#000;font-weight:bold">=</span> l; k <span style="color:#000;font-weight:bold">&lt;=</span> r; k<span style="color:#000;font-weight:bold">++</span>) {
+        a[k] <span style="color:#000;font-weight:bold">=</span> b[k];
     }
 }
 
-void merge_sort_helper(int a[], int b[], int l, int r)
+<span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">merge_sort_helper</span>(<span style="color:#458;font-weight:bold">int</span> a[], <span style="color:#458;font-weight:bold">int</span> b[], <span style="color:#458;font-weight:bold">int</span> l, <span style="color:#458;font-weight:bold">int</span> r)
 {
-    if (l &gt;= r) {
-        return;
+    <span style="color:#000;font-weight:bold">if</span> (l <span style="color:#000;font-weight:bold">&gt;=</span> r) {
+        <span style="color:#000;font-weight:bold">return</span>;
     }
-    int m = (l + r)/2;
+    <span style="color:#458;font-weight:bold">int</span> m <span style="color:#000;font-weight:bold">=</span> (l <span style="color:#000;font-weight:bold">+</span> r)<span style="color:#000;font-weight:bold">/</span><span style="color:#099">2</span>;
     merge_sort_helper(a, b, l, m);
-    merge_sort_helper(a, b, m + 1, r);
+    merge_sort_helper(a, b, m <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>, r);
     merge(a, b, l, m, r);
 }
 
-void merge_sort(int a[], int len)
+<span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">merge_sort</span>(<span style="color:#458;font-weight:bold">int</span> a[], <span style="color:#458;font-weight:bold">int</span> len)
 {
-    int *b = new int[len];
-    merge_sort_helper(a, b, 0, len - 1);
-    delete[] b;
+    <span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span>b <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#458;font-weight:bold">int</span>[len];
+    merge_sort_helper(a, b, <span style="color:#099">0</span>, len <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>);
+    <span style="color:#000;font-weight:bold">delete</span>[] b;
 }
 
-int main(int argc, const char * argv[])
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>(<span style="color:#458;font-weight:bold">int</span> argc, <span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">char</span> <span style="color:#000;font-weight:bold">*</span> argv[])
 {
-    int a[] = {1, 1, 6, 6, 8, 3, 5, 100, 300, 200, 99, 99};
-    merge_sort(a, sizeof(a)/sizeof(a[0]));
+    <span style="color:#458;font-weight:bold">int</span> a[] <span style="color:#000;font-weight:bold">=</span> {<span style="color:#099">1</span>, <span style="color:#099">1</span>, <span style="color:#099">6</span>, <span style="color:#099">6</span>, <span style="color:#099">8</span>, <span style="color:#099">3</span>, <span style="color:#099">5</span>, <span style="color:#099">100</span>, <span style="color:#099">300</span>, <span style="color:#099">200</span>, <span style="color:#099">99</span>, <span style="color:#099">99</span>};
+    merge_sort(a, <span style="color:#000;font-weight:bold">sizeof</span>(a)<span style="color:#000;font-weight:bold">/</span><span style="color:#000;font-weight:bold">sizeof</span>(a[<span style="color:#099">0</span>]));
 
-    for (int i : a) {
-        std::cout &lt;&lt; i &lt;&lt; ' ';
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">i</span> : a) {
+        std<span style="color:#000;font-weight:bold">::</span>cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> i <span style="color:#000;font-weight:bold">&lt;&lt;</span> <span style="color:#d14">&#39; &#39;</span>;
     }
-    std::cout &lt;&lt; std::endl;
+    std<span style="color:#000;font-weight:bold">::</span>cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> std<span style="color:#000;font-weight:bold">::</span>endl;
     
-    return 0;
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
 
-</code></pre>
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
 
         
@@ -163,7 +230,7 @@ int main(int argc, const char * argv[])
         
 
 <div class="post-archive">
-    <h2>See Also</h2>
+    <h2>相关文章</h2>
     <ul class="listing">
         
         <li><a href="/cpp/quick-sort-cpp/">快速排序-C&#43;&#43;代码</a></li>

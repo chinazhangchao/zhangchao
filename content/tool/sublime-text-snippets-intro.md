@@ -13,7 +13,7 @@ Snippets是可以复用的代码片段模板，可以帮助你快速输入大量
 
 <img src="/tool/sublime-text-snippets-intro/1.png" style="width:600px;"/>
 
-```
+```xml
 <snippet>
 	<content><![CDATA[
 Hello, ${1:this} is a ${2:snippet}.
@@ -27,7 +27,7 @@ Hello, ${1:this} is a ${2:snippet}.
 ```
 
 将模板内容修改如下：
-```
+```xml
 <snippet>
 	<content><![CDATA[
 Hello, this is a snippet.

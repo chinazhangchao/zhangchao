@@ -20,7 +20,7 @@ tags: [LeetCode,C++]
 ```
 下面给出三种解法的C++代码
 #### 1. 第一种解法：暴力解法
-```
+```cpp
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -34,13 +34,12 @@ public:
     }
 };
 ```
-```
-```
+
 **复杂度分析**
 - 时间复杂度：O(n^2)。
 - 空间复杂度：O(1)。
 #### 2. 第二种解法：两遍哈希表
-```
+```cpp
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -67,7 +66,7 @@ public:
 - 时间复杂度：O(n)。
 - 空间复杂度：O(n)。
 #### 3. 第三种解法：一遍哈希表
-```
+```cpp
 class Solution {
 public:
 	vector<int> twoSum(vector<int>& nums, int target) {
@@ -88,7 +87,7 @@ public:
 	}
 };
 ```
-```
+```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         d = {}

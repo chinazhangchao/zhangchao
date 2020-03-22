@@ -8,7 +8,7 @@ tags: [C++,快速排序]
 summary: "快速排序C++实现。"
 ---
 
-```
+```cpp
 #include <iostream>
 
 int partition(int a[], int l, int r)

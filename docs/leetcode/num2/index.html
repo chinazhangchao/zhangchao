@@ -101,55 +101,115 @@
 输出：7 -&gt; 0 -&gt; 8
 原因：342 + 465 = 807
 </code></pre><p>下面给出C++代码的解法</p>
-<pre><code>/**
-* Definition for singly-linked list.
-* struct ListNode {
-*     int val;
-*     ListNode *next;
-*     ListNode(int x) : val(x), next(NULL) {}
-* };
-*/
-class Solution {
-public:
-	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-		// 注意运用dummy技巧很多时候可以让代码更简洁
-		ListNode dummy(0);
-		ListNode* prev = &amp;dummy;
-		int carry = 0;
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#998;font-style:italic">/**
+</span><span style="color:#998;font-style:italic">* Definition for singly-linked list.
+</span><span style="color:#998;font-style:italic">* struct ListNode {
+</span><span style="color:#998;font-style:italic">*     int val;
+</span><span style="color:#998;font-style:italic">*     ListNode *next;
+</span><span style="color:#998;font-style:italic">*     ListNode(int x) : val(x), next(NULL) {}
+</span><span style="color:#998;font-style:italic">* };
+</span><span style="color:#998;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Solution</span> {
+<span style="color:#000;font-weight:bold">public</span><span style="color:#000;font-weight:bold">:</span>
+	ListNode<span style="color:#000;font-weight:bold">*</span> addTwoNumbers(ListNode<span style="color:#000;font-weight:bold">*</span> l1, ListNode<span style="color:#000;font-weight:bold">*</span> l2) {
+		<span style="color:#998;font-style:italic">// 注意运用dummy技巧很多时候可以让代码更简洁
+</span><span style="color:#998;font-style:italic"></span>		ListNode <span style="color:#900;font-weight:bold">dummy</span>(<span style="color:#099">0</span>);
+		ListNode<span style="color:#000;font-weight:bold">*</span> prev <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">&amp;</span>dummy;
+		<span style="color:#458;font-weight:bold">int</span> carry <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
 
-		while (l1 != nullptr || l2 != nullptr || carry != 0) {
-			int sum = (l1 == nullptr ? 0 : l1-&gt;val) + (l2 == nullptr ? 0 : l2-&gt;val) + carry;
-			carry = sum / 10;
-			prev-&gt;next = new ListNode(sum % 10);
-			prev = prev-&gt;next;
-			l1 = (l1 == nullptr ? nullptr : l1-&gt;next);
-			l2 = (l2 == nullptr ? nullptr : l2-&gt;next);
+		<span style="color:#000;font-weight:bold">while</span> (l1 <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nullptr</span> <span style="color:#000;font-weight:bold">||</span> l2 <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nullptr</span> <span style="color:#000;font-weight:bold">||</span> carry <span style="color:#000;font-weight:bold">!=</span> <span style="color:#099">0</span>) {
+			<span style="color:#458;font-weight:bold">int</span> sum <span style="color:#000;font-weight:bold">=</span> (l1 <span style="color:#000;font-weight:bold">==</span> <span style="color:#000;font-weight:bold">nullptr</span> <span style="color:#000;font-weight:bold">?</span> <span style="color:#099">0</span> <span style="color:#000;font-weight:bold">:</span> l1<span style="color:#000;font-weight:bold">-&gt;</span>val) <span style="color:#000;font-weight:bold">+</span> (l2 <span style="color:#000;font-weight:bold">==</span> <span style="color:#000;font-weight:bold">nullptr</span> <span style="color:#000;font-weight:bold">?</span> <span style="color:#099">0</span> <span style="color:#000;font-weight:bold">:</span> l2<span style="color:#000;font-weight:bold">-&gt;</span>val) <span style="color:#000;font-weight:bold">+</span> carry;
+			carry <span style="color:#000;font-weight:bold">=</span> sum <span style="color:#000;font-weight:bold">/</span> <span style="color:#099">10</span>;
+			prev<span style="color:#000;font-weight:bold">-&gt;</span>next <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> ListNode(sum <span style="color:#000;font-weight:bold">%</span> <span style="color:#099">10</span>);
+			prev <span style="color:#000;font-weight:bold">=</span> prev<span style="color:#000;font-weight:bold">-&gt;</span>next;
+			l1 <span style="color:#000;font-weight:bold">=</span> (l1 <span style="color:#000;font-weight:bold">==</span> <span style="color:#000;font-weight:bold">nullptr</span> <span style="color:#000;font-weight:bold">?</span> <span style="color:#000;font-weight:bold">nullptr</span> <span style="color:#000;font-weight:bold">:</span> l1<span style="color:#000;font-weight:bold">-&gt;</span>next);
+			l2 <span style="color:#000;font-weight:bold">=</span> (l2 <span style="color:#000;font-weight:bold">==</span> <span style="color:#000;font-weight:bold">nullptr</span> <span style="color:#000;font-weight:bold">?</span> <span style="color:#000;font-weight:bold">nullptr</span> <span style="color:#000;font-weight:bold">:</span> l2<span style="color:#000;font-weight:bold">-&gt;</span>next);
 		}
 
-		return dummy.next;
+		<span style="color:#000;font-weight:bold">return</span> dummy.next;
 	}
 };
-</code></pre><pre><code># Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#998;font-style:italic"># Definition for singly-linked list.</span>
+<span style="color:#998;font-style:italic"># class ListNode:</span>
+<span style="color:#998;font-style:italic">#     def __init__(self, x):</span>
+<span style="color:#998;font-style:italic">#         self.val = x</span>
+<span style="color:#998;font-style:italic">#         self.next = None</span>
 
-class Solution:
-    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -&gt; ListNode:
-        prev = root = ListNode(0)
-        carry = 0
+<span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Solution</span>:
+    <span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">addTwoNumbers</span>(<span style="color:#999">self</span>, l1: ListNode, l2: ListNode) <span style="color:#000;font-weight:bold">-&gt;</span> ListNode:
+        prev <span style="color:#000;font-weight:bold">=</span> root <span style="color:#000;font-weight:bold">=</span> ListNode(<span style="color:#099">0</span>)
+        carry <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>
         
-        while l1 or l2 or carry:
-            sum = (l1.val if l1 else 0) + (l2.val if l2 else 0) + carry
-            carry = sum // 10
-            prev.next = ListNode(sum % 10)
-            prev = prev.next
-            l1 = l1.next if l1 else None
-            l2 = l2.next if l2 else None
+        <span style="color:#000;font-weight:bold">while</span> l1 <span style="color:#000;font-weight:bold">or</span> l2 <span style="color:#000;font-weight:bold">or</span> carry:
+            <span style="color:#0086b3">sum</span> <span style="color:#000;font-weight:bold">=</span> (l1<span style="color:#000;font-weight:bold">.</span>val <span style="color:#000;font-weight:bold">if</span> l1 <span style="color:#000;font-weight:bold">else</span> <span style="color:#099">0</span>) <span style="color:#000;font-weight:bold">+</span> (l2<span style="color:#000;font-weight:bold">.</span>val <span style="color:#000;font-weight:bold">if</span> l2 <span style="color:#000;font-weight:bold">else</span> <span style="color:#099">0</span>) <span style="color:#000;font-weight:bold">+</span> carry
+            carry <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">sum</span> <span style="color:#000;font-weight:bold">//</span> <span style="color:#099">10</span>
+            prev<span style="color:#000;font-weight:bold">.</span>next <span style="color:#000;font-weight:bold">=</span> ListNode(<span style="color:#0086b3">sum</span> <span style="color:#000;font-weight:bold">%</span> <span style="color:#099">10</span>)
+            prev <span style="color:#000;font-weight:bold">=</span> prev<span style="color:#000;font-weight:bold">.</span>next
+            l1 <span style="color:#000;font-weight:bold">=</span> l1<span style="color:#000;font-weight:bold">.</span>next <span style="color:#000;font-weight:bold">if</span> l1 <span style="color:#000;font-weight:bold">else</span> <span style="color:#999">None</span>
+            l2 <span style="color:#000;font-weight:bold">=</span> l2<span style="color:#000;font-weight:bold">.</span>next <span style="color:#000;font-weight:bold">if</span> l2 <span style="color:#000;font-weight:bold">else</span> <span style="color:#999">None</span>
         
-        return root.next
-</code></pre><p><strong>复杂度分析</strong></p>
+        <span style="color:#000;font-weight:bold">return</span> root<span style="color:#000;font-weight:bold">.</span>next
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>复杂度分析</strong></p>
 <ul>
 <li>
 <p>时间复杂度：O(max(m, n))，假设 m 和 n 分别表示 l1 和 l2 的长度，上面的算法最多重复 max(m, n) 次。</p>
@@ -169,7 +229,7 @@ class Solution:
         
 
 <div class="post-archive">
-    <h2>See Also</h2>
+    <h2>相关文章</h2>
     <ul class="listing">
         
         <li><a href="/leetcode/num1/">LeetCode-1. Two Sum（两数之和）C&#43;&#43;实现</a></li>

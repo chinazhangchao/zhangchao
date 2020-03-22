@@ -96,21 +96,21 @@
 <ol>
 <li>
 <p>找到Sublime Text 3安装目录下的<code>Default.sublime-package</code>文件，在我电脑上的路径为：<code>D:\Program Files\Sublime Text 3\Packages\Default.sublime-package</code>，复制一份该文件，把文件扩展名改为zip，比如改为：<code>Default.zip</code>。
-<!-- raw HTML omitted --></p>
+<img src="/tool/sublime-text-3-increase-recent-file-number-windows/1.png" style="width:600px;"/></p>
 </li>
 <li>
 <p>解压该zip文件，在解压出的目录中找到文件<code>Main.sublime-menu</code>，用文本编辑器打开：
-<!-- raw HTML omitted --></p>
+<img src="/tool/sublime-text-3-increase-recent-file-number-windows/2.png" style="width: 600px;"/></p>
 </li>
 <li>
 <p>找到如图所示的文本，增加几行<code>{ &quot;command&quot;: &quot;open_recent_file&quot;, &quot;args&quot;: {&quot;index&quot;: n } },</code>。
-<!-- raw HTML omitted -->
+<img src="/tool/sublime-text-3-increase-recent-file-number-windows/3-1.png" style="width: 600px;"/>
 例如把最近打开的文件和文件夹数量都改为15：
-<!-- raw HTML omitted --></p>
+<img src="/tool/sublime-text-3-increase-recent-file-number-windows/3-2.png" style="width: 600px;"/></p>
 </li>
 <li>
 <p>保存修改的文件<code>Main.sublime-menu</code>，找到Sublime Text 3的配置文件目录，在我电脑为<code>C:\Users\zhangchao\AppData\Roaming\Sublime Text 3\Packages\</code>，新建文件夹<code>Default</code>，把修改后的<code>Main.sublime-menu</code>文件复制到<code>Default</code>目录中即可。
-<!-- raw HTML omitted --></p>
+<img src="/tool/sublime-text-3-increase-recent-file-number-windows/4.png" style="width: 600px;"/></p>
 </li>
 </ol>
         </div>

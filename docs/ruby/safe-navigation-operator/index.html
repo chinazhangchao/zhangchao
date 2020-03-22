@@ -243,28 +243,68 @@ account<span style="color:#000;font-weight:bold">&amp;.</span>owner<span style="
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>很遗憾，try方法没有检查接收者是否响应给定的方法。这就是为什么应该尽量使用try的严格版本——try!的原因：</strong></p>
-<pre><code>account.try!(:owner).try!(:address)
-# =&gt; NoMethodError: undefined method `address' for #&lt;Object:0x00559996b5bde8&gt;`
-</code></pre><h1 id="注意事项">注意事项</h1>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">account<span style="color:#000;font-weight:bold">.</span>try!(<span style="color:#990073">:owner</span>)<span style="color:#000;font-weight:bold">.</span>try!(<span style="color:#990073">:address</span>)
+<span style="color:#998;font-style:italic"># =&gt; NoMethodError: undefined method `address&#39; for #&lt;Object:0x00559996b5bde8&gt;`</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="注意事项">注意事项</h1>
 <p>这段作者也有疑惑，我就自己发挥一下了。第一个例子不用解释。第二个我理解为先调用nil?，此时返回false（主对象main调用nil?的结果）。然后再调用nil?，还是返回false（相当于false.nil?）。<strong>第三个例子表明&amp;.符号在对象为nil时不会再去检查是否响应对应的方法</strong>。</p>
-<pre><code>nil.nil?
-# =&gt; true
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#000;font-weight:bold">nil</span><span style="color:#000;font-weight:bold">.</span>nil?
+<span style="color:#998;font-style:italic"># =&gt; true</span>
 
-nil?.nil?
-# =&gt; false
+<span style="color:#000;font-weight:bold">nil</span>?<span style="color:#000;font-weight:bold">.</span>nil?
+<span style="color:#998;font-style:italic"># =&gt; false</span>
 
-nil&amp;.nil?
-# =&gt; nil
-</code></pre><h1 id="arraydig-and-hashdig">Array#dig and Hash#dig</h1>
+<span style="color:#000;font-weight:bold">nil</span><span style="color:#000;font-weight:bold">&amp;.</span>nil?
+<span style="color:#998;font-style:italic"># =&gt; nil</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="arraydig-and-hashdig">Array#dig and Hash#dig</h1>
 <p>在我看来，dig方法是这个版本中最有用的特性。我们再也不用写下面这样恶心的代码：</p>
-<pre><code>address = params[:account].try(:[], :owner).try(:[], :address)
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">address <span style="color:#000;font-weight:bold">=</span> params<span style="color:#000;font-weight:bold">[</span><span style="color:#990073">:account</span><span style="color:#000;font-weight:bold">].</span>try(<span style="color:#990073">:[]</span>, <span style="color:#990073">:owner</span>)<span style="color:#000;font-weight:bold">.</span>try(<span style="color:#990073">:[]</span>, <span style="color:#990073">:address</span>)
 
-# or
+<span style="color:#998;font-style:italic"># or</span>
 
-address = params[:account].fetch(:owner) .fetch(:address)
-</code></pre><p>只需简单的使用Hash#dig来达到同样的目的：</p>
-<pre><code>address = params.dig(:account, :owner, :address)
-</code></pre><h1 id="写在后面">写在后面</h1>
+address <span style="color:#000;font-weight:bold">=</span> params<span style="color:#000;font-weight:bold">[</span><span style="color:#990073">:account</span><span style="color:#000;font-weight:bold">].</span>fetch(<span style="color:#990073">:owner</span>) <span style="color:#000;font-weight:bold">.</span>fetch(<span style="color:#990073">:address</span>)
+</code></pre></td></tr></table>
+</div>
+</div><p>只需简单的使用Hash#dig来达到同样的目的：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">address <span style="color:#000;font-weight:bold">=</span> params<span style="color:#000;font-weight:bold">.</span>dig(<span style="color:#990073">:account</span>, <span style="color:#990073">:owner</span>, <span style="color:#990073">:address</span>)
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="写在后面">写在后面</h1>
 <p>我非常不喜欢处理动态语言中的空值，安全调用运算符和dig的出现使得代码可以写得非常简洁。（最后一句不翻了，Ruby 2.3.0早已发布，祝大家编码愉快<code>^_^</code>）</p>
 <p>英文原文地址：http://mitrev.net/ruby/2015/11/13/the-operator-in-ruby/</p>
 

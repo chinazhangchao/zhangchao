@@ -8,7 +8,7 @@ tags: [C++,归并排序]
 summary: "归并排序C++实现。"
 ---
 
-```
+```cpp
 #include <iostream>
 
 void merge(int a[], int b[], int l, int m, int r)

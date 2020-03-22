@@ -20,7 +20,7 @@ tags: [LeetCode,C++]
 原因：342 + 465 = 807
 ```
 下面给出C++代码的解法
-```
+```cpp
 /**
 * Definition for singly-linked list.
 * struct ListNode {
@@ -50,7 +50,7 @@ public:
 	}
 };
 ```
-```
+```python
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):

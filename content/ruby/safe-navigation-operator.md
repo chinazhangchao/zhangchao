@@ -86,13 +86,13 @@ account&.owner&.address
 # => NoMethodError: undefined method `address' for #<Object:0x00559996b5bde8>`
 ```
 **很遗憾，try方法没有检查接收者是否响应给定的方法。这就是为什么应该尽量使用try的严格版本——try!的原因：**
-```
+```ruby
 account.try!(:owner).try!(:address)
 # => NoMethodError: undefined method `address' for #<Object:0x00559996b5bde8>`
 ```
 # 注意事项
 这段作者也有疑惑，我就自己发挥一下了。第一个例子不用解释。第二个我理解为先调用nil?，此时返回false（主对象main调用nil?的结果）。然后再调用nil?，还是返回false（相当于false.nil?）。**第三个例子表明&.符号在对象为nil时不会再去检查是否响应对应的方法**。
-```
+```ruby
 nil.nil?
 # => true
 
@@ -104,7 +104,7 @@ nil&.nil?
 ```
 # Array#dig and Hash#dig
 在我看来，dig方法是这个版本中最有用的特性。我们再也不用写下面这样恶心的代码：
-```
+```ruby
 address = params[:account].try(:[], :owner).try(:[], :address)
 
 # or
@@ -112,7 +112,7 @@ address = params[:account].try(:[], :owner).try(:[], :address)
 address = params[:account].fetch(:owner) .fetch(:address)
 ```
 只需简单的使用Hash#dig来达到同样的目的：
-```
+```ruby
 address = params.dig(:account, :owner, :address)
 ```
 

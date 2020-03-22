@@ -8,7 +8,7 @@ tags: [C++,堆排序]
 summary: "堆排序C++实现。"
 ---
 
-```
+```cpp
 #include <iostream>
 
 // 堆调整（非递归版）

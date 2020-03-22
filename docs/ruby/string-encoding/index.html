@@ -102,10 +102,19 @@ Ruby 1.9 的实现方法是，所有的源码都有一个 Encoding 对象，当�
 ###2.外部字符串编码
 字符串经常还可以通过另一种方法来创建：从 IO 对象读取。这时候我们就不能简单的将源码的 Encoding 对象赋值给字符串了，因为外码数据与源码无关。因此，IO 对象至少要附着一种 Encoding 对象。而 Ruby 为此提供了两种编码：外部编码和内部编码。</p>
 <p>我们通过设置打开文件的模式来设定外部编码和内部编码，并通过 IO 对象的 <code>external_encoding</code> 和 <code>internal_encoding</code> 方法来访问外部编码和内部编码。</p>
-<pre><code>f = File.new('test.txt', internal_encoding: Encoding::UTF_8, external_encoding: Encoding::GBK)
-f.internal_encoding               # =&gt; Encoding::UTF_8
-f.external_encoding               # =&gt; Encoding::GBK
-</code></pre><p>外部编码是数据在 IO 对象内所采用的编码，外部编码影响数据的读取；如果内部编码没有设定的话，返回数据也会采用外部编码的编码进行编码。</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">f <span style="color:#000;font-weight:bold">=</span> <span style="color:#008080">File</span><span style="color:#000;font-weight:bold">.</span>new(<span style="color:#d14">&#39;test.txt&#39;</span>, <span style="color:#990073">internal_encoding</span>: <span style="color:#008080">Encoding</span><span style="color:#000;font-weight:bold">::</span><span style="color:#008080">UTF_8</span>, <span style="color:#990073">external_encoding</span>: <span style="color:#008080">Encoding</span><span style="color:#000;font-weight:bold">::</span><span style="color:#008080">GBK</span>)
+f<span style="color:#000;font-weight:bold">.</span>internal_encoding               <span style="color:#998;font-style:italic"># =&gt; Encoding::UTF_8</span>
+f<span style="color:#000;font-weight:bold">.</span>external_encoding               <span style="color:#998;font-style:italic"># =&gt; Encoding::GBK</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>外部编码是数据在 IO 对象内所采用的编码，外部编码影响数据的读取；如果内部编码没有设定的话，返回数据也会采用外部编码的编码进行编码。</p>
 <p>如果设置了内部编码，数据还是以外部编码读取，但是在创建字符串时会将其转到内部编码。这个程序带来了便利。</p>
 <p>在写模式下，外部编码以相同的方式工作。但是，此时你就没有必要显示的指定一个内部编码了，Ruby 会自动将输出的字符串的编码设为内部编码，如果需要的话将数据转换为外部编码。</p>
 <p>如果不设置它们，内部编码默认值是 nil 。外部编码默认值会从环境中去取得，类似于通过命令行设定源码的方式。</p>
@@ -119,7 +128,7 @@ f.external_encoding               # =&gt; Encoding::GBK
         
 
 <div class="post-archive">
-    <h2>See Also</h2>
+    <h2>相关文章</h2>
     <ul class="listing">
         
         <li><a href="/ruby/magic-comment/">Ruby 2.3中的魔法注释# frozen_string_literal: true</a></li>

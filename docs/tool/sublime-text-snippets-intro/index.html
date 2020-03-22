@@ -93,38 +93,70 @@
         <div class="post-content">
             <p>Snippets是可以复用的代码片段模板，可以帮助你快速输入大量重复内容，极大提高写作效率。</p>
 <p>在Sublime Text中新建Snippet，选择菜单：Tools-&gt;Developer-&gt;New Snippet&hellip;，Sublime Text会生成一个Snippet模板。</p>
-<!-- raw HTML omitted -->
-<pre><code>&lt;snippet&gt;
-	&lt;content&gt;&lt;![CDATA[
-Hello, ${1:this} is a ${2:snippet}.
-]]&gt;&lt;/content&gt;
-	&lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;
-	&lt;!-- &lt;tabTrigger&gt;hello&lt;/tabTrigger&gt; --&gt;
-	&lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;
-	&lt;!-- &lt;scope&gt;source.python&lt;/scope&gt; --&gt;
-&lt;/snippet&gt;
+<img src="/tool/sublime-text-snippets-intro/1.png" style="width:600px;"/>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#000080">&lt;snippet&gt;</span>
+	<span style="color:#000080">&lt;content&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;![CDATA[
+</span><span style="color:#999;font-weight:bold;font-style:italic">Hello, ${1:this} is a ${2:snippet}.
+</span><span style="color:#999;font-weight:bold;font-style:italic">]]&gt;</span><span style="color:#000080">&lt;/content&gt;</span>
+	<span style="color:#998;font-style:italic">&lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;</span>
+	<span style="color:#998;font-style:italic">&lt;!-- &lt;tabTrigger&gt;hello&lt;/tabTrigger&gt; --&gt;</span>
+	<span style="color:#998;font-style:italic">&lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;</span>
+	<span style="color:#998;font-style:italic">&lt;!-- &lt;scope&gt;source.python&lt;/scope&gt; --&gt;</span>
+<span style="color:#000080">&lt;/snippet&gt;</span>
 
-</code></pre><p>将模板内容修改如下：</p>
-<pre><code>&lt;snippet&gt;
-	&lt;content&gt;&lt;![CDATA[
-Hello, this is a snippet.
-]]&gt;&lt;/content&gt;
-	&lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;
-	&lt;tabTrigger&gt;hello&lt;/tabTrigger&gt;
-	&lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;
-	&lt;scope&gt;source.python&lt;/scope&gt;
-&lt;/snippet&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>将模板内容修改如下：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#000080">&lt;snippet&gt;</span>
+	<span style="color:#000080">&lt;content&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">&lt;![CDATA[
+</span><span style="color:#999;font-weight:bold;font-style:italic">Hello, this is a snippet.
+</span><span style="color:#999;font-weight:bold;font-style:italic">]]&gt;</span><span style="color:#000080">&lt;/content&gt;</span>
+	<span style="color:#998;font-style:italic">&lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;</span>
+	<span style="color:#000080">&lt;tabTrigger&gt;</span>hello<span style="color:#000080">&lt;/tabTrigger&gt;</span>
+	<span style="color:#998;font-style:italic">&lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;</span>
+	<span style="color:#000080">&lt;scope&gt;</span>source.python<span style="color:#000080">&lt;/scope&gt;</span>
+<span style="color:#000080">&lt;/snippet&gt;</span>
 
-</code></pre><p>简单介绍一下各节点含义（看不懂没关系，后面的实际操作会让你豁然开朗，可以回头再看<code>^_^</code>）：</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>简单介绍一下各节点含义（看不懂没关系，后面的实际操作会让你豁然开朗，可以回头再看<code>^_^</code>）：</p>
 <ul>
 <li><code>content</code>节点内容表示实际的代码片段。</li>
 <li><code>tabTrigger</code>节点内容表示用来输入代码片段的快捷字符串。</li>
 <li><code>scope</code>节点内容表示代码片段会在哪种上下文环境下激活, 比如上面代码定义了source.python, 意思是这段代码片段会在python语言环境下激活。<strong>注意：Scope不是文件扩展名，可以从菜单：Tools-&gt;Developer-&gt;Show Scope Name查看当前文件扩展名对应的Scope。</strong></li>
 </ul>
 <p>把修改后的模板保存为文件<code>hello.sublime-snippet</code>（保存目录保持默认打开的目录即可）。</p>
-<!-- raw HTML omitted -->
+<img src="/tool/sublime-text-snippets-intro/2.png" style="width:600px;"/>
 <p>新建文件<code>t.py</code>，在文件中输入<code>hello</code>，按下<code>Tab</code>键，则输出如下：
-<!-- raw HTML omitted --></p>
+<img src="/tool/sublime-text-snippets-intro/3.png" style="width:600px;"/></p>
 <p>好了，这就是Snippet最基本的用法，是不是很简单很强大！更多高级功能请参考官方文档<a href="http://docs.sublimetext.info/en/latest/extensibility/snippets.html">http://docs.sublimetext.info/en/latest/extensibility/snippets.html</a></p>
 <p><strong>一个常见问题：针对Markdown文件的Snippet没有出现在自动补全列表中</strong></p>
 <p>解决办法是选择菜单Preferences-&gt;Settings，在右侧的窗口中增加如下设置：</p>
@@ -203,7 +235,7 @@ YAML: source.yaml
         
 
 <div class="post-archive">
-    <h2>See Also</h2>
+    <h2>相关文章</h2>
     <ul class="listing">
         
         <li><a href="/tool/sublime-text-3-increase-recent-file-number-mac/">Sublime Text 3增加最近打开的文件数量（Mac）</a></li>
