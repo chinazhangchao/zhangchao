@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rails on 张超的博客</title>
-    <link>http://zhangchao.xyz/rails/</link>
+    <link>https://zhangchao.xyz/rails/</link>
     <description>Recent content in Rails on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 24 Aug 2019 11:46:54 +0800</lastBuildDate>
     
-	<atom:link href="http://zhangchao.xyz/rails/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhangchao.xyz/rails/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rails中的MIME类型解析规则</title>
-      <link>http://zhangchao.xyz/rails/mime-parse/</link>
+      <link>https://zhangchao.xyz/rails/mime-parse/</link>
       <pubDate>Sat, 24 Aug 2019 11:46:54 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/rails/mime-parse/</guid>
+      <guid>https://zhangchao.xyz/rails/mime-parse/</guid>
       <description>Rails中的MIME解析并没有那么看起来那么简单</description>
     </item>
     

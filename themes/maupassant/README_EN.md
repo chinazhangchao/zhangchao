@@ -12,11 +12,15 @@ A simple Hugo template with great performance on different devices, ported from 
 
 ## Features
 
+#### Requirements
+
+Hugo Version >= v 0.60.0
+
 ## Installation
 
 ```bash
 cd <YOUR Bolg Root Dir>
-git clone https://github.com/rujews/maupassant-hugo themes/maupassant
+git clone https://github.com/flysnow-org/maupassant-hugo themes/maupassant
 ```
 
 ## Configuration
@@ -27,23 +31,9 @@ git clone https://github.com/rujews/maupassant-hugo themes/maupassant
 theme = "maupassant"
 ```
 
-#### Basic Configuration
+#### Quick Start
 
-```toml
-baseURL = "http://www.flysnow.org"
-languageCode = "zh-CN"
-title = "飞雪无情的博客"
-theme = "maupassant"
-
-[author]
-  name = "飞雪无情"
-
-[params]
-  author = "飞雪无情"
-  subtitle = "专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构"
-  keywords = "golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序"
-  description = "专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等"
-```
+See [exampleSite](exampleSite/) folder,  copy the`config.toml` in the root folder of your Hugo site and change it to your needs.
 
 #### Menus
 
@@ -89,6 +79,26 @@ TOC support in Front Matter .
 ```toml
 toc = true
 ```
+ If the left blank space more than 100px, it will display Floating TOC. 
+
+
+#### Local Search
+
+If you want to use local search , please following steps:
+
+1. enabled rss,you can visit `http://127.0.0.1:1313/index.xml` check it.
+2. edit `config.toml` file,add `localSearch = true` under the `[params]`.
+3. new `index.md` file in your `content/search/` dir,and write content for:
+
+```
+---
+title: "搜索"
+description: "搜索页面"
+type: "search"
+---
+```
+
+Now ,run `hugo server` and try local search.
 
 #### Ads
 
@@ -137,6 +147,107 @@ disqusShortname = "yourdiscussshortname"
   busuanzi = true
 ```
 
+#### Draw Diagram
+- sequence diagram(powered by [js-sequence](https://bramp.github.io/js-sequence-diagrams/))
+  1. global setting, add below config to `config.toml`.
+  
+     ```toml
+     [params.sequenceDiagrams]
+         enable = true
+         options = ""            # default: "{theme: 'simple'}"
+     ```
+     
+  2. Configure for an article itself only, add below config to `Front Matter` of the article.
+  
+     ```yaml
+     sequenceDiagrams
+       enable: true
+     ```
+  
+  Then set language identifier of code blocks as `sequence`. For example
+  
+  ```
+  ​```sequence
+  Alice->Bob: Hello Bob, how are you?
+  Note right of Bob: Bob thinks
+  Bob-->Alice: I am good thanks!
+  ​```
+  ```
+  
+- flowchart diagram(powered by [flowchart.js](http://flowchart.js.org/))
+  1. Global setting, add below config to `config.toml`.
+  
+     ```toml
+     [params.flowchartDiagrams]
+       enable = true
+       options = ""
+     ```
+     
+  2. Configure for an article itself only, add below config to `Front Matter` of the article.
+  
+     ```yaml
+     flowchartDiagrams:
+       enable: true
+     ```
+  
+  Then set language identifier of code blocks as `flowchat` or `flow`. For example
+  
+   ```
+  ​```flow
+  st=>start: Start
+  op=>operation: Your Operation
+  cond=>condition: Yes or No?
+  e=>end
+  
+  st->op->cond
+  cond(yes)->e
+  cond(no)->op
+  ​```
+   ```
+  
+- graphviz(powered by [viz.js](https://github.com/mdaines/viz.js))
+
+  It should be configured for an article itself only，add below config to `Front Matter` of the article.
+
+  ```yaml
+  graphviz:
+    enable: true
+  ```
+
+  Then set language identifier of code blocks as `viz-<engin>`, engin parameter is the name of graphviz engin including `circo`、`dot`、`fdp`、`neato` 、`osage`和`twopi`. For example
+  
+  ```
+  ​```viz-dot
+  digraph G {
+  
+  	subgraph cluster_0 {
+  		style=filled;
+  		color=lightgrey;
+  		node [style=filled,color=white];
+  		a0 -> a1 -> a2 -> a3;
+  		label = "process #1";
+  	}
+  
+  	subgraph cluster_1 {
+  		node [style=filled];
+  		b0 -> b1 -> b2 -> b3;
+  		label = "process #2";
+  		color=blue
+  	}
+  	start -> a0;
+  	start -> b0;
+  	a1 -> b3;
+  	b2 -> a3;
+  	a3 -> a0;
+  	a3 -> end;
+  	b3 -> end;
+  
+  	start [shape=Mdiamond];
+  	end [shape=Msquare];
+  }
+  ​```
+  ```
+
 ## Contributing
 
 All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.
@@ -151,4 +262,4 @@ Looking forward to your pull request.
 + Wordpress：https://github.com/iMuFeng/maupassant/
 + Ghost: https://github.com/LjxPrime/maupassant/
 + Hexo: https://github.com/tufu9441/maupassant-hexo
-+ Hugo: https://github.com/rujews/maupassant-hugo
++ Hugo: https://github.com/flysnow-org/maupassant-hugo

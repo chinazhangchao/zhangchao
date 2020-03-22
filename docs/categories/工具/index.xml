@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on 张超的博客</title>
-    <link>http://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</link>
+    <link>https://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 24 Sep 2019 21:47:24 +0800</lastBuildDate>
     
-	<atom:link href="http://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Sublime Text使用代码片段Snippets高效写作</title>
-      <link>http://zhangchao.xyz/tool/sublime-text-snippets-intro/</link>
+      <link>https://zhangchao.xyz/tool/sublime-text-snippets-intro/</link>
       <pubDate>Tue, 24 Sep 2019 21:47:24 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/tool/sublime-text-snippets-intro/</guid>
+      <guid>https://zhangchao.xyz/tool/sublime-text-snippets-intro/</guid>
       <description>&lt;p&gt;Snippets是可以复用的代码片段模板，可以帮助你快速输入大量重复内容，极大提高写作效率。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sublime Text 3增加最近打开的文件数量（Mac）</title>
-      <link>http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/</link>
+      <link>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/</link>
       <pubDate>Sat, 21 Sep 2019 10:43:21 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/</guid>
+      <guid>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/</guid>
       <description>&lt;p&gt;Sublime Text 3 默认只存储7个最近打开的文件、7个最近打开的文件夹。&lt;/p&gt;
-&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Mac系统为例说明如何修改。（Windows请参考&lt;a href=&#34;http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Windows）&lt;/a&gt;）&lt;/p&gt;</description>
+&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Mac系统为例说明如何修改。（Windows请参考&lt;a href=&#34;https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Windows）&lt;/a&gt;）&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sublime Text 3增加最近打开的文件数量（Windows）</title>
-      <link>http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/</link>
+      <link>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/</link>
       <pubDate>Sat, 21 Sep 2019 09:43:21 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/</guid>
+      <guid>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/</guid>
       <description>&lt;p&gt;Sublime Text 3 默认只存储7个最近打开的文件、7个最近打开的文件夹。&lt;/p&gt;
-&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Windows系统为例说明如何修改。（Mac请参考&lt;a href=&#34;http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Mac）&lt;/a&gt;）&lt;/p&gt;</description>
+&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Windows系统为例说明如何修改。（Mac请参考&lt;a href=&#34;https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Mac）&lt;/a&gt;）&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>扫描版PDF文档转文本方法</title>
-      <link>http://zhangchao.xyz/tool/pdf-to-text/</link>
+      <link>https://zhangchao.xyz/tool/pdf-to-text/</link>
       <pubDate>Sat, 24 Aug 2019 18:44:59 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/tool/pdf-to-text/</guid>
+      <guid>https://zhangchao.xyz/tool/pdf-to-text/</guid>
       <description>&lt;p&gt;很多pdf文档是扫描版的，也就是图片，无法提取文字，使用很不方便。通过结合以下两个利器可以很方便的把pdf转为文本。&lt;/p&gt;</description>
     </item>
     

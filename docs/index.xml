@@ -2,412 +2,113 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>张超的博客</title>
-    <link>http://zhangchao.xyz/</link>
+    <link>https://zhangchao.xyz/</link>
     <description>Recent content on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 24 Aug 2019 12:21:11 +0800</lastBuildDate>
     
-	<atom:link href="http://zhangchao.xyz/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhangchao.xyz/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>巧记单词——用case记住20个单词</title>
-      <link>http://zhangchao.xyz/english/case_extend_words/</link>
-      <pubDate>Sat, 14 Mar 2020 21:11:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/case_extend_words/</guid>
-      <description>通过case记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用part记住20个单词</title>
-      <link>http://zhangchao.xyz/english/part_extend_words/</link>
-      <pubDate>Sat, 14 Mar 2020 20:50:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/part_extend_words/</guid>
-      <description>通过part记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用take记住10个单词</title>
-      <link>http://zhangchao.xyz/english/take_extend_words/</link>
-      <pubDate>Sat, 14 Mar 2020 20:16:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/take_extend_words/</guid>
-      <description>通过take记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用some记住10个单词</title>
-      <link>http://zhangchao.xyz/english/some_extend_words/</link>
-      <pubDate>Sat, 14 Mar 2020 19:49:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/some_extend_words/</guid>
-      <description>通过some记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用will记住10个单词</title>
-      <link>http://zhangchao.xyz/english/will_extend_words/</link>
-      <pubDate>Sun, 01 Mar 2020 14:35:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/will_extend_words/</guid>
-      <description>通过will记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用with记住10个单词</title>
-      <link>http://zhangchao.xyz/english/with_extend_words/</link>
-      <pubDate>Sun, 01 Mar 2020 14:35:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/with_extend_words/</guid>
-      <description>通过with记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用well记住10个单词</title>
-      <link>http://zhangchao.xyz/english/well_extend_words/</link>
-      <pubDate>Sun, 01 Mar 2020 14:34:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/well_extend_words/</guid>
-      <description>通过well记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用law记住10个单词</title>
-      <link>http://zhangchao.xyz/english/law_extend_words/</link>
-      <pubDate>Sat, 29 Feb 2020 15:58:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/law_extend_words/</guid>
-      <description>通过law记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用lose记住10个单词</title>
-      <link>http://zhangchao.xyz/english/lose_extend_words/</link>
-      <pubDate>Sat, 29 Feb 2020 15:57:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/lose_extend_words/</guid>
-      <description>通过lose记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用line记住10个单词</title>
-      <link>http://zhangchao.xyz/english/line_extend_words/</link>
-      <pubDate>Sat, 29 Feb 2020 15:56:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/line_extend_words/</guid>
-      <description>通过line记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用sit记住10个单词</title>
-      <link>http://zhangchao.xyz/english/sit_extend_words/</link>
-      <pubDate>Sat, 29 Feb 2020 15:55:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/sit_extend_words/</guid>
-      <description>通过sit记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用head记住10个单词</title>
-      <link>http://zhangchao.xyz/english/head_extend_words/</link>
-      <pubDate>Mon, 24 Feb 2020 08:40:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/head_extend_words/</guid>
-      <description>通过head记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用most记住10个单词</title>
-      <link>http://zhangchao.xyz/english/most_extend_words/</link>
-      <pubDate>Mon, 24 Feb 2020 08:37:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/most_extend_words/</guid>
-      <description>通过most记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用last记住10个单词</title>
-      <link>http://zhangchao.xyz/english/last_extend_words/</link>
-      <pubDate>Sat, 22 Feb 2020 10:13:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/last_extend_words/</guid>
-      <description>通过last记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用good记住10个单词</title>
-      <link>http://zhangchao.xyz/english/good_extend_words/</link>
-      <pubDate>Sat, 22 Feb 2020 09:13:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/good_extend_words/</guid>
-      <description>通过good记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用far记住10个单词</title>
-      <link>http://zhangchao.xyz/english/far_extend_words/</link>
-      <pubDate>Sat, 22 Feb 2020 09:12:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/far_extend_words/</guid>
-      <description>通过far记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用room记住10个单词</title>
-      <link>http://zhangchao.xyz/english/room_extend_words/</link>
-      <pubDate>Sat, 22 Feb 2020 09:11:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/room_extend_words/</guid>
-      <description>通过room记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用back记住10个单词</title>
-      <link>http://zhangchao.xyz/english/back_extend_words/</link>
-      <pubDate>Sat, 22 Feb 2020 09:10:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/back_extend_words/</guid>
-      <description>通过back记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用more记住10个单词</title>
-      <link>http://zhangchao.xyz/english/more_extend_words/</link>
-      <pubDate>Sun, 16 Feb 2020 13:05:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/more_extend_words/</guid>
-      <description>通过more记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用like记住10个单词</title>
-      <link>http://zhangchao.xyz/english/like_extend_words/</link>
-      <pubDate>Sun, 16 Feb 2020 13:04:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/like_extend_words/</guid>
-      <description>通过like记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用now记住10个单词</title>
-      <link>http://zhangchao.xyz/english/now_extend_words/</link>
-      <pubDate>Sun, 16 Feb 2020 13:03:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/now_extend_words/</guid>
-      <description>通过now记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用one记住10个单词</title>
-      <link>http://zhangchao.xyz/english/one_extend_words/</link>
-      <pubDate>Sun, 16 Feb 2020 13:02:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/one_extend_words/</guid>
-      <description>通过one记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用year记住10个单词</title>
-      <link>http://zhangchao.xyz/english/year_extend_words/</link>
-      <pubDate>Sun, 16 Feb 2020 13:01:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/year_extend_words/</guid>
-      <description>通过year记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用make记住10个单词</title>
-      <link>http://zhangchao.xyz/english/make_extend_words/</link>
-      <pubDate>Fri, 14 Feb 2020 21:04:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/make_extend_words/</guid>
-      <description>通过make记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用get记住10个单词</title>
-      <link>http://zhangchao.xyz/english/get_extend_words/</link>
-      <pubDate>Fri, 14 Feb 2020 21:03:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/get_extend_words/</guid>
-      <description>通过get记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用can记住10个单词</title>
-      <link>http://zhangchao.xyz/english/can_extend_words/</link>
-      <pubDate>Fri, 14 Feb 2020 21:02:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/can_extend_words/</guid>
-      <description>通过can记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用for记住10个单词</title>
-      <link>http://zhangchao.xyz/english/for_extend_words/</link>
-      <pubDate>Fri, 14 Feb 2020 21:01:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/for_extend_words/</guid>
-      <description>通过for记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用not记住10个单词</title>
-      <link>http://zhangchao.xyz/english/not_extend_words/</link>
-      <pubDate>Mon, 10 Feb 2020 14:01:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/not_extend_words/</guid>
-      <description>通过not记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用but记住10个单词</title>
-      <link>http://zhangchao.xyz/english/but_extend_words/</link>
-      <pubDate>Sun, 09 Feb 2020 16:01:10 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/but_extend_words/</guid>
-      <description>通过but记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用say记住10个单词</title>
-      <link>http://zhangchao.xyz/english/say_extend_words/</link>
-      <pubDate>Sun, 09 Feb 2020 16:01:00 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/say_extend_words/</guid>
-      <description>通过say记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用have记住10个单词</title>
-      <link>http://zhangchao.xyz/english/have_extend_words/</link>
-      <pubDate>Sun, 09 Feb 2020 16:00:21 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/have_extend_words/</guid>
-      <description>通过have记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用and记住10个单词</title>
-      <link>http://zhangchao.xyz/english/and_extend_words/</link>
-      <pubDate>Sun, 09 Feb 2020 15:59:21 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/and_extend_words/</guid>
-      <description>通过and记住十几个单词！</description>
-    </item>
-    
-    <item>
-      <title>巧记单词——用easy记住10个单词</title>
-      <link>http://zhangchao.xyz/english/easy_extend_words/</link>
-      <pubDate>Fri, 07 Feb 2020 17:31:21 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/english/easy_extend_words/</guid>
-      <description>通过easy记住十几个单词，so easy！</description>
-    </item>
-    
-    <item>
-      <title>最好的数学书</title>
-      <link>http://zhangchao.xyz/math/best-math-books/</link>
-      <pubDate>Sun, 12 Jan 2020 15:50:21 +0800</pubDate>
-      
-      <guid>http://zhangchao.xyz/math/best-math-books/</guid>
-      <description>最好的数学书、教材</description>
-    </item>
     
     <item>
       <title>单词那些事（2）——一览众山小</title>
-      <link>http://zhangchao.xyz/english/word-things-2/</link>
-      <pubDate>Tue, 19 Nov 2019 07:26:21 +0800</pubDate>
+      <link>https://zhangchao.xyz/english/word-things-2/</link>
+      <pubDate>Sun, 22 Mar 2020 15:01:21 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/english/word-things-2/</guid>
+      <guid>https://zhangchao.xyz/english/word-things-2/</guid>
       <description>英语单词虽然数量巨大，其中还是有规律可循的，充分利用规律可以大大加快单词的记忆速度。</description>
     </item>
     
     <item>
       <title>单词那些事（1）——胸中有丘壑</title>
-      <link>http://zhangchao.xyz/english/word-things-1/</link>
-      <pubDate>Wed, 23 Oct 2019 20:43:21 +0800</pubDate>
+      <link>https://zhangchao.xyz/english/word-things-1/</link>
+      <pubDate>Sun, 22 Mar 2020 15:00:21 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/english/word-things-1/</guid>
+      <guid>https://zhangchao.xyz/english/word-things-1/</guid>
       <description>英语中总共有多少词汇？外国人的词汇量有多大？掌握多少词汇才够用？开始学习单词之前先了解一些单词的知识，可以让你知己知彼、有的放矢。</description>
     </item>
     
     <item>
+      <title>最好的数学书</title>
+      <link>https://zhangchao.xyz/math/best-math-books/</link>
+      <pubDate>Sun, 12 Jan 2020 15:50:21 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/math/best-math-books/</guid>
+      <description>最好的数学书、教材</description>
+    </item>
+    
+    <item>
       <title>Sublime Text使用代码片段Snippets高效写作</title>
-      <link>http://zhangchao.xyz/tool/sublime-text-snippets-intro/</link>
+      <link>https://zhangchao.xyz/tool/sublime-text-snippets-intro/</link>
       <pubDate>Tue, 24 Sep 2019 21:47:24 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/tool/sublime-text-snippets-intro/</guid>
+      <guid>https://zhangchao.xyz/tool/sublime-text-snippets-intro/</guid>
       <description>&lt;p&gt;Snippets是可以复用的代码片段模板，可以帮助你快速输入大量重复内容，极大提高写作效率。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sublime Text 3增加最近打开的文件数量（Mac）</title>
-      <link>http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/</link>
+      <link>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/</link>
       <pubDate>Sat, 21 Sep 2019 10:43:21 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/</guid>
+      <guid>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/</guid>
       <description>&lt;p&gt;Sublime Text 3 默认只存储7个最近打开的文件、7个最近打开的文件夹。&lt;/p&gt;
-&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Mac系统为例说明如何修改。（Windows请参考&lt;a href=&#34;http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Windows）&lt;/a&gt;）&lt;/p&gt;</description>
+&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Mac系统为例说明如何修改。（Windows请参考&lt;a href=&#34;https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Windows）&lt;/a&gt;）&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sublime Text 3增加最近打开的文件数量（Windows）</title>
-      <link>http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/</link>
+      <link>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/</link>
       <pubDate>Sat, 21 Sep 2019 09:43:21 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/</guid>
+      <guid>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/</guid>
       <description>&lt;p&gt;Sublime Text 3 默认只存储7个最近打开的文件、7个最近打开的文件夹。&lt;/p&gt;
-&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Windows系统为例说明如何修改。（Mac请参考&lt;a href=&#34;http://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Mac）&lt;/a&gt;）&lt;/p&gt;</description>
+&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Windows系统为例说明如何修改。（Mac请参考&lt;a href=&#34;https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Mac）&lt;/a&gt;）&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>扫描版PDF文档转文本方法</title>
-      <link>http://zhangchao.xyz/tool/pdf-to-text/</link>
+      <link>https://zhangchao.xyz/tool/pdf-to-text/</link>
       <pubDate>Sat, 24 Aug 2019 18:44:59 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/tool/pdf-to-text/</guid>
+      <guid>https://zhangchao.xyz/tool/pdf-to-text/</guid>
       <description>&lt;p&gt;很多pdf文档是扫描版的，也就是图片，无法提取文字，使用很不方便。通过结合以下两个利器可以很方便的把pdf转为文本。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>关于我</title>
-      <link>http://zhangchao.xyz/about/</link>
+      <link>https://zhangchao.xyz/about/</link>
       <pubDate>Sat, 24 Aug 2019 12:21:11 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/about/</guid>
-      <description>一个涉猎广泛的软件工程师，写点C++、iOS、Ruby、Python。研究点历史、经济、投资、哲学、心理学……
-QQ：609318664
-公众号：</description>
+      <guid>https://zhangchao.xyz/about/</guid>
+      <description>单词范——最快速的背单词方法 创始人。 一个涉猎广泛的软件工程师，写点C++、iOS、Ruby、Python。研究点历史、经济、投资、哲学、心理学…… QQ：609318664 微信公众号：</description>
     </item>
     
     <item>
       <title>归档</title>
-      <link>http://zhangchao.xyz/archives/</link>
+      <link>https://zhangchao.xyz/archives/</link>
       <pubDate>Sat, 24 Aug 2019 12:21:11 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/archives/</guid>
+      <guid>https://zhangchao.xyz/archives/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ruby字符串编码</title>
-      <link>http://zhangchao.xyz/ruby/string-encoding/</link>
+      <link>https://zhangchao.xyz/ruby/string-encoding/</link>
       <pubDate>Sat, 24 Aug 2019 11:59:34 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/ruby/string-encoding/</guid>
+      <guid>https://zhangchao.xyz/ruby/string-encoding/</guid>
       <description>Ruby的各种字符串编码。</description>
     </item>
     
     <item>
       <title>LeetCode-2. Add Two Numbers（两数相加）C&#43;&#43;实现</title>
-      <link>http://zhangchao.xyz/leetcode/num2/</link>
+      <link>https://zhangchao.xyz/leetcode/num2/</link>
       <pubDate>Sat, 24 Aug 2019 11:54:08 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/leetcode/num2/</guid>
+      <guid>https://zhangchao.xyz/leetcode/num2/</guid>
       <description>&lt;p&gt;给出两个 &lt;strong&gt;非空&lt;/strong&gt; 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 &lt;strong&gt;逆序&lt;/strong&gt; 的方式存储的，并且它们的每个节点只能存储 &lt;strong&gt;一位&lt;/strong&gt; 数字。&lt;/p&gt;
 &lt;p&gt;如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。&lt;/p&gt;
 &lt;p&gt;您可以假设除了数字 0 之外，这两个数都不会以 0 开头。&lt;/p&gt;</description>
@@ -415,93 +116,93 @@ QQ：609318664
     
     <item>
       <title>LeetCode-1. Two Sum（两数之和）C&#43;&#43;实现</title>
-      <link>http://zhangchao.xyz/leetcode/num1/</link>
+      <link>https://zhangchao.xyz/leetcode/num1/</link>
       <pubDate>Sat, 24 Aug 2019 11:52:21 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/leetcode/num1/</guid>
+      <guid>https://zhangchao.xyz/leetcode/num1/</guid>
       <description>&lt;p&gt;给定一个整数数组 &lt;code&gt;nums&lt;/code&gt; 和一个目标值 &lt;code&gt;target&lt;/code&gt;，请你在该数组中找出和为目标值的那 &lt;strong&gt;两个&lt;/strong&gt; 整数，并返回他们的数组下标。&lt;/p&gt;
 &lt;p&gt;你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode题解汇总</title>
-      <link>http://zhangchao.xyz/leetcode/summary/</link>
+      <link>https://zhangchao.xyz/leetcode/summary/</link>
       <pubDate>Sat, 24 Aug 2019 11:50:11 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/leetcode/summary/</guid>
+      <guid>https://zhangchao.xyz/leetcode/summary/</guid>
       <description>LeetCode的解题思路及源码，力求简洁严谨。</description>
     </item>
     
     <item>
       <title>Rails中的MIME类型解析规则</title>
-      <link>http://zhangchao.xyz/rails/mime-parse/</link>
+      <link>https://zhangchao.xyz/rails/mime-parse/</link>
       <pubDate>Sat, 24 Aug 2019 11:46:54 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/rails/mime-parse/</guid>
+      <guid>https://zhangchao.xyz/rails/mime-parse/</guid>
       <description>Rails中的MIME解析并没有那么看起来那么简单</description>
     </item>
     
     <item>
       <title>Ruby 2.3中的魔法注释# frozen_string_literal: true</title>
-      <link>http://zhangchao.xyz/ruby/magic-comment/</link>
+      <link>https://zhangchao.xyz/ruby/magic-comment/</link>
       <pubDate>Sat, 24 Aug 2019 11:44:41 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/ruby/magic-comment/</guid>
+      <guid>https://zhangchao.xyz/ruby/magic-comment/</guid>
       <description>注释# frozen_string_literal: true是干什么用的？</description>
     </item>
     
     <item>
       <title>Ruby 安全调用运算符 (&amp;.)</title>
-      <link>http://zhangchao.xyz/ruby/safe-navigation-operator/</link>
+      <link>https://zhangchao.xyz/ruby/safe-navigation-operator/</link>
       <pubDate>Sat, 24 Aug 2019 11:41:31 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/ruby/safe-navigation-operator/</guid>
+      <guid>https://zhangchao.xyz/ruby/safe-navigation-operator/</guid>
       <description>Ruby运算符&amp;amp;.的用法。</description>
     </item>
     
     <item>
       <title>归并排序-C&#43;&#43;代码</title>
-      <link>http://zhangchao.xyz/cpp/merge-sort-cpp/</link>
+      <link>https://zhangchao.xyz/cpp/merge-sort-cpp/</link>
       <pubDate>Sat, 24 Aug 2019 11:38:15 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/cpp/merge-sort-cpp/</guid>
+      <guid>https://zhangchao.xyz/cpp/merge-sort-cpp/</guid>
       <description>归并排序C++实现。</description>
     </item>
     
     <item>
       <title>快速排序-C&#43;&#43;代码</title>
-      <link>http://zhangchao.xyz/cpp/quick-sort-cpp/</link>
+      <link>https://zhangchao.xyz/cpp/quick-sort-cpp/</link>
       <pubDate>Sat, 24 Aug 2019 11:34:24 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/cpp/quick-sort-cpp/</guid>
+      <guid>https://zhangchao.xyz/cpp/quick-sort-cpp/</guid>
       <description>快速排序C++实现。</description>
     </item>
     
     <item>
       <title>堆排序-C&#43;&#43;代码</title>
-      <link>http://zhangchao.xyz/cpp/heap-sort-cpp/</link>
+      <link>https://zhangchao.xyz/cpp/heap-sort-cpp/</link>
       <pubDate>Sat, 24 Aug 2019 11:33:07 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/cpp/heap-sort-cpp/</guid>
+      <guid>https://zhangchao.xyz/cpp/heap-sort-cpp/</guid>
       <description>堆排序C++实现。</description>
     </item>
     
     <item>
       <title>每周工作4小时</title>
-      <link>http://zhangchao.xyz/wealth/4-hour-workweek/</link>
+      <link>https://zhangchao.xyz/wealth/4-hour-workweek/</link>
       <pubDate>Sat, 27 Jul 2019 18:29:41 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/wealth/4-hour-workweek/</guid>
+      <guid>https://zhangchao.xyz/wealth/4-hour-workweek/</guid>
       <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;世界上最富有、最成功的人和所有人一样，每天都拥有同样的24小时，每周都拥有同样的7天。他们之所以杰出，是因为他们更聪明地工作，而不是更辛苦地工作。&lt;/strong&gt;&lt;/em&gt;
 ——— 蒂莫西·费里斯&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>C&#43;&#43;构造函数、析构函数执行顺序详解</title>
-      <link>http://zhangchao.xyz/cpp/constructor-destrutor-order/</link>
+      <link>https://zhangchao.xyz/cpp/constructor-destrutor-order/</link>
       <pubDate>Sat, 27 Jul 2019 11:48:17 +0800</pubDate>
       
-      <guid>http://zhangchao.xyz/cpp/constructor-destrutor-order/</guid>
+      <guid>https://zhangchao.xyz/cpp/constructor-destrutor-order/</guid>
       <description>&lt;h2 id=&#34;构造函数执行顺序&#34;&gt;构造函数执行顺序&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;调用虚基类构造函数（如有多个则按虚基类声明顺序从左到右）&lt;/li&gt;
@@ -510,6 +211,15 @@ QQ：609318664
 &lt;li&gt;执行初始化列表、调用成员变量构造函数（按成员变量声明顺序）&lt;/li&gt;
 &lt;li&gt;执行自身构造函数&lt;/li&gt;
 &lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>搜索</title>
+      <link>https://zhangchao.xyz/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhangchao.xyz/search/</guid>
+      <description></description>
     </item>
     
   </channel>
