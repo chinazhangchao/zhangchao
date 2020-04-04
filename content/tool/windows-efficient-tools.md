@@ -5,6 +5,7 @@ type: posts
 categories: [工具]
 keywords: [Windows,高效]
 tags: [Windows,工具]
+summary: "Windows下提高效率的超级神器合集：Everything、Launchy、Ditto、Snipaste、Total Commander"
 ---
 
 Windows下提高效率的超级神器。
@@ -12,7 +13,7 @@ Windows下提高效率的超级神器。
 1. Everything
 速度最快的文件搜索工具，秒级实时搜索。[下载地址](https://www.voidtools.com/zh-cn/downloads/)
 <img src="/tool/windows-efficient-tools/1.png"/>
-1. launchy
+1. Launchy
 用键盘快速启动所有程序，再也不需要鼠标点半天。[下载地址](https://www.launchy.net/download.php)
 <img src="/tool/windows-efficient-tools/2.png"/>
 1. Ditto

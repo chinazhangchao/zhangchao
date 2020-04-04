@@ -8,7 +8,7 @@ tags: [Windows]
 ---
 
 苹果电脑开机后可以恢复上次打开的应用，Windows也有类似功能。具体开启步骤如下：
-
+<!--more-->
 1. 点击Windows徽标，点击设置按钮：
 <img src="/tool/windows-restore-application/1.png" style="height:200px;"/>
 1. 在打开的Windows设置界面中点击账户：
