@@ -1,5 +1,5 @@
 ---
-title: "Windows高效工作利器"
+title: "Windows高效工作神器"
 date: 2020-04-04T15:50:59+08:00
 type: posts
 categories: [工具]
@@ -7,7 +7,7 @@ keywords: [Windows,高效]
 tags: [Windows,工具]
 ---
 
-Windows下提高效率的超级利器。
+Windows下提高效率的超级神器。
 
 1. Everything
 速度最快的文件搜索工具，秒级实时搜索。[下载地址](https://www.voidtools.com/zh-cn/downloads/)
