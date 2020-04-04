@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 22 Mar 2020 15:01:21 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 15:50:59 +0800</lastBuildDate>
     
 	<atom:link href="https://zhangchao.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows</title>
+      <link>https://zhangchao.xyz/tags/windows/</link>
+      <pubDate>Sat, 04 Apr 2020 15:50:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工具</title>
+      <link>https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sat, 04 Apr 2020 15:50:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>单词</title>
@@ -98,15 +116,6 @@
       <pubDate>Tue, 24 Sep 2019 21:47:24 +0800</pubDate>
       
       <guid>https://zhangchao.xyz/tags/sublime-text/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>工具</title>
-      <link>https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Sat, 24 Aug 2019 18:44:59 +0800</pubDate>
-      
-      <guid>https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,28 @@
     <description>Recent content in Categories on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 22 Mar 2020 15:01:21 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 15:50:59 +0800</lastBuildDate>
     
 	<atom:link href="https://zhangchao.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>工具</title>
+      <link>https://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sat, 04 Apr 2020 15:50:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://zhangchao.xyz/categories/windows/</link>
+      <pubDate>Sat, 04 Apr 2020 15:38:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/categories/windows/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>英语</title>
@@ -26,15 +44,6 @@
       <pubDate>Sun, 12 Jan 2020 15:50:21 +0800</pubDate>
       
       <guid>https://zhangchao.xyz/categories/%E6%95%B0%E5%AD%A6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>工具</title>
-      <link>https://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Tue, 24 Sep 2019 21:47:24 +0800</pubDate>
-      
-      <guid>https://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     

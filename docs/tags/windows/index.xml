@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on 张超的博客</title>
+    <link>https://zhangchao.xyz/tags/windows/</link>
+    <description>Recent content in Windows on 张超的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 04 Apr 2020 15:50:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://zhangchao.xyz/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows高效工作利器</title>
+      <link>https://zhangchao.xyz/tool/windows-efficient-tools/</link>
+      <pubDate>Sat, 04 Apr 2020 15:50:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/tool/windows-efficient-tools/</guid>
+      <description>Windows下提高效率的超级利器。 Everything 速度最快的文件搜索工具，秒级实时搜索。下载地址 launchy 用键盘快速启动所有程序，再也不需要鼠标点半天。下载地址 Ditto 最好的剪贴板增强软件，文字工作者的神器，可以把复制过的所有内容保存起来，快捷地供后续调用。下载地址 Snipaste Windows上最好的截图、贴图工具，</description>
+    </item>
+    
+    <item>
+      <title>Windows 10 开机启动后自动恢复上次应用</title>
+      <link>https://zhangchao.xyz/tool/windows-restore-application/</link>
+      <pubDate>Sat, 04 Apr 2020 15:38:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/tool/windows-restore-application/</guid>
+      <description>苹果电脑开机后可以恢复上次打开的应用，Windows也有类似功能。具体开启步骤如下： 点击Windows徽标，点击设置按钮： 在打开的Windows设置界面中点击账户： 在打开的账户设置中，点击登录选项，将“更新或重启后，使用我的登录信息自动完成设备设置并重新打开我的应用。”置为打开状</description>
+    </item>
+    
+  </channel>
+</rss>

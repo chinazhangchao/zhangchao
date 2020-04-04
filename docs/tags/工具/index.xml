@@ -6,10 +6,19 @@
     <description>Recent content in 工具 on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 24 Aug 2019 18:44:59 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 15:50:59 +0800</lastBuildDate>
     
 	<atom:link href="https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows高效工作利器</title>
+      <link>https://zhangchao.xyz/tool/windows-efficient-tools/</link>
+      <pubDate>Sat, 04 Apr 2020 15:50:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/tool/windows-efficient-tools/</guid>
+      <description>Windows下提高效率的超级利器。 Everything 速度最快的文件搜索工具，秒级实时搜索。下载地址 launchy 用键盘快速启动所有程序，再也不需要鼠标点半天。下载地址 Ditto 最好的剪贴板增强软件，文字工作者的神器，可以把复制过的所有内容保存起来，快捷地供后续调用。下载地址 Snipaste Windows上最好的截图、贴图工具，</description>
+    </item>
     
     <item>
       <title>扫描版PDF文档转文本方法</title>
