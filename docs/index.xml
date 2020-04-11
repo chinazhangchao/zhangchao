@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>C&#43;&#43;模板类型推导</title>
+      <link>https://zhangchao.xyz/cpp/cpp-template-type-duducing/</link>
+      <pubDate>Sat, 11 Apr 2020 20:00:17 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/cpp/cpp-template-type-duducing/</guid>
+      <description>&lt;p&gt;模板是C++的重要特性，是C++标准模板库的基础。模板可以根据数据类型自动生成代码，大大减少重复代码。模板实例化的时候编译器需要根据具体变量推导数据类型，模板推导出的类型很多时候是显而易见的，有些时候却不太明显，本文详细阐述一下C++模板的类型推导机制。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Windows高效工作神器</title>
       <link>https://zhangchao.xyz/tool/windows-efficient-tools/</link>
       <pubDate>Sat, 04 Apr 2020 15:50:59 +0800</pubDate>

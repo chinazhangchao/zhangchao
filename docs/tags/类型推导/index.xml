@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>类型推导 on 张超的博客</title>
+    <link>https://zhangchao.xyz/tags/%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC/</link>
+    <description>Recent content in 类型推导 on 张超的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Apr 2020 20:00:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://zhangchao.xyz/tags/%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43;模板类型推导</title>
+      <link>https://zhangchao.xyz/cpp/cpp-template-type-duducing/</link>
+      <pubDate>Sat, 11 Apr 2020 20:00:17 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/cpp/cpp-template-type-duducing/</guid>
+      <description>&lt;p&gt;模板是C++的重要特性，是C++标准模板库的基础。模板可以根据数据类型自动生成代码，大大减少重复代码。模板实例化的时候编译器需要根据具体变量推导数据类型，模板推导出的类型很多时候是显而易见的，有些时候却不太明显，本文详细阐述一下C++模板的类型推导机制。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
