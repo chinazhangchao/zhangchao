@@ -8,6 +8,7 @@ tags: [C++,类型推导]
 ---
 
 C++ auto 类型推导规则与[模板类型推导]({{< ref "cpp-template-type-deducing.md" >}})类似，两者只有一点不一样。
+<!--more-->
 前面说过，模板的声明和使用方式如下：
 ```cpp
 template<typename T>
