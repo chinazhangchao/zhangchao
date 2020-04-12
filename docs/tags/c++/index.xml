@@ -6,17 +6,26 @@
     <description>Recent content in C&#43;&#43; on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 11 Apr 2020 20:00:17 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 12:00:17 +0800</lastBuildDate>
     
 	<atom:link href="https://zhangchao.xyz/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>C&#43;&#43; auto 类型推导</title>
+      <link>https://zhangchao.xyz/cpp/cpp-auto-type-deducing/</link>
+      <pubDate>Sun, 12 Apr 2020 12:00:17 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/cpp/cpp-auto-type-deducing/</guid>
+      <description>C++ auto 类型推导规则与模板类型推导类似，两者只有一点不一样。 前面说过，模板的声明和使用方式如下： 1 2 3 4 template&amp;lt;typename T&amp;gt; void f(ParamType param); f(expr); auto的使用方式如下： 1 2 3 auto x = 27; const auto cx = x; const auto&amp;amp; rx = x; 在auto进行类型推导的时候，auto相当于模板里的T，变量类型修饰符相当于ParamType，等号右边的部分</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43;模板类型推导</title>
-      <link>https://zhangchao.xyz/cpp/cpp-template-type-duducing/</link>
+      <link>https://zhangchao.xyz/cpp/cpp-template-type-deducing/</link>
       <pubDate>Sat, 11 Apr 2020 20:00:17 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/cpp/cpp-template-type-duducing/</guid>
+      <guid>https://zhangchao.xyz/cpp/cpp-template-type-deducing/</guid>
       <description>&lt;p&gt;模板是C++的重要特性，是C++标准模板库的基础。模板可以根据数据类型自动生成代码，大大减少重复代码。模板实例化的时候编译器需要根据具体变量推导数据类型，模板推导出的类型很多时候是显而易见的，有些时候却不太明显，本文详细阐述一下C++模板的类型推导机制。&lt;/p&gt;</description>
     </item>
     

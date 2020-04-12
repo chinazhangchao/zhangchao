@@ -90,7 +90,30 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://zhangchao.xyz/cpp/cpp-template-type-duducing/">C&#43;&#43;模板类型推导</a>
+                <a href="https://zhangchao.xyz/cpp/cpp-auto-type-deducing/">C&#43;&#43; auto 类型推导</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月12日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://zhangchao.xyz/categories/c&#43;&#43;'>C&#43;&#43;</a>
+            
+        </div>
+        
+        <div class="post-content">
+            C++ auto 类型推导规则与模板类型推导类似，两者只有一点不一样。 前面说过，模板的声明和使用方式如下： 1 2 3 4 template&lt;typename T&gt; void f(ParamType param); f(expr); auto的使用方式如下： 1 2 3 auto x = 27; const auto cx = x; const auto&amp; rx = x; 在auto进行类型推导的时候，auto相当于模板里的T，变量类型修饰符相当于ParamType，等号右边的部分……
+            <p class="readmore"><a href="https://zhangchao.xyz/cpp/cpp-auto-type-deducing/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://zhangchao.xyz/cpp/cpp-template-type-deducing/">C&#43;&#43;模板类型推导</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -106,7 +129,7 @@
         
         <div class="post-content">
             <p>模板是C++的重要特性，是C++标准模板库的基础。模板可以根据数据类型自动生成代码，大大减少重复代码。模板实例化的时候编译器需要根据具体变量推导数据类型，模板推导出的类型很多时候是显而易见的，有些时候却不太明显，本文详细阐述一下C++模板的类型推导机制。</p>……
-            <p class="readmore"><a href="https://zhangchao.xyz/cpp/cpp-template-type-duducing/">阅读全文</a></p>
+            <p class="readmore"><a href="https://zhangchao.xyz/cpp/cpp-template-type-deducing/">阅读全文</a></p>
         </div>
     </article>
     
@@ -294,7 +317,11 @@
 <ul class="widget-list">
     
     <li>
-        <a href="https://zhangchao.xyz/cpp/cpp-template-type-duducing/" title="C&#43;&#43;模板类型推导">C&#43;&#43;模板类型推导</a>
+        <a href="https://zhangchao.xyz/cpp/cpp-auto-type-deducing/" title="C&#43;&#43; auto 类型推导">C&#43;&#43; auto 类型推导</a>
+    </li>
+    
+    <li>
+        <a href="https://zhangchao.xyz/cpp/cpp-template-type-deducing/" title="C&#43;&#43;模板类型推导">C&#43;&#43;模板类型推导</a>
     </li>
     
     <li>
@@ -329,10 +356,6 @@
         <a href="https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/" title="Sublime Text 3增加最近打开的文件数量（Windows）">Sublime Text 3增加最近打开的文件数量（Windows）</a>
     </li>
     
-    <li>
-        <a href="https://zhangchao.xyz/tool/pdf-to-text/" title="扫描版PDF文档转文本方法">扫描版PDF文档转文本方法</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -365,7 +388,7 @@
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><a href="https://zhangchao.xyz/categories/c&#43;&#43;/">C&#43;&#43; (7)</a></li>
+    <li><a href="https://zhangchao.xyz/categories/c&#43;&#43;/">C&#43;&#43; (8)</a></li>
     
     <li><a href="https://zhangchao.xyz/categories/leetcode/">LeetCode (3)</a></li>
     
