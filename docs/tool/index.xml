@@ -6,10 +6,19 @@
     <description>Recent content in Tools on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 19 Apr 2020 13:20:59 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2020 15:50:59 +0800</lastBuildDate>
     
 	<atom:link href="https://zhangchao.xyz/tool/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mac工具集合</title>
+      <link>https://zhangchao.xyz/tool/mac-tools/</link>
+      <pubDate>Sun, 19 Apr 2020 15:50:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/tool/mac-tools/</guid>
+      <description>Mac工具集合</description>
+    </item>
     
     <item>
       <title>Windows工具合集</title>
