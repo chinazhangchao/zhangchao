@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 12 Apr 2020 12:00:17 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2020 13:20:59 +0800</lastBuildDate>
     
 	<atom:link href="https://zhangchao.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows</title>
+      <link>https://zhangchao.xyz/tags/windows/</link>
+      <pubDate>Sun, 19 Apr 2020 13:20:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工具</title>
+      <link>https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sun, 19 Apr 2020 13:20:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>awesome</title>
+      <link>https://zhangchao.xyz/tags/awesome/</link>
+      <pubDate>Sat, 18 Apr 2020 15:50:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/tags/awesome/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>C&#43;&#43;</title>
@@ -26,24 +53,6 @@
       <pubDate>Sun, 12 Apr 2020 12:00:17 +0800</pubDate>
       
       <guid>https://zhangchao.xyz/tags/%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows</title>
-      <link>https://zhangchao.xyz/tags/windows/</link>
-      <pubDate>Sat, 04 Apr 2020 15:50:59 +0800</pubDate>
-      
-      <guid>https://zhangchao.xyz/tags/windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>工具</title>
-      <link>https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Sat, 04 Apr 2020 15:50:59 +0800</pubDate>
-      
-      <guid>https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     

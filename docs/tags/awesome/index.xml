@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>awesome on 张超的博客</title>
+    <link>https://zhangchao.xyz/tags/awesome/</link>
+    <description>Recent content in awesome on 张超的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 18 Apr 2020 15:50:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://zhangchao.xyz/tags/awesome/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>awesome集合</title>
+      <link>https://zhangchao.xyz/tool/awesome/</link>
+      <pubDate>Sat, 18 Apr 2020 15:50:59 +0800</pubDate>
+      
+      <guid>https://zhangchao.xyz/tool/awesome/</guid>
+      <description>awesome集合</description>
+    </item>
+    
+  </channel>
+</rss>

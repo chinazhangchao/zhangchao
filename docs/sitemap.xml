@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zhangchao.xyz/categories/</loc>
+    <lastmod>2020-04-19T13:20:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhangchao.xyz/tags/</loc>
+    <lastmod>2020-04-19T13:20:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhangchao.xyz/tool/</loc>
+    <lastmod>2020-04-19T13:20:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhangchao.xyz/tags/windows/</loc>
+    <lastmod>2020-04-19T13:20:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhangchao.xyz/tool/windows-tools/</loc>
+    <lastmod>2020-04-19T13:20:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-04-19T13:20:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-04-19T13:20:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhangchao.xyz/tags/awesome/</loc>
+    <lastmod>2020-04-18T15:50:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhangchao.xyz/tool/awesome/</loc>
+    <lastmod>2020-04-18T15:50:59+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zhangchao.xyz/tags/c&#43;&#43;/</loc>
     <lastmod>2020-04-12T12:00:17+08:00</lastmod>
   </url>
@@ -18,17 +63,7 @@
   </url>
   
   <url>
-    <loc>https://zhangchao.xyz/categories/</loc>
-    <lastmod>2020-04-12T12:00:17+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zhangchao.xyz/cpp/</loc>
-    <lastmod>2020-04-12T12:00:17+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhangchao.xyz/tags/</loc>
     <lastmod>2020-04-12T12:00:17+08:00</lastmod>
   </url>
   
@@ -43,27 +78,7 @@
   </url>
   
   <url>
-    <loc>https://zhangchao.xyz/tool/</loc>
-    <lastmod>2020-04-04T15:50:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhangchao.xyz/tags/windows/</loc>
-    <lastmod>2020-04-04T15:50:59+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zhangchao.xyz/tool/windows-efficient-tools/</loc>
-    <lastmod>2020-04-04T15:50:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhangchao.xyz/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2020-04-04T15:50:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2020-04-04T15:50:59+08:00</lastmod>
   </url>
   
