@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>线性代数 on 张超的博客</title>
-    <link>https://zhangchao.xyz/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</link>
+    <link>https://zhiwuya.fun/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</link>
     <description>Recent content in 线性代数 on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 12 Jan 2020 15:50:21 +0800</lastBuildDate>
     
-	<atom:link href="https://zhangchao.xyz/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhiwuya.fun/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>最好的数学书</title>
-      <link>https://zhangchao.xyz/math/best-math-books/</link>
+      <link>https://zhiwuya.fun/math/best-math-books/</link>
       <pubDate>Sun, 12 Jan 2020 15:50:21 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/math/best-math-books/</guid>
+      <guid>https://zhiwuya.fun/math/best-math-books/</guid>
       <description>最好的数学书、教材</description>
     </item>
     

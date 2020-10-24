@@ -2,95 +2,95 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on 张超的博客</title>
-    <link>https://zhangchao.xyz/tool/</link>
+    <link>https://zhiwuya.fun/tool/</link>
     <description>Recent content in Tools on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 19 Apr 2020 15:50:59 +0800</lastBuildDate>
     
-	<atom:link href="https://zhangchao.xyz/tool/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhiwuya.fun/tool/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mac工具集合</title>
-      <link>https://zhangchao.xyz/tool/mac-tools/</link>
+      <link>https://zhiwuya.fun/tool/mac-tools/</link>
       <pubDate>Sun, 19 Apr 2020 15:50:59 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/tool/mac-tools/</guid>
+      <guid>https://zhiwuya.fun/tool/mac-tools/</guid>
       <description>Mac工具集合</description>
     </item>
     
     <item>
       <title>Windows工具合集</title>
-      <link>https://zhangchao.xyz/tool/windows-tools/</link>
+      <link>https://zhiwuya.fun/tool/windows-tools/</link>
       <pubDate>Sun, 19 Apr 2020 13:20:59 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/tool/windows-tools/</guid>
+      <guid>https://zhiwuya.fun/tool/windows-tools/</guid>
       <description>Windows工具合集</description>
     </item>
     
     <item>
       <title>awesome集合</title>
-      <link>https://zhangchao.xyz/tool/awesome/</link>
+      <link>https://zhiwuya.fun/tool/awesome/</link>
       <pubDate>Sat, 18 Apr 2020 15:50:59 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/tool/awesome/</guid>
+      <guid>https://zhiwuya.fun/tool/awesome/</guid>
       <description>awesome集合</description>
     </item>
     
     <item>
       <title>Windows高效工作神器</title>
-      <link>https://zhangchao.xyz/tool/windows-efficient-tools/</link>
+      <link>https://zhiwuya.fun/tool/windows-efficient-tools/</link>
       <pubDate>Sat, 04 Apr 2020 15:50:59 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/tool/windows-efficient-tools/</guid>
+      <guid>https://zhiwuya.fun/tool/windows-efficient-tools/</guid>
       <description>Windows下提高效率的超级神器合集：Everything、Launchy、Ditto、Snipaste、Total Commander</description>
     </item>
     
     <item>
       <title>Windows 10 开机启动后自动恢复上次应用</title>
-      <link>https://zhangchao.xyz/tool/windows-restore-application/</link>
+      <link>https://zhiwuya.fun/tool/windows-restore-application/</link>
       <pubDate>Sat, 04 Apr 2020 15:38:59 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/tool/windows-restore-application/</guid>
+      <guid>https://zhiwuya.fun/tool/windows-restore-application/</guid>
       <description>&lt;p&gt;苹果电脑开机后可以恢复上次打开的应用，Windows也有类似功能。具体开启步骤如下：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sublime Text使用代码片段Snippets高效写作</title>
-      <link>https://zhangchao.xyz/tool/sublime-text-snippets-intro/</link>
+      <link>https://zhiwuya.fun/tool/sublime-text-snippets-intro/</link>
       <pubDate>Tue, 24 Sep 2019 21:47:24 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/tool/sublime-text-snippets-intro/</guid>
+      <guid>https://zhiwuya.fun/tool/sublime-text-snippets-intro/</guid>
       <description>&lt;p&gt;Snippets是可以复用的代码片段模板，可以帮助你快速输入大量重复内容，极大提高写作效率。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sublime Text 3增加最近打开的文件数量（Mac）</title>
-      <link>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/</link>
+      <link>https://zhiwuya.fun/tool/sublime-text-3-increase-recent-file-number-mac/</link>
       <pubDate>Sat, 21 Sep 2019 10:43:21 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/</guid>
+      <guid>https://zhiwuya.fun/tool/sublime-text-3-increase-recent-file-number-mac/</guid>
       <description>&lt;p&gt;Sublime Text 3 默认只存储7个最近打开的文件、7个最近打开的文件夹。&lt;/p&gt;
-&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Mac系统为例说明如何修改。（Windows请参考&lt;a href=&#34;https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Windows）&lt;/a&gt;）&lt;/p&gt;</description>
+&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Mac系统为例说明如何修改。（Windows请参考&lt;a href=&#34;https://zhiwuya.fun/tool/sublime-text-3-increase-recent-file-number-windows/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Windows）&lt;/a&gt;）&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sublime Text 3增加最近打开的文件数量（Windows）</title>
-      <link>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/</link>
+      <link>https://zhiwuya.fun/tool/sublime-text-3-increase-recent-file-number-windows/</link>
       <pubDate>Sat, 21 Sep 2019 09:43:21 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-windows/</guid>
+      <guid>https://zhiwuya.fun/tool/sublime-text-3-increase-recent-file-number-windows/</guid>
       <description>&lt;p&gt;Sublime Text 3 默认只存储7个最近打开的文件、7个最近打开的文件夹。&lt;/p&gt;
-&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Windows系统为例说明如何修改。（Mac请参考&lt;a href=&#34;https://zhangchao.xyz/tool/sublime-text-3-increase-recent-file-number-mac/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Mac）&lt;/a&gt;）&lt;/p&gt;</description>
+&lt;p&gt;有时觉得不够用，想增大这个数值，该怎么做呢？本文以Windows系统为例说明如何修改。（Mac请参考&lt;a href=&#34;https://zhiwuya.fun/tool/sublime-text-3-increase-recent-file-number-mac/&#34;&gt;Sublime Text 3增加最近打开的文件数量（Mac）&lt;/a&gt;）&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>扫描版PDF文档转文本方法</title>
-      <link>https://zhangchao.xyz/tool/pdf-to-text/</link>
+      <link>https://zhiwuya.fun/tool/pdf-to-text/</link>
       <pubDate>Sat, 24 Aug 2019 18:44:59 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/tool/pdf-to-text/</guid>
+      <guid>https://zhiwuya.fun/tool/pdf-to-text/</guid>
       <description>&lt;p&gt;很多pdf文档是扫描版的，也就是图片，无法提取文字，使用很不方便。通过结合以下两个利器可以很方便的把pdf转为文本。&lt;/p&gt;</description>
     </item>
     

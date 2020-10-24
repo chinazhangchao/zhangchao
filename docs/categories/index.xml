@@ -2,102 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 张超的博客</title>
-    <link>https://zhangchao.xyz/categories/</link>
+    <link>https://zhiwuya.fun/categories/</link>
     <description>Recent content in Categories on 张超的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 19 Apr 2020 15:50:59 +0800</lastBuildDate>
     
-	<atom:link href="https://zhangchao.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhiwuya.fun/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>工具</title>
-      <link>https://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</link>
+      <link>https://zhiwuya.fun/categories/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Sun, 19 Apr 2020 15:50:59 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <guid>https://zhiwuya.fun/categories/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C&#43;&#43;</title>
-      <link>https://zhangchao.xyz/categories/c&#43;&#43;/</link>
+      <link>https://zhiwuya.fun/categories/c&#43;&#43;/</link>
       <pubDate>Sun, 12 Apr 2020 12:00:17 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/categories/c&#43;&#43;/</guid>
+      <guid>https://zhiwuya.fun/categories/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows</title>
-      <link>https://zhangchao.xyz/categories/windows/</link>
+      <link>https://zhiwuya.fun/categories/windows/</link>
       <pubDate>Sat, 04 Apr 2020 15:38:59 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/categories/windows/</guid>
+      <guid>https://zhiwuya.fun/categories/windows/</guid>
       <description></description>
     </item>
     
     <item>
       <title>英语</title>
-      <link>https://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/</link>
+      <link>https://zhiwuya.fun/categories/%E8%8B%B1%E8%AF%AD/</link>
       <pubDate>Sun, 22 Mar 2020 15:01:21 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/categories/%E8%8B%B1%E8%AF%AD/</guid>
+      <guid>https://zhiwuya.fun/categories/%E8%8B%B1%E8%AF%AD/</guid>
       <description></description>
     </item>
     
     <item>
       <title>数学</title>
-      <link>https://zhangchao.xyz/categories/%E6%95%B0%E5%AD%A6/</link>
+      <link>https://zhiwuya.fun/categories/%E6%95%B0%E5%AD%A6/</link>
       <pubDate>Sun, 12 Jan 2020 15:50:21 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/categories/%E6%95%B0%E5%AD%A6/</guid>
+      <guid>https://zhiwuya.fun/categories/%E6%95%B0%E5%AD%A6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ruby</title>
-      <link>https://zhangchao.xyz/categories/ruby/</link>
+      <link>https://zhiwuya.fun/categories/ruby/</link>
       <pubDate>Sat, 24 Aug 2019 11:59:34 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/categories/ruby/</guid>
+      <guid>https://zhiwuya.fun/categories/ruby/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LeetCode</title>
-      <link>https://zhangchao.xyz/categories/leetcode/</link>
+      <link>https://zhiwuya.fun/categories/leetcode/</link>
       <pubDate>Sat, 24 Aug 2019 11:54:08 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/categories/leetcode/</guid>
+      <guid>https://zhiwuya.fun/categories/leetcode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rails</title>
-      <link>https://zhangchao.xyz/categories/rails/</link>
+      <link>https://zhiwuya.fun/categories/rails/</link>
       <pubDate>Sat, 24 Aug 2019 11:46:54 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/categories/rails/</guid>
+      <guid>https://zhiwuya.fun/categories/rails/</guid>
       <description></description>
     </item>
     
     <item>
       <title>算法</title>
-      <link>https://zhangchao.xyz/categories/%E7%AE%97%E6%B3%95/</link>
+      <link>https://zhiwuya.fun/categories/%E7%AE%97%E6%B3%95/</link>
       <pubDate>Sat, 24 Aug 2019 11:38:15 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/categories/%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://zhiwuya.fun/categories/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>财富</title>
-      <link>https://zhangchao.xyz/categories/%E8%B4%A2%E5%AF%8C/</link>
+      <link>https://zhiwuya.fun/categories/%E8%B4%A2%E5%AF%8C/</link>
       <pubDate>Sat, 27 Jul 2019 18:29:41 +0800</pubDate>
       
-      <guid>https://zhangchao.xyz/categories/%E8%B4%A2%E5%AF%8C/</guid>
+      <guid>https://zhiwuya.fun/categories/%E8%B4%A2%E5%AF%8C/</guid>
       <description></description>
     </item>
     
