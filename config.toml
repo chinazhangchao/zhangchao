@@ -1,6 +1,6 @@
 baseURL = "https://zhiwuya.fun/"
 languageCode = "zh-CN"
-title = "张超的博客"
+title = "知无涯.fun"
 theme = "maupassant"
 ## 保持分类的原始名字（false会做转小写处理）
 preserveTaxonomyNames = true
@@ -19,7 +19,7 @@ googleAnalytics = "UA-144916691-1"
 
 [params]
   author = "张超"
-  subtitle = "记录一些思考"
+  subtitle = "知识无涯，学中作乐"
   keywords = "C++,Ruby,Rails,Web,算法,leetcode,编程,公众号,小程序,小游戏,英语,背单词,赚钱,财务自由,财富自由"
   busuanzi = true #启用不算子网页统计
   # googleAd = "ca-pub-4031353640611810"  #ca-pub-xxxxxxxxxxxxxx
