@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on 知无涯.fun</title>
-    <link>https://zhiwuya.fun/tags/%E5%B7%A5%E5%85%B7/</link>
+    <link>http://www.zhiwuya.fun/tags/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on 知无涯.fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 19 Apr 2020 15:50:59 +0800</lastBuildDate>
     
-	<atom:link href="https://zhiwuya.fun/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.zhiwuya.fun/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mac工具集合</title>
-      <link>https://zhiwuya.fun/tool/mac-tools/</link>
+      <link>http://www.zhiwuya.fun/tool/mac-tools/</link>
       <pubDate>Sun, 19 Apr 2020 15:50:59 +0800</pubDate>
       
-      <guid>https://zhiwuya.fun/tool/mac-tools/</guid>
+      <guid>http://www.zhiwuya.fun/tool/mac-tools/</guid>
       <description>Mac工具集合</description>
     </item>
     
     <item>
       <title>Windows工具合集</title>
-      <link>https://zhiwuya.fun/tool/windows-tools/</link>
+      <link>http://www.zhiwuya.fun/tool/windows-tools/</link>
       <pubDate>Sun, 19 Apr 2020 13:20:59 +0800</pubDate>
       
-      <guid>https://zhiwuya.fun/tool/windows-tools/</guid>
+      <guid>http://www.zhiwuya.fun/tool/windows-tools/</guid>
       <description>Windows工具合集</description>
     </item>
     
     <item>
       <title>awesome集合</title>
-      <link>https://zhiwuya.fun/tool/awesome/</link>
+      <link>http://www.zhiwuya.fun/tool/awesome/</link>
       <pubDate>Sat, 18 Apr 2020 15:50:59 +0800</pubDate>
       
-      <guid>https://zhiwuya.fun/tool/awesome/</guid>
+      <guid>http://www.zhiwuya.fun/tool/awesome/</guid>
       <description>awesome集合</description>
     </item>
     
     <item>
       <title>Windows高效工作神器</title>
-      <link>https://zhiwuya.fun/tool/windows-efficient-tools/</link>
+      <link>http://www.zhiwuya.fun/tool/windows-efficient-tools/</link>
       <pubDate>Sat, 04 Apr 2020 15:50:59 +0800</pubDate>
       
-      <guid>https://zhiwuya.fun/tool/windows-efficient-tools/</guid>
+      <guid>http://www.zhiwuya.fun/tool/windows-efficient-tools/</guid>
       <description>Windows下提高效率的超级神器合集：Everything、Launchy、Ditto、Snipaste、Total Commander</description>
     </item>
     
     <item>
       <title>扫描版PDF文档转文本方法</title>
-      <link>https://zhiwuya.fun/tool/pdf-to-text/</link>
+      <link>http://www.zhiwuya.fun/tool/pdf-to-text/</link>
       <pubDate>Sat, 24 Aug 2019 18:44:59 +0800</pubDate>
       
-      <guid>https://zhiwuya.fun/tool/pdf-to-text/</guid>
+      <guid>http://www.zhiwuya.fun/tool/pdf-to-text/</guid>
       <description>&lt;p&gt;很多pdf文档是扫描版的，也就是图片，无法提取文字，使用很不方便。通过结合以下两个利器可以很方便的把pdf转为文本。&lt;/p&gt;</description>
     </item>
     

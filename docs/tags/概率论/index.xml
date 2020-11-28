@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>概率论 on 知无涯.fun</title>
-    <link>https://zhiwuya.fun/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</link>
+    <link>http://www.zhiwuya.fun/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</link>
     <description>Recent content in 概率论 on 知无涯.fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 12 Jan 2020 15:50:21 +0800</lastBuildDate>
     
-	<atom:link href="https://zhiwuya.fun/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.zhiwuya.fun/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>最好的数学书</title>
-      <link>https://zhiwuya.fun/math/best-math-books/</link>
+      <link>http://www.zhiwuya.fun/math/best-math-books/</link>
       <pubDate>Sun, 12 Jan 2020 15:50:21 +0800</pubDate>
       
-      <guid>https://zhiwuya.fun/math/best-math-books/</guid>
+      <guid>http://www.zhiwuya.fun/math/best-math-books/</guid>
       <description>最好的数学书、教材</description>
     </item>
     

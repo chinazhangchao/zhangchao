@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>awesome on 知无涯.fun</title>
-    <link>https://zhiwuya.fun/tags/awesome/</link>
+    <link>http://www.zhiwuya.fun/tags/awesome/</link>
     <description>Recent content in awesome on 知无涯.fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 18 Apr 2020 15:50:59 +0800</lastBuildDate>
     
-	<atom:link href="https://zhiwuya.fun/tags/awesome/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.zhiwuya.fun/tags/awesome/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>awesome集合</title>
-      <link>https://zhiwuya.fun/tool/awesome/</link>
+      <link>http://www.zhiwuya.fun/tool/awesome/</link>
       <pubDate>Sat, 18 Apr 2020 15:50:59 +0800</pubDate>
       
-      <guid>https://zhiwuya.fun/tool/awesome/</guid>
+      <guid>http://www.zhiwuya.fun/tool/awesome/</guid>
       <description>awesome集合</description>
     </item>
     
