@@ -6,11 +6,7 @@
     <description>Recent content in Rubies on 知无涯.fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 24 Aug 2019 11:59:34 +0800</lastBuildDate>
-    
-	<atom:link href="http://www.zhiwuya.fun/ruby/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 24 Aug 2019 11:59:34 +0800</lastBuildDate><atom:link href="http://www.zhiwuya.fun/ruby/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ruby字符串编码</title>
       <link>http://www.zhiwuya.fun/ruby/string-encoding/</link>

@@ -6,11 +6,7 @@
     <description>Recent content in Windows on 知无涯.fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 04 Apr 2020 15:38:59 +0800</lastBuildDate>
-    
-	<atom:link href="http://www.zhiwuya.fun/categories/windows/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 04 Apr 2020 15:38:59 +0800</lastBuildDate><atom:link href="http://www.zhiwuya.fun/categories/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows 10 开机启动后自动恢复上次应用</title>
       <link>http://www.zhiwuya.fun/tool/windows-restore-application/</link>
